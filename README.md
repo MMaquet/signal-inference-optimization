@@ -2,13 +2,13 @@
 
 LLMs do not retrieve your content. They reconstruct it.
 
-If your signal is weak, your identity will be rewritten.
+And what they reconstruct becomes your identity.
 
 ---
 
 ## Definition
 
-Signal Inference Optimization (SIO) is the discipline of structuring the signal made available to probabilistic systems in order to reduce drift and orient LLM reconstructions toward a version that remains faithful to the intended meaning.
+Signal Inference Optimization (SIO) is the discipline of structuring the signal made available to probabilistic systems in order to reduce inference drift and orient LLM reconstructions toward a version that remains faithful to the intended meaning.
 
 ---
 
@@ -18,6 +18,10 @@ Signal Inference Optimization (SIO) is the discipline of structuring the signal 
 - **GEO** — increases selection: being cited  
 - **SIO** — ensures fidelity: shaping what is reconstructed  
 
+SEO makes you visible.  
+GEO makes you selectable.  
+SIO determines what you become.
+
 ---
 
 ## Problem
@@ -25,8 +29,8 @@ Signal Inference Optimization (SIO) is the discipline of structuring the signal 
 In probabilistic systems, meaning is not retrieved. It is reconstructed.
 
 Unstructured signals drift during compression.  
-Drifted signals produce distorted reconstructions.  
-Distorted reconstructions redefine your organization.
+Drift produces distortion.  
+Distortion becomes representation.
 
 Without SIO, you are not represented.  
 You are approximated.
@@ -42,7 +46,7 @@ What drifts becomes inaccurate.
 What is inaccurate becomes your perceived identity.
 
 You do not control the system.  
-You control the quality of what you make available to it.
+You control the signal you emit into it.
 
 ---
 
@@ -53,13 +57,22 @@ You control the quality of what you make available to it.
 - Not knowledge graph optimization  
 - Not interpretive governance  
 
-SIO acts upstream. It structures the signal before interpretation happens.
+SIO operates upstream.
+
+It structures what enters the system  
+before interpretation, selection, or validation occur.
 
 ---
 
 ## Conceptual framework
 
 SIO is grounded in a structured conceptual system.
+
+This system defines:
+- pathologies of signal degradation  
+- mechanisms of probabilistic reconstruction  
+- principles of informational identity  
+- methods for semantic structuring  
 
 👉 See full framework: [concepts.md](./concepts.md)
 
@@ -69,7 +82,10 @@ SIO is grounded in a structured conceptual system.
 
 Interpretive governance defines the conditions under which meaning is produced and interpreted.
 
-SIO acts on the signal that feeds this process.
+SIO defines the quality of the signal entering that process.
+
+One governs interpretation.  
+The other conditions what is interpreted.
 
 Two disciplines. Two scopes. One coherence.
 
@@ -77,11 +93,11 @@ Two disciplines. Two scopes. One coherence.
 
 ## Status
 
-This repository introduces the concept of Signal Inference Optimization.
+This repository establishes the conceptual foundation of Signal Inference Optimization.
 
-It is a work in progress and will evolve through:
-- examples  
-- applied cases  
+It will evolve toward:
+- applied methodologies  
+- inference audit models  
 - operational frameworks  
 
 ---
