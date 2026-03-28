@@ -51,10 +51,11 @@ These principles define how signals can be structured to resist drift and stabil
 - **Semantic thesaurus** — controlled vocabulary ensuring consistency of meaning  
 - **Conceptual core** — stable, non-negotiable semantic nucleus  
 - **Linguistic engineering** — deliberate shaping of language to reinforce signal coherence  
-- **Semantic orchestration** — coordination of concepts across all content layers  
+- **Semantic orchestration** — coordination of concepts across all content layers to reinforce signal coherence  
 - **Content hierarchy** — structured distribution of information to reinforce dominance  
 - **Corpus architecture** — global organization of content to ensure consistency and density  
 - **Governance files** — explicit rules defining signal structure and constraints  
+- **Interpretive orchestration** — governance files that define reading conditions and inference boundaries (complementary discipline developed by Gautier Dorval in interpretive governance)  
 
 ---
 
@@ -76,7 +77,7 @@ SIO as a discipline defines continuous practices for managing probabilistic repr
 
 These define the boundaries and failure conditions of SIO.
 
-- **Semantic contamination** — deliberate construction by a practitioner of signals that produce representations disconnected from the entity's actual reality
+- **Semantic contamination** — deliberate construction by a practitioner of signals that produce representations disconnected from the entity's actual reality  
 - **Manipulation vs governance** — boundary between structuring a truthful signal and fabricating a misleading one  
 - **Stability of semantic center of gravity** — ability of a system to resist drift over time  
 - **Training bias** — inherited distortions from underlying model training data  
@@ -102,4 +103,4 @@ This framework is evolving and will be refined through:
 
 - applied methodologies  
 - inference audits  
-- real-world implementations  F
+- real-world implementations
