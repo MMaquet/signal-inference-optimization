@@ -94,6 +94,7 @@ These concepts define the specific language and primitives of the discipline.
 - **Inference drift** — deviation between intended meaning and reconstructed output  
 - **Semantic mass** — weight of a concept determined by density, coherence, and repetition  
 - **Proprietary conceptual core** — controlled semantic structure designed to resist compression and guide reconstruction  
+- **Attractive density** — capacity of a dense, coherent endogenous corpus to reduce the relative weight of uncontrolled exogenous signals in LLM reconstruction  
 
 ---
 
