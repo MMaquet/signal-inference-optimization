@@ -74,7 +74,7 @@ This system defines:
 - principles of informational identity  
 - methods for semantic structuring  
 
-👉 See full framework: [concepts.md](./concepts.md)
+See full framework: [concepts.md](https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md)
 
 ---
 
@@ -112,7 +112,7 @@ Melanie Maquet
 
 This work is developed through an ongoing article series exploring Signal Inference Optimization in depth:
 
-👉 https://medium.com/@melaniemaquet
+https://medium.com/@melaniemaquet
 
 The GitHub repository provides the conceptual structure.  
 The Medium series develops the reasoning, cases, and implications.
