@@ -8,6 +8,8 @@ It formalizes how signals degrade, how probabilistic systems reconstruct meaning
 
 ## 1. Signal Pathologies
 
+Signal degradation follows identifiable patterns:
+
 - **Semantic obesity** — excessive content reduces signal coherence and weakens interpretive dominance  
 - **Content overload** — volume exceeds structural capacity, preventing stable reconstruction  
 - **Terminological fragmentation** — inconsistent vocabulary breaks semantic continuity across the corpus  
@@ -21,12 +23,24 @@ It formalizes how signals degrade, how probabilistic systems reconstruct meaning
 - **Probabilistic compression** — transformation of information into statistical representations with inherent loss  
 - **Fragmentary autonomy** — independent reconstruction of partial signals without global coherence guarantees  
 - **Probabilistic reconstruction** — generation of meaning from compressed distributions rather than direct retrieval  
-- **LLM pipeline** — sequence of ingestion, compression, and generation shaping output formation  
+- **Inference pipeline** — sequence of ingestion, compression, retrieval, and generation shaping output formation  
 - **Inference space** — probabilistic field within which reconstruction occurs  
 
 ---
 
-## 3. Informational Identity
+## 3. Fundamental Laws
+
+- Meaning is not retrieved. It is reconstructed.  
+- Reconstruction is probabilistic, not deterministic.  
+- Signal degradation is cumulative across the inference pipeline.  
+- Unstructured signals drift by default.  
+- What survives reconstruction defines perceived identity.  
+
+SIO operates under these constraints.
+
+---
+
+## 4. Informational Identity
 
 - **Probabilistic informational identity** — identity as reconstructed outputs, not retrieved facts  
 - **Informational dominance** — relative influence of a signal within competing reconstruction candidates  
@@ -35,9 +49,16 @@ It formalizes how signals degrade, how probabilistic systems reconstruct meaning
 - **Exogenous corpus** — external signals influencing reconstruction  
 - **Signal** — structured informational input entering probabilistic systems  
 
+Signal is the primary unit of influence in probabilistic reconstruction.
+
+Informational identity cannot be controlled directly.  
+It can only be influenced through signal structuring.
+
+It emerges from the interaction between signals and probabilistic systems.
+
 ---
 
-## 4. Methodological Foundations
+## 5. Methodological Foundations
 
 - **Semantic thesaurus** — controlled vocabulary ensuring consistency of meaning  
 - **Conceptual core** — stable, non-negotiable semantic nucleus  
@@ -46,11 +67,10 @@ It formalizes how signals degrade, how probabilistic systems reconstruct meaning
 - **Content hierarchy** — structured distribution of information to reinforce dominance  
 - **Corpus architecture** — global organization of content to ensure consistency and density  
 - **Governance files** — explicit rules defining signal structure and constraints  
-- **Interpretive orchestration** — governance files that define reading conditions and inference boundaries (complementary discipline developed by Gautier Dorval in interpretive governance)  
 
 ---
 
-## 5. Discipline
+## 6. Discipline
 
 - **Informational ecology** — management of signal environments and interactions  
 - **Sectoral semantic monitoring** — tracking concept evolution within a domain  
@@ -62,7 +82,7 @@ It formalizes how signals degrade, how probabilistic systems reconstruct meaning
 
 ---
 
-## 6. Limits and Risks
+## 7. Limits and Risks
 
 - **Semantic contamination** — deliberate construction of signals disconnected from actual reality  
 - **Manipulation vs governance** — boundary between structuring a truthful signal and fabricating a misleading one  
@@ -71,7 +91,7 @@ It formalizes how signals degrade, how probabilistic systems reconstruct meaning
 
 ---
 
-## 7. Core SIO Concepts
+## 8. Core SIO Concepts
 
 - **Signal Inference Optimization (SIO)** — structuring signal to orient probabilistic reconstruction  
 - **Interpretive center of gravity** — dominant semantic anchor emerging from a coherent endogenous corpus  
@@ -83,31 +103,34 @@ It formalizes how signals degrade, how probabilistic systems reconstruct meaning
 
 ---
 
-## 8. Diagnostic Methodology
+## 9. Diagnostic Methodology
 
 The three-thesaurus framework defines the diagnostic foundation of SIO practice.
 
 It measures the gap between what an organization believes it signals, what it actually signals, and what probabilistic systems reconstruct from that signal.
 
-- **Projected thesaurus** — the conceptual vocabulary an organization believes it is communicating. Reflects strategic intent and self-perception.
+### Thesaurus layers
 
-- **Expressed thesaurus** — the conceptual vocabulary actually present in the informational corpus, both endogenous and controlled exogenous. Reflects what is genuinely available to probabilistic systems for reconstruction.
+- **Projected thesaurus** — the conceptual vocabulary an organization believes it is communicating. Reflects strategic intent and self-perception.  
+- **Expressed thesaurus** — the conceptual vocabulary actually present in the informational corpus, both endogenous and controlled exogenous. Reflects what is genuinely available to probabilistic systems for reconstruction.  
+- **Machine thesaurus** — the conceptual vocabulary effectively reconstructed by LLMs, extracted through systematic multi-model, multi-run interrogation.  
 
-- **Machine thesaurus** — the conceptual vocabulary effectively reconstructed by LLMs, extracted through systematic multi-model, multi-run interrogation.
+### Diagnostic gaps
 
-**Diagnostic gaps**
+- Gap between projected and expressed thesaurus reveals internal incoherence — editorial drift, terminological fragmentation, or misalignment between intent and production.  
 
-- Gap between projected and expressed thesaurus reveals internal incoherence — editorial drift, terminological fragmentation, or misalignment between intent and production.
+- Gap between expressed and machine thesaurus reveals signal failure — inference drift, chunking loss, or dilution through retrieval and reconstruction.  
 
-- Gap between expressed and machine thesaurus reveals signal failure — inference drift, chunking loss, or dilution through retrieval and reconstruction.
+- The projected thesaurus is never compared directly to the machine thesaurus. The expressed corpus is the only observable and actionable terrain.  
 
-- The projected thesaurus is never compared directly to the machine thesaurus. The expressed corpus is the only observable and actionable terrain.
+### Foundational principle
 
-**Foundational principle**
+The objective is not measurement for its own sake. It is corrective.
 
-The objective is not measurement for its own sake. It is to ensure that the concepts, relationships, and meaning present in the projected and expressed thesaurus survive the LLM pipeline — chunking, embedding, retrieval, reranking, and generation — and emerge intact in the machine thesaurus.
+The goal is to ensure that the concepts, relationships, and meaning present in the projected and expressed thesaurus survive the inference pipeline — chunking, embedding, retrieval, reranking, and generation — and emerge intact in the machine thesaurus.
 
-Signal structure is not sufficient. Signal survival through transformation is the standard.
+Signal structure is not sufficient.  
+Signal survival through transformation is the standard.
 
 ---
 
@@ -117,4 +140,4 @@ This framework is evolving and will be refined through:
 
 - applied methodologies  
 - inference audits  
-- real-world implementations
+- real-world implementations  
