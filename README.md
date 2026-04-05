@@ -1,14 +1,16 @@
 # Signal Inference Optimization (SIO)
 
 LLMs do not retrieve your content. They reconstruct it.
-
 And what they reconstruct becomes your identity.
 
 ---
 
 ## Definition
 
-Signal Inference Optimization (SIO) is the discipline of structuring the signal made available to probabilistic systems in order to reduce inference drift and orient LLM reconstructions toward a version that remains faithful to the intended meaning.
+Signal Inference Optimization (SIO) is the discipline of structuring 
+the signal made available to probabilistic systems in order to reduce 
+inference drift and orient LLM reconstructions toward a version that 
+remains faithful to the intended meaning.
 
 ---
 
@@ -50,15 +52,28 @@ You control the signal you emit into it.
 
 ---
 
+## Signal survival
+
+Structuring the signal is necessary.  
+But the real standard is survival.
+
+A signal must survive the LLM pipeline intact —  
+chunking, embedding, retrieval, reranking, generation —  
+and emerge in reconstruction faithful to its original meaning.
+
+SIO is the discipline that makes this possible.
+
+---
+
 ## What SIO is not
 
 - Not semantic SEO  
 - Not GEO  
 - Not knowledge graph optimization  
 - Not interpretive governance  
+- Not LLMO  
 
-SIO operates upstream.
-
+SIO operates upstream.  
 It structures what enters the system  
 before interpretation, selection, or validation occur.
 
@@ -69,10 +84,12 @@ before interpretation, selection, or validation occur.
 SIO is grounded in a structured conceptual system.
 
 This system defines:
+
 - pathologies of signal degradation  
 - mechanisms of probabilistic reconstruction  
 - principles of informational identity  
 - methods for semantic structuring  
+- diagnostic methodology for measuring signal integrity  
 
 See full framework: [concepts.md](https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md)
 
@@ -80,7 +97,8 @@ See full framework: [concepts.md](https://github.com/MMaquet/signal-inference-op
 
 ## Relationship with Interpretive Governance
 
-Interpretive governance defines the conditions under which meaning is produced and interpreted.
+Interpretive governance defines the conditions under which meaning 
+is produced and interpreted.
 
 SIO defines the quality of the signal entering that process.
 
@@ -91,11 +109,28 @@ Two disciplines. Two scopes. One coherence.
 
 ---
 
+## Relationship with LLMO
+
+LLMO analyzes and adjusts outputs —  
+what systems produce after reconstruction.
+
+SIO structures inputs —  
+what systems receive before reconstruction begins.
+
+One optimizes the result.  
+The other conditions the material.
+
+Two disciplines. Two moments. One pipeline.
+
+---
+
 ## Status
 
-This repository establishes the conceptual foundation of Signal Inference Optimization.
+This repository establishes the conceptual foundation of Signal 
+Inference Optimization.
 
 It will evolve toward:
+
 - applied methodologies  
 - inference audit models  
 - operational frameworks  
@@ -110,7 +145,7 @@ Melanie Maquet
 
 ## Writing & research
 
-This work is developed through an ongoing article series exploring Signal Inference Optimization in depth:
+This work is developed through an ongoing article series:
 
 https://medium.com/@melaniemaquet
 
