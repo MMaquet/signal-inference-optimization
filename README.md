@@ -1,7 +1,9 @@
 # Signal Inference Optimization (SIO)
 
-LLMs do not retrieve your content. They reconstruct it.
-And what they reconstruct becomes your identity.
+LLMs do not retrieve your content.  
+They reconstruct it.
+
+What they reconstruct becomes your identity.
 
 ---
 
@@ -12,13 +14,26 @@ the signal made available to probabilistic systems in order to reduce
 inference drift and orient LLM reconstructions toward a version that 
 remains faithful to the intended meaning.
 
+SIO does not control reconstruction.  
+It structures the conditions that make faithful reconstruction more likely.
+
+---
+
+## Core shift
+
+In traditional systems, meaning is retrieved.  
+In probabilistic systems, meaning is reconstructed.
+
+You are no longer indexed.  
+You are inferred.
+
 ---
 
 ## Positioning
 
-- **SEO** — ensures visibility: being found  
-- **GEO** — increases selection: being cited  
-- **SIO** — ensures fidelity: shaping what is reconstructed  
+- **SEO** — ensures access: being found  
+- **GEO** — increases selection: being chosen  
+- **SIO** — ensures fidelity: being reconstructed accurately  
 
 SEO makes you visible.  
 GEO makes you selectable.  
@@ -26,11 +41,17 @@ SIO determines what you become.
 
 ---
 
-## Problem
+## The problem
 
-In probabilistic systems, meaning is not retrieved. It is reconstructed.
+Probabilistic systems compress and reconstruct information.
 
-Unstructured signals drift during compression.  
+During this process:
+
+- signals are fragmented  
+- context is reduced  
+- meaning is approximated  
+
+Unstructured signals drift.  
 Drift produces distortion.  
 Distortion becomes representation.
 
@@ -39,16 +60,34 @@ You are approximated.
 
 ---
 
-## Principle
+## Inference pipeline
 
-LLMs compress, then reconstruct.
+All signals pass through a transformation pipeline:
 
-What is not structured drifts.  
-What drifts becomes inaccurate.  
-What is inaccurate becomes your perceived identity.
+1. Chunking  
+2. Embedding  
+3. Retrieval  
+4. Reranking  
+5. Generation  
 
-You do not control the system.  
-You control the signal you emit into it.
+At each stage, information is transformed.
+
+SIO structures the signal across the entire pipeline  
+to preserve semantic coherence end-to-end.
+
+---
+
+## Drift layers
+
+Inference drift does not occur in one place.  
+It accumulates across layers:
+
+- **Compression drift** — loss during token reduction  
+- **Semantic drift** — ambiguity in embedding space  
+- **Retrieval drift** — irrelevant or competing chunks selected  
+- **Generation drift** — probabilistic reconstruction errors  
+
+SIO identifies and stabilizes these layers.
 
 ---
 
@@ -57,11 +96,32 @@ You control the signal you emit into it.
 Structuring the signal is necessary.  
 But the real standard is survival.
 
-A signal must survive the LLM pipeline intact —  
+A signal must survive the inference pipeline intact —  
 chunking, embedding, retrieval, reranking, generation —  
 and emerge in reconstruction faithful to its original meaning.
 
-SIO is the discipline that makes this possible.
+If the signal does not survive,  
+its meaning does not exist in the system.
+
+SIO is the discipline of making signal survival intentional.
+
+---
+
+## Informational identity
+
+In probabilistic systems, identity is not stored.  
+It is reconstructed.
+
+What emerges from inference becomes your informational identity.
+
+This identity is:
+
+- probabilistic  
+- context-dependent  
+- shaped by available signals  
+
+SIO stabilizes this identity by structuring  
+how signals enter the system.
 
 ---
 
@@ -91,49 +151,47 @@ This system defines:
 - methods for semantic structuring  
 - diagnostic methodology for measuring signal integrity  
 
-See full framework: [concepts.md](https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md)
+See full framework:  
+https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
 
 ---
 
 ## Relationship with Interpretive Governance
 
-Interpretive governance defines the conditions under which meaning 
-is produced and interpreted.
+Interpretive governance defines the conditions under which 
+meaning is produced and interpreted.
 
 SIO defines the quality of the signal entering that process.
 
 One governs interpretation.  
 The other conditions what is interpreted.
 
-Two disciplines. Two scopes. One coherence.
+Two disciplines. Two scopes. One system.
 
 ---
 
 ## Relationship with LLMO
 
-LLMO analyzes and adjusts outputs —  
-what systems produce after reconstruction.
+LLMO optimizes outputs — what systems produce after reconstruction.
 
-SIO structures inputs —  
-what systems receive before reconstruction begins.
+SIO structures inputs — what systems receive before reconstruction begins.
 
-One optimizes the result.  
-The other conditions the material.
+One acts after reconstruction.  
+The other acts before it begins.
 
-Two disciplines. Two moments. One pipeline.
+Two moments. One pipeline.
 
 ---
 
 ## Status
 
-This repository establishes the conceptual foundation of Signal 
-Inference Optimization.
+This repository establishes the conceptual foundation of SIO.
 
 It will evolve toward:
 
-- applied methodologies  
-- inference audit models  
-- operational frameworks  
+- inference audit methodologies  
+- signal integrity diagnostics  
+- operational structuring frameworks  
 
 ---
 
@@ -149,5 +207,18 @@ This work is developed through an ongoing article series:
 
 https://medium.com/@melaniemaquet
 
-The GitHub repository provides the conceptual structure.  
-The Medium series develops the reasoning, cases, and implications.
+The GitHub repository defines the conceptual structure.  
+The Medium series develops reasoning, applications, and implications.
+
+---
+
+## Closing
+
+In probabilistic systems:
+
+Visibility is not identity.  
+Selection is not control.
+
+What survives reconstruction defines what you are.
+
+SIO is the discipline of making that survival intentional.
