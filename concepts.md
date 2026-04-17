@@ -60,14 +60,47 @@ Inference drift is the gap between the two.
 
 - **Probabilistic reconstruction** — generation of meaning from compressed distributions rather than direct retrieval. Reconstruction is inference, not description. It produces the most probable version, not the most accurate version.
 
-- **Inference pipeline** — sequence of transformations shaping output:
-  1. Chunking
-  2. Embedding
-  3. Retrieval
-  4. Reranking
-  5. Generation
+- **Inference pipeline** — sequence of transformations shaping output. Two modes exist:
 
-- **Context window** — the token limit a model can process simultaneously during generation. A mechanical constraint that forces compression and chunking of signals. When available embeddings exceed the context window capacity, the model must arbitrate aggressively, amplifying variance.
+### Single-hop pipeline
+
+  1. **Query analysis** — intent, entities, freshness assessment. The model decides whether to search the web.
+  2. **Query expansion** — the query is reformulated with lexical variants, synonyms, and associated terms. The search surface extends beyond the original wording.
+  3. **Web search** — lexical relevance, domain authority, freshness. This is where SEO remains necessary. It conditions entry into the pipeline. But entering the pipeline is not surviving it.
+  4. **Page selection** — relevant pages are identified and retrieved.
+  5. **Extraction and cleaning** — noise removed (navigation, ads, non-informational blocks). Useful content isolated.
+  6. **Semantic chunking** — content is split into semantically coherent, ideally autonomous fragments. From this point, the content ceases to exist as a page. It becomes a point in a vectorial space.
+  7. **Embedding** — each chunk is transformed into a vector representation of its semantic content.
+  8. **Hybrid retrieval** — combines vectorial signals (semantic proximity) and lexical signals (exact term matching). A chunk that covers the right subject but lacks the precise query terms can be discarded in favor of a lexically matching but conceptually weaker competitor.
+  9. **Reranking** — optimizes for actual relevance to the question, beyond raw vectorial similarity.
+  10. **Context construction** — retained chunks are filtered (redundancy removed), then compressed to fit the model's token limit. Some chunks disappear at this stage.
+  11. **Generation** — the model produces its response from this constructed context, not from the site, not from the article, but from the fragments that survived all transformations.
+
+### Multi-hop pipeline
+
+  Complex queries trigger multiple pipelines simultaneously.
+
+  1. **Complexity analysis** — multi-intent detection, dependency mapping.
+  2. **Query fan-out** — decomposition into distinct sub-queries.
+  3. **Parallel pipelines per sub-query** — each sub-query follows its own full single-hop pipeline: expansion → web search → selection → extraction → chunking → embedding → retrieval → reranking → **local synthesis**.
+  4. **Local synthesis** — intermediate synthesis produced for each sub-query before assembly. This is where drift becomes maximal: chunks from different sources using divergent terminology for the same concept produce divergent embeddings that partially cancel each other instead of reinforcing.
+  5. **Synthesis fusion** — alignment, deduplication, divergence resolution across local syntheses.
+  6. **Global context construction** — final selection and compression.
+  7. **Final generation** — response produced from the fused global context.
+
+### Five signal disappearance points
+
+  Signal does not disappear all at once. It dies stage by stage:
+
+  1. **Extraction** — structurally ambiguous content (dense paragraphs, unclear sections, mixed concepts) produces uninterpretable blocks. Everything downstream fails.
+  2. **Chunking** — a chunk that depends on previous context to be understood is a dead chunk. The model sees isolated fragments, not your article.
+  3. **Retrieval** — each chunk competes directly against chunks from all other selected sources. A semantically weak or terminologically unstable signal loses this competition even if the page was selected by web search.
+  4. **Internal non-competition** — chunks from the same corpus compete against each other. A redundant corpus dilutes its own vectorial signal. A corpus can fight against itself and lose.
+  5. **Multi-hop synthesis** — presence across multiple sub-queries with divergent terminology does not reinforce. It partially cancels during synthesis. Terminological stability across an entire corpus is not an editorial detail. It is a survival condition.
+
+### Context window
+
+- **Context window** — the token limit a model can process simultaneously during generation. A mechanical constraint that forces compression and selection of signals. When available embeddings exceed the context window capacity, the model must arbitrate aggressively, amplifying variance. This constraint is particularly acute for users of free or lightweight interfaces, where reduced context windows compound compression effects.
 
 ---
 
