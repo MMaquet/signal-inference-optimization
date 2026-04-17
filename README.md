@@ -60,20 +60,49 @@ You are approximated.
 
 ---
 
+## Dual space architecture
+
+SIO operates across two distinct spaces:
+
+- **Interpretive space** — the global informational environment  
+  where signals circulate (all corpora, all sources, the full web).  
+  This is the signal source. This is where you act.
+
+- **Inference space** — the internal vectorial/probabilistic space  
+  of the LLM where embeddings distribute and reconstruction occurs.  
+  This is signal processing. This is what you influence.
+
+You govern the interpretive space.  
+The model operates in the inference space.  
+Inference drift is the gap between the two.
+
+---
+
 ## Inference pipeline
 
-All signals pass through a transformation pipeline:
+All signals pass through a transformation pipeline.
 
-1. Chunking  
-2. Embedding  
-3. Retrieval  
-4. Reranking  
-5. Generation  
+### Single-hop
 
-At each stage, information is transformed.
+Query analysis → Query expansion → Web search → Page selection →  
+Extraction → Semantic chunking → Embedding → Hybrid retrieval →  
+Reranking → Context construction → Generation
+
+### Multi-hop
+
+Complex queries trigger parallel pipelines:
+
+Query fan-out → Parallel single-hop pipelines per sub-query →  
+Local synthesis → Synthesis fusion → Global context → Final generation
+
+At each stage, information is transformed.  
+At five critical points, signal disappears.
 
 SIO structures the signal across the entire pipeline  
 to preserve semantic coherence end-to-end.
+
+See detailed pipeline:  
+https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
 
 ---
 
@@ -104,6 +133,22 @@ If the signal does not survive,
 its meaning does not exist in the system.
 
 SIO is the discipline of making signal survival intentional.
+
+---
+
+## Centers of gravity
+
+SIO produces two observable anchors:
+
+- **Interpretive center of gravity** — the dominant cluster  
+  in the interpretive space. The source signal sufficiently dense  
+  and coherent to orient reconstructions. This is what you build.
+
+- **Inference center of gravity** — the convergence point  
+  in the inference space toward which embeddings converge.  
+  This is what you measure.
+
+**Attractive density** is the mechanism that produces both.
 
 ---
 
