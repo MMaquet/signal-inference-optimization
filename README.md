@@ -23,6 +23,8 @@ It structures the conditions that make faithful reconstruction more likely.
 The name reads: optimization of the signal **for** inference —  
 not optimization **of** inference itself.
 
+**SIO is the discipline of signal resilience through a destructive pipeline.**
+
 ---
 
 ## Core shift
