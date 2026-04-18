@@ -216,7 +216,7 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 ## 8. Core SIO Concepts
 
-- **Signal Inference Optimization (SIO)** — the discipline of structuring the signal made available to probabilistic systems in order to reduce inference drift and orient LLM reconstructions toward a version faithful to intended meaning.
+- **Signal Inference Optimization (SIO)** — the discipline of structuring the signal made available to probabilistic systems in order to reduce inference drift and orient LLM reconstructions toward a version faithful to intended meaning. SIO does not optimize inference. It optimizes the signal that enters the inference process. The name reads: optimization of the signal *for* inference — not optimization *of* inference itself.
 
 - **Interpretive center of gravity** — the dominant cluster in the interpretive space. The source signal sufficiently dense and coherent to orient reconstructions toward a chosen version. This is what you build.
 
