@@ -10,6 +10,8 @@ It is not an editorial charter.
 
 It is the foundational instrument that decides which terms must survive probabilistic compression, which associations must remain stable, and which formulations must be excluded to prevent signal fragmentation.
 
+Within SIO (Signal Inference Optimization), the Codebook is the primary tool for structuring signal before it enters the inference process. SIO does not optimize inference — it optimizes the signal available for inference. The Codebook is where that optimization begins.
+
 In an environment where LLMs reconstruct organizations from statistically dominant patterns, the Semantic Codebook is the only tool that transforms implicit terminological drift into explicit governance.
 
 ---
