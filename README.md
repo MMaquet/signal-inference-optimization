@@ -14,8 +14,14 @@ the signal made available to probabilistic systems in order to reduce
 inference drift and orient LLM reconstructions toward a version that 
 remains faithful to the intended meaning.
 
+SIO does not optimize inference.  
+It optimizes the signal that enters the inference process.
+
 SIO does not control reconstruction.  
 It structures the conditions that make faithful reconstruction more likely.
+
+The name reads: optimization of the signal **for** inference —  
+not optimization **of** inference itself.
 
 ---
 
