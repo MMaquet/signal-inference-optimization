@@ -153,17 +153,17 @@ It emerges from the interaction between signals and probabilistic systems.
 
 - **Corpus engineering** (macro level) — global architecture of all content: volume, hierarchy, multi-source coherence, systemic consistency. Prevents fragmentation at scale.
 - **Semantic engineering** (intermediate level) — structure of meaning within the corpus: relationships between concepts, conceptual hierarchies, intentional associations. Maintains coherence within thematic domains.
-- **Linguistic engineering** (micro level) — deliberate choice of words and terms, terminological stability, thesaurus application, semantic sobriety. The execution layer.
+- **Linguistic engineering** (micro level) — deliberate choice of words and terms, terminological stability, Codebook application, semantic sobriety. The execution layer.
 
 ### Core tools
 
-- **Semantic Codebook** (operational name) / **Semantic thesaurus** (technical name) — the central governance infrastructure structuring how an organization codes its canonical concepts, terms, obligatory associations, and excluded formulations to produce a stable signal readable by AI systems. Structure: canonical term → definition → admitted synonyms → excluded formulations → obligatory associations → coherence note.
+- **Semantic Codebook** — the central governance infrastructure structuring how an organization codes its canonical concepts, terms, obligatory associations, and excluded formulations to produce a stable signal readable by AI systems. Structure: canonical term → definition → admitted synonyms → excluded formulations → obligatory associations → coherence note.
 
 - **Interpretive orchestration** — the technical infrastructure making canonical signals explicitly accessible, structured, and prioritized for AI systems. Encompasses all machine-readable files addressed to AI systems regardless of format:
   - **Governance layer**: llms.txt, llms-full.txt, ai-manifest.json, identity.json, claims.json, common-misinterpretations.json, ai-policy.json, llm-guidelines.txt, humans.txt
   - **Thematic RAG layer**: structured Markdown files, one per key domain, optimized for retrieval and use by RAG systems
 
-- **Semantic sobriety** — editorial discipline opposing semantic obesity. One concept per textual space, explicit hierarchization, elimination of unanchored abstractions, thesaurus compliance.
+- **Semantic sobriety** — editorial discipline opposing semantic obesity. One concept per textual space, explicit hierarchization, elimination of unanchored abstractions, Codebook compliance.
 
 - **Proprietary conceptual core** — controlled semantic structure designed to resist compression and guide reconstruction. Non-synonymizable. Non-negotiable.
 
@@ -192,7 +192,7 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 - **Interpretable web** — web structured for probabilistic interpretation rather than indexing. Publishing to be reconstructed, not to be visited. The site as interpretive tool, not showcase.
 
-- **Consensus engineering** — deliberate shaping of shared interpretations through structured signal. The result of thesaurus + five laws + interpretive orchestration + corpus architecture + informational ecology applied together. Four conditions: abandonment of parasitic terms, proprietary conceptual core, mastered repetition over time, signal hierarchy. Four measurement signals: inter-contextual stability, reformulation resistance, multi-query coherence, semantic convergence.
+- **Consensus engineering** — deliberate shaping of shared interpretations through structured signal. The result of Codebook + five laws + interpretive orchestration + corpus architecture + informational ecology applied together. Four conditions: abandonment of parasitic terms, proprietary conceptual core, mastered repetition over time, signal hierarchy. Four measurement signals: inter-contextual stability, reformulation resistance, multi-query coherence, semantic convergence.
 
 - **Attractive density** — capacity of a dense, coherent signal to dominate reconstruction through mass and coherence. The vectorial mechanism that produces the interpretive center of gravity. Attractive density is the engine; the center of gravity is the observable result.
 
