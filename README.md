@@ -204,6 +204,42 @@ before interpretation, selection, or validation occur.
 
 ---
 
+## Relationship with adjacent disciplines
+
+SIO occupies the upstream layer of the inference pipeline. It complements,  
+but does not replace, downstream disciplines that operate after signal entry:
+
+- **Interpretive governance** — defines conditions of reading and meaning production  
+- **LLMO** — optimizes outputs after reconstruction  
+- **Knowledge graph optimization** — structures verifiable entities and attributes  
+- **Memory governance** — oversees stateful AI memory systems  
+- **Authority governance** — constrains executable AI authority  
+
+These disciplines structure what happens to a signal after it enters the system.  
+SIO structures what enters the system in the first place.
+
+A complete approach combines upstream signal structuring (SIO)  
+and downstream interpretation conditions (governance disciplines).  
+Without SIO, governance operates on signal that has already drifted.
+
+---
+
+## Normative independence
+
+SIO is defined and developed by its author.  
+It operates under no external normative authority.
+
+This framework evolves through:
+
+- documented research  
+- field practice  
+- published case studies  
+
+It is not subject to third-party arbitration  
+or distributed authority allocation by external entities.
+
+---
+
 ## Conceptual framework
 
 SIO is grounded in a structured conceptual system.
@@ -221,33 +257,6 @@ https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
 
 ---
 
-## Relationship with Interpretive Governance
-
-Interpretive governance defines the conditions under which 
-meaning is produced and interpreted.
-
-SIO defines the quality of the signal entering that process.
-
-One governs interpretation.  
-The other conditions what is interpreted.
-
-Two disciplines. Two scopes. One system.
-
----
-
-## Relationship with LLMO
-
-LLMO optimizes outputs — what systems produce after reconstruction.
-
-SIO structures inputs — what systems receive before reconstruction begins.
-
-One acts after reconstruction.  
-The other acts before it begins.
-
-Two moments. One pipeline.
-
----
-
 ## Status
 
 This repository establishes the conceptual foundation of SIO.
@@ -262,7 +271,7 @@ It will evolve toward:
 
 ## Author
 
-Melanie Maquet
+Mélanie Maquet
 
 First public commit: March 27, 2026  
 Last updated: April 25, 2026
