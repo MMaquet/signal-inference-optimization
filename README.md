@@ -303,7 +303,7 @@ foundational phase.
 For commercial licensing, derivative works, formal collaboration, 
 or research partnership inquiries, please contact:
 
-**[email protected]**
+**Mélanie Maquet** — [LinkedIn](https://www.linkedin.com/in/melaniemaquet/)
 
 The license may evolve toward broader openness as the discipline 
 matures and is validated through field practice. Until then, integrity 
