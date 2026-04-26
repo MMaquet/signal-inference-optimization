@@ -1,3 +1,15 @@
+> **License:** This work is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+> Attribution required. No commercial use. No derivatives.
+> See [LICENSE](./LICENSE) file.
+
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+**First public commit:** April 18, 2026  
+**Last updated:** April 25, 2026  
+**Author:** Mélanie Maquet
+
+---
+
 # Typed Correction of LLM Reconstructions
 
 Probabilistic systems do not produce random errors.  
@@ -156,6 +168,23 @@ Typed correction requires prior diagnosis — a systematic inference audit that 
 
 ---
 
+## License
+
+This document is licensed under the Creative Commons 
+Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).
+
+You may share this work with attribution.  
+You may not use it commercially.  
+You may not modify or redistribute modified versions.
+
+Full license text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode  
+See [LICENSE](./LICENSE) file in this repository.
+
+For commercial licensing, derivative works, or formal collaboration:  
+[Mélanie Maquet on LinkedIn](https://www.linkedin.com/in/melaniemaquet/)
+
+---
+
 ## Reference
 
 This document is part of the Signal Inference Optimization (SIO) conceptual framework:
@@ -164,3 +193,7 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [SIO Concepts](https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md)
 - [Semantic Codebook](https://github.com/MMaquet/signal-inference-optimization/blob/main/codebook.md)
 - [Article series](https://medium.com/@melaniemaquet)
+
+**First public commit:** April 18, 2026  
+**Last updated:** April 25, 2026  
+**Author:** Mélanie Maquet — SEMANTIKIA
