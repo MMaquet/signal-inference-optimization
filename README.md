@@ -1,4 +1,4 @@
-# Signal Inference Optimization (SIO)
+# Signal Inference Optimization (SIO) 
 
 > **License:** This work is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 > Attribution required. No commercial use. No derivatives.
