@@ -1,9 +1,21 @@
 # Signal Inference Optimization (SIO)
 
+> **License:** This work is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+> Attribution required. No commercial use. No derivatives.
+> See [LICENSE](./LICENSE) file.
+
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
 LLMs do not retrieve your content.  
 They reconstruct it.
 
 What they reconstruct becomes your identity.
+
+---
+
+**First public commit:** March 27, 2026  
+**Last updated:** April 25, 2026  
+**Author:** Mélanie Maquet
 
 ---
 
@@ -252,6 +264,9 @@ It will evolve toward:
 
 Melanie Maquet
 
+First public commit: March 27, 2026  
+Last updated: April 25, 2026
+
 ---
 
 ## Writing & research
@@ -262,6 +277,20 @@ https://medium.com/@melaniemaquet
 
 The GitHub repository defines the conceptual structure.  
 The Medium series develops reasoning, applications, and implications.
+
+---
+
+## License
+
+This work is licensed under the Creative Commons 
+Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).
+
+You may share this work with attribution.  
+You may not use it commercially.  
+You may not modify or redistribute modified versions.
+
+Full license text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode  
+See [LICENSE](./LICENSE) file in this repository.
 
 ---
 
