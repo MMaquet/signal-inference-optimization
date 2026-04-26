@@ -1,3 +1,15 @@
+> **License:** This work is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+> Attribution required. No commercial use. No derivatives.
+> See [LICENSE](./LICENSE) file.
+
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+**First public commit:** March 27, 2026  
+**Last updated:** April 25, 2026  
+**Author:** Mélanie Maquet
+
+---
+
 # SIO Conceptual Framework
 
 This document defines the core conceptual system underlying Signal Inference Optimization (SIO).
@@ -18,6 +30,8 @@ Signal degradation follows identifiable patterns:
   - **Team fragmentation** — each department develops its own professional vocabulary
   - **Channel fragmentation** — LinkedIn, website, newsletter, case studies produce distinct registers
   - **Period fragmentation** — sedimentary layers of past terminology coexist with current vocabulary
+
+- **Semantic debt** — cumulative cost of content production without terminological governance. Unlike a discrete error, semantic debt accumulates over time and becomes asymmetrically expensive to correct: publishing correct content afterward does not erase months of sedimented drift. Each ungoverned publication adds competing clusters to the existing corpus, diluting the proprietary signal and reinforcing generic reconstructions.
 
 - **Variance operations** — five semantic transformations that probabilistic systems apply to signals during reconstruction:
   - **Generalization** — the system broadens scope beyond actual identity
@@ -157,7 +171,16 @@ It emerges from the interaction between signals and probabilistic systems.
 
 ### Core tools
 
-- **Semantic Codebook** — the central governance infrastructure structuring how an organization codes its canonical concepts, terms, obligatory associations, and excluded formulations to produce a stable signal readable by AI systems. Structure: canonical term → definition → admitted synonyms → excluded formulations → obligatory associations → coherence note.
+- **Semantic Codebook** — the central governance infrastructure structuring how an organization codes its canonical concepts, terms, obligatory associations, and excluded formulations to produce a stable signal readable by AI systems. Structure: canonical term → definition → admitted synonyms → excluded formulations → obligatory associations → coherence note. See dedicated document: [codebook.md](https://github.com/MMaquet/signal-inference-optimization/blob/main/codebook.md).
+
+- **Governed Writing Protocol** — the methodological framework that produces content surviving the inference pipeline. The Protocol operationalizes the five laws of linguistic engineering through three structural rules applied to every content unit:
+  - **Semantic autonomy** — each passage must be extractable from its context and remain comprehensible. No orphan pronouns, no internal references requiring prior context.
+  - **Conceptual density** — each passage must contain the canonical term of the concept it develops. No periphrasis, no metaphorical replacement.
+  - **Terminological coherence** — one dominant concept per unit, anchored in the corpus signal.
+  
+  The Protocol produces Autonomous Inference Units. It is the bridge between the Semantic Codebook (which terms) and corpus deployment (how those terms travel through the pipeline).
+
+- **Autonomous Inference Unit (AIU)** — paragraph or content block containing complete signal independently, designed to survive chunking with its proprietary terminology intact. An AIU does not depend on other paragraphs to be understood, contains no orphan pronouns, and carries the canonical term of the concept it develops. The AIU is the smallest content unit on which the Governed Writing Protocol applies. The unit name reads: a block (Unit) constructed for the model's reconstruction process (Inference) that carries its meaning independently of its origin context (Autonomous).
 
 - **Interpretive orchestration** — the technical infrastructure making canonical signals explicitly accessible, structured, and prioritized for AI systems. Encompasses all machine-readable files addressed to AI systems regardless of format:
   - **Governance layer**: llms.txt, llms-full.txt, ai-manifest.json, identity.json, claims.json, common-misinterpretations.json, ai-policy.json, llm-guidelines.txt, humans.txt
@@ -167,11 +190,28 @@ It emerges from the interaction between signals and probabilistic systems.
 
 - **Proprietary conceptual core** — controlled semantic structure designed to resist compression and guide reconstruction. Non-synonymizable. Non-negotiable.
 
+- **Core/Periphery architecture** — structural distribution of terminology within content, organizing the relationship between proprietary terms and market terms:
+  - **Core** — proprietary terms from the Semantic Codebook. Occupy dominant positions: titles, opening paragraphs, definitions, repeated conceptual anchors. The core is what the model retains under compression.
+  - **Periphery** — market terms (industry vocabulary, common search terms). Occupy secondary positions: contextual illustrations, accessibility bridges, lexical enrichment. The periphery is what enables retrieval entry, never what defines reconstruction.
+  
+  Market terms enter the pipeline. Proprietary terms survive inside it. Core/Periphery architecture is the structural answer to the SEO/SIO articulation: SEO needs market terms in periphery for retrieval; SIO needs proprietary terms in core for fidelity.
+
 - **Content hierarchy** — structured distribution of information to reinforce dominance. Pillar content concentrates density; satellite content reinforces without diluting.
 
 - **Corpus architecture** — global organization of content ensuring consistency and density across the three corpus zones.
 
 - **Governance files** — explicit rules defining signal structure and constraints, deployed as part of interpretive orchestration.
+
+- **Inference audit** — systematic multi-model, multi-run, multi-angle interrogation of LLMs to extract the machine thesaurus. The audit measures what probabilistic systems actually reconstruct from a corpus. Method: same entity queried across ChatGPT, Perplexity, Gemini, with multiple runs per query, multiple query angles per entity, comparison against projected and expressed thesauri. The audit identifies which variance operation is dominant, where in the pipeline signal dies, and which corrective intervention is structurally appropriate.
+
+- **Typed correction** — diagnostic-driven intervention adapted to the specific variance operation identified. Generic correction in a probabilistic system is random correction. Typed correction matches intervention to cause:
+  - **Generalization** → densify the central concept, rebalance core/periphery ratio
+  - **Amalgamation** → reinforce proprietary concepts, exclude shared terms from the core
+  - **Truncation** → strengthen obligatory co-occurrences between concept components
+  - **Substitution** → exclude generic equivalent, densify proprietary term, create contrastive associations
+  - **Projection** → saturate real signal, declare exclusions in machine-readable files (common-misinterpretations.json), avoid editorial negation
+  
+  Priority order: loss → distortion → pollution. Loss of identity (amalgamation, substitution) treats first because no other correction has effect without identity. Distortion (generalization) treats second. Incomplete signal (truncation) treats third. Polluted signal (projection) treats last.
 
 ### The rule of three autonomies
 
@@ -232,6 +272,10 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 - **Probabilistic governance** — the posture of governing signal inputs to influence reconstruction outputs, with full acknowledgment that correlation is observable but causality is not provable. Not control. Influence under structural uncertainty.
 
+- **Variance operations vs variance manifestations** — analytical distinction between the underlying transformations applied by probabilistic systems (operations: generalization, amalgamation, truncation, substitution, projection) and their observable symptoms in reconstructions (manifestations: distortion, divergence, instability, amplification, dilution). The distinction matters diagnostically: manifestations are what the audit observes; operations are what corrective intervention must address. Treating manifestations without identifying operations produces generic correction, which in a probabilistic system equals random correction.
+
+- **Diagnostic methodology cycle** — the operational sequence: diagnostic → codebook → inference audit → corrective → re-audit. The cycle is not linear but iterative. Each re-audit informs the next diagnostic. The Codebook evolves with the corpus. The audit recalibrates with model updates and corpus growth.
+
 ---
 
 ## 9. Diagnostic Methodology
@@ -276,3 +320,34 @@ This framework is evolving and will be refined through:
 - applied methodologies
 - inference audits
 - real-world implementations
+
+---
+
+## License
+
+This document is licensed under the Creative Commons 
+Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).
+
+You may share this work with attribution.  
+You may not use it commercially.  
+You may not modify or redistribute modified versions.
+
+Full license text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode  
+See [LICENSE](./LICENSE) file in this repository.
+
+For commercial licensing, derivative works, or formal collaboration:  
+[Mélanie Maquet on LinkedIn](https://www.linkedin.com/in/melaniemaquet/)
+
+---
+
+## Reference
+
+This document is part of the Signal Inference Optimization (SIO) conceptual framework:
+
+- [SIO README](https://github.com/MMaquet/signal-inference-optimization/blob/main/README.md)
+- [Semantic Codebook](https://github.com/MMaquet/signal-inference-optimization/blob/main/codebook.md)
+- [Article series](https://medium.com/@melaniemaquet)
+
+**First public commit:** March 27, 2026  
+**Last updated:** April 25, 2026  
+**Author:** Mélanie Maquet — SEMANTIKIA
