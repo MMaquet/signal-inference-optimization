@@ -294,6 +294,23 @@ See [LICENSE](./LICENSE) file in this repository.
 
 ---
 
+## Commercial use & extensions
+
+This work is currently licensed under CC BY-NC-ND 4.0 — no commercial use, 
+no derivatives — to protect the integrity of the discipline during its 
+foundational phase.
+
+For commercial licensing, derivative works, formal collaboration, 
+or research partnership inquiries, please contact:
+
+**[email protected]**
+
+The license may evolve toward broader openness as the discipline 
+matures and is validated through field practice. Until then, integrity 
+of the foundational vocabulary takes priority over derivative circulation.
+
+---
+
 ## Closing
 
 In probabilistic systems:
