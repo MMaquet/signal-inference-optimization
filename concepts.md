@@ -5,7 +5,7 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 **First public commit:** March 27, 2026  
-**Last updated:** April 25, 2026  
+**Last updated:** April 26, 2026  
 **Author:** Mélanie Maquet
 
 ---
@@ -111,6 +111,14 @@ Inference drift is the gap between the two.
   3. **Retrieval** — each chunk competes directly against chunks from all other selected sources. A semantically weak or terminologically unstable signal loses this competition even if the page was selected by web search.
   4. **Internal non-competition** — chunks from the same corpus compete against each other. A redundant corpus dilutes its own vectorial signal. A corpus can fight against itself and lose.
   5. **Multi-hop synthesis** — presence across multiple sub-queries with divergent terminology does not reinforce. It partially cancels during synthesis. Terminological stability across an entire corpus is not an editorial detail. It is a survival condition.
+
+### Local chunk competition
+
+- **Chunk competition** — operational mechanism by which LLMs select which chunks survive in the final response when multiple chunks describe the same subject. For each query, only a limited subset of chunks is mobilized in the competition window. Within that window, your chunks compete directly against those of other organizations covering the same territory. The competition is local to the query, not global to the sector.
+
+- **Vectorial attractivity** — what makes one chunk preferred over another in the local competition window. Determined by four governable dimensions: semantic coherence (stable terminology, predictable co-occurrences), fragmentary autonomy (chunk understandable in isolation), conceptual precision (explicit distinctive markers), resistance to compression (central concept early, clear hierarchy).
+
+The distinction matters: typicality bias operates at two levels. The global level pulls identity toward the sectoral prototype — accessible only to organizations with massive accumulation. The local level operates in chunk competition windows — accessible to any organization that applies the discipline. Local victory is the operational terrain of SIO.
 
 ### Context window
 
@@ -349,5 +357,5 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [Article series](https://medium.com/@melaniemaquet)
 
 **First public commit:** March 27, 2026  
-**Last updated:** April 25, 2026  
+**Last updated:** April 26, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
