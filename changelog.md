@@ -15,6 +15,16 @@ This framework follows a deliberate publication cadence — foundational concept
 
 ---
 
+## 2026-04-26
+
+### Concepts enrichment (concepts.md)
+- Added **Local chunk competition** subsection in Section 2 (Spaces and Mechanisms).
+- Defined **Chunk competition** as the operational mechanism by which LLMs select which chunks survive in the final response when multiple chunks describe the same subject within a query competition window.
+- Defined **Vectorial attractivity** as what makes one chunk preferred over another, determined by four governable dimensions: semantic coherence, fragmentary autonomy, conceptual precision, resistance to compression.
+- Articulated the two-level operation of typicality bias: global level (sectoral prototype) versus local level (chunk competition windows), establishing local victory as the operational terrain accessible to any organization applying the discipline.
+
+---
+
 ## 2026-04-25
 
 ### License migration
