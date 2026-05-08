@@ -5,7 +5,7 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 **First public commit:** March 27, 2026  
-**Last updated:** April 26, 2026  
+**Last updated:** May 7, 2026  
 **Author:** Mélanie Maquet
 
 ---
@@ -157,7 +157,7 @@ These are not recommendations. They are structural constraints. Violating one we
   - **Offensive dominance** — deliberate construction of dominant signals through oriented production, canonical structuring, and multi-source distribution.
   - **Defensive dominance** — preservation of constructed dominance through inference audit and continuous semantic monitoring.
 - **Informational corpus** — total available signal contributing to reconstruction, structured in three zones:
-  - **Endogenous corpus** — internally controlled signal production (site, governance files, institutional documents)
+  - **Endogenous corpus** — internally controlled signal production (site, signal amplification files, institutional documents)
   - **Exogenous corpus with partial control** — off-site signals with influence but not final control (LinkedIn, interviews, solicited press, aligned partners)
   - **Exogenous corpus beyond control** — signals neither produced nor modifiable (forums, Reddit, third-party comparisons, unsolicited press)
 - **Signal** — structured informational input entering probabilistic systems. The primary unit of influence in probabilistic reconstruction.
@@ -190,9 +190,9 @@ It emerges from the interaction between signals and probabilistic systems.
 
 - **Autonomous Inference Unit (AIU)** — paragraph or content block containing complete signal independently, designed to survive chunking with its proprietary terminology intact. An AIU does not depend on other paragraphs to be understood, contains no orphan pronouns, and carries the canonical term of the concept it develops. The AIU is the smallest content unit on which the Governed Writing Protocol applies. The unit name reads: a block (Unit) constructed for the model's reconstruction process (Inference) that carries its meaning independently of its origin context (Autonomous).
 
-- **Interpretive orchestration** — the technical infrastructure making canonical signals explicitly accessible, structured, and prioritized for AI systems. Encompasses all machine-readable files addressed to AI systems regardless of format:
-  - **Governance layer**: llms.txt, llms-full.txt, ai-manifest.json, identity.json, claims.json, common-misinterpretations.json, ai-policy.json, llm-guidelines.txt, humans.txt
-  - **Thematic RAG layer**: structured Markdown files, one per key domain, optimized for retrieval and use by RAG systems
+- **Interpretive orchestration** — the technical infrastructure that makes canonical corpus signals explicitly accessible and amplified for AI systems. Encompasses machine-readable files that declare and amplify existing signal:
+  - **Declarative layer**: sio-identity.json, sio-claims.json, sio-glossary.json, corpus-canon.json, corpus-exclusions.json, llms.txt, JSON-LD, Schema.org
+  - **Thematic corpus layer**: structured Markdown files, one per key domain, optimized for retrieval by RAG systems
 
 - **Semantic sobriety** — editorial discipline opposing semantic obesity. One concept per textual space, explicit hierarchization, elimination of unanchored abstractions, Codebook compliance.
 
@@ -208,7 +208,7 @@ It emerges from the interaction between signals and probabilistic systems.
 
 - **Corpus architecture** — global organization of content ensuring consistency and density across the three corpus zones.
 
-- **Governance files** — explicit rules defining signal structure and constraints, deployed as part of interpretive orchestration.
+- **Signal amplification files** — machine-readable files that declare canonical signals and amplify corpus structure for AI systems. These files make existing corpus signals explicitly accessible without imposing reading order or interpretation hierarchy.
 
 - **Inference audit** — systematic multi-model, multi-run, multi-angle interrogation of LLMs to extract the machine thesaurus. The audit measures what probabilistic systems actually reconstruct from a corpus. Method: same entity queried across ChatGPT, Perplexity, Gemini, with multiple runs per query, multiple query angles per entity, comparison against projected and expressed thesauri. The audit identifies which variance operation is dominant, where in the pipeline signal dies, and which corrective intervention is structurally appropriate.
 
@@ -217,7 +217,7 @@ It emerges from the interaction between signals and probabilistic systems.
   - **Amalgamation** → reinforce proprietary concepts, exclude shared terms from the core
   - **Truncation** → strengthen obligatory co-occurrences between concept components
   - **Substitution** → exclude generic equivalent, densify proprietary term, create contrastive associations
-  - **Projection** → saturate real signal, declare exclusions in machine-readable files (common-misinterpretations.json), avoid editorial negation
+  - **Projection** → saturate real signal, declare exclusions in machine-readable files (corpus-exclusions.json), avoid editorial negation
   
   Priority order: loss → distortion → pollution. Loss of identity (amalgamation, substitution) treats first because no other correction has effect without identity. Distortion (generalization) treats second. Incomplete signal (truncation) treats third. Polluted signal (projection) treats last.
 
@@ -357,5 +357,5 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [Article series](https://medium.com/@melaniemaquet)
 
 **First public commit:** March 27, 2026  
-**Last updated:** April 26, 2026  
+**Last updated:** May 7, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
