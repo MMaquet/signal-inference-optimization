@@ -189,7 +189,7 @@ It distinguishes through the architecture of weighting and through proprietary c
 The Semantic Codebook is the foundation. Without it, nothing else holds.
 
 - **The five laws of linguistic engineering** govern how content is produced. The Codebook governs which terms that content uses.
-- **Interpretive orchestration** (signal amplification files, RAG files) must reflect the Codebook. Same canonical terms. Same obligatory associations. Same excluded formulations.
+- **Interpretive orchestration** (declarative signal files, RAG files) must reflect the Codebook. Same canonical terms. Same obligatory associations. Same excluded formulations.
 - **Corpus architecture** distributes signal across three zones. The Codebook ensures terminological consistency across all three.
 - **Consensus engineering** builds dominance through repetition of a proprietary conceptual core. The Codebook defines that core.
 - **Informational ecology** monitors the interpretive space. The Codebook provides the reference against which drift is measured.
