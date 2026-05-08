@@ -17,21 +17,29 @@ This framework follows a deliberate publication cadence — foundational concept
 
 ## 2026-05-07
 
+### Declarative signal layer — terminology decoupling
+- **README**: Added "Declarative signal layer" section defining machine-native identity files as high-density signal fragments that compete as chunks by density, not by authority.
+- **README**: Added "Interpretive orchestration" section defining deployment and maintenance of the declarative signal layer.
+- **README**: Renamed all declarative files to signal- prefix: signal-identity.json, signal-claims.json, inference-corrections.json, signal-manifest.json, signal-policy.json, signal-context.txt. Retained open standards unchanged: llms.txt, llms-full.txt, humans.txt.
+- **README**: Replaced "machine-first governance frameworks" with "machine-first frameworks" throughout.
+- **README**: Replaced "governance disciplines" with "adjacent disciplines" in conclusions.
+- **concepts.md**: Aligned declarative layer file names with README (signal- prefix throughout).
+- **concepts.md**: Replaced "Signal amplification files" with "Declarative signal files" in definitions and corpus references.
+- **concepts.md**: Updated corpus-exclusions.json → inference-corrections.json in Typed correction (Projection).
+- **codebook.md**: Updated "Relationship with other SIO components" to reference declarative signal files.
+- **typed-correction.md**: Updated corpus-exclusions.json → inference-corrections.json in Operation 5 (Projection) and Correction matrix.
+- **typed-correction.md**: Updated signal amplification files → declarative signal files in Operation 4 (Substitution).
+
+### Rationale
+- Decoupled SIO terminology from adjacent discipline vocabulary to eliminate co-occurrence ambiguity.
+- Established "declarative signal files" as the canonical term for machine-native identity files within SIO architecture.
+- Signal- prefix anchors each file in the foundational concept of the discipline (signal), not in the discipline name (SIO) or in adjacent frameworks.
+- Declarative signal files densify identity signal without commanding models, constraining inference, or imposing reading hierarchies. They compete in the pipeline like any other chunk — by density, coherence, and semantic alignment.
+
 ### Technical foundations & methodological positioning
 - **README enrichment**: Added "Technical foundations & learning ecosystem" section documenting 2026 technical training across vector databases, embeddings, and retrieval systems (Deep Learning AI / Google Cloud, Vectara, Cohere, Chroma, Pinecone, Qdrant).
 - **README enrichment**: Added "Machine-readable formats & structured data" subsection (JSON-LD, Schema.org, OpenGraph, Robots.txt, llms.txt).
-- **README enrichment**: Formalized methodological positioning distinguishing SIO's corpus-first approach from machine-first governance frameworks.
-
-### Terminology updates (corpus-first alignment)
-- **concepts.md**: Replaced "Governance layer" with "Declarative layer" in Interpretive orchestration definition.
-- **concepts.md**: Replaced "Governance files" with "Signal amplification files" throughout.
-- **concepts.md**: Updated Interpretive orchestration to list declarative signal amplification files: sio-identity.json, sio-claims.json, sio-glossary.json, corpus-canon.json, corpus-exclusions.json, llms.txt, JSON-LD, Schema.org.
-- **codebook.md**: Updated "Relationship with other SIO components" section to reference signal amplification files instead of governance files.
-- **typed-correction.md**: Replaced "common-misinterpretations.json" with "corpus-exclusions.json" in Operation 5 (Projection) correction protocol.
-
-### Infrastructure clarification
-- Established distinction between declarative/amplification approach (SIO) and governance/hierarchy approach (adjacent disciplines).
-- Documented that SIO files declare and amplify existing corpus signals without imposing reading order or interpretation hierarchy.
+- **README enrichment**: Formalized methodological positioning distinguishing SIO's corpus-first approach from machine-first frameworks.
 
 ---
 
