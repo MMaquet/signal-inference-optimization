@@ -5,7 +5,7 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 **First public commit:** April 18, 2026  
-**Last updated:** April 25, 2026  
+**Last updated:** May 7, 2026  
 **Author:** Mélanie Maquet
 
 ---
@@ -108,7 +108,7 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 
 **Typed correction:**
 - Exclude the generic term from the Codebook — it must not appear as a central term in the corpus. It may exist in context, as explicit contrast, never as equivalent
-- Densify the proprietary term — it must appear in every pillar content, governance files, structured metadata, satellite content. Frequency must be sufficient to create an autonomous cluster
+- Densify the proprietary term — it must appear in every pillar content, signal amplification files, structured metadata, satellite content. Frequency must be sufficient to create an autonomous cluster
 - Create explicit contrastive associations — produce content that explicitly opposes the proprietary term to the generic: "X is not Y. It intervenes upstream, on the structure itself." This creates a contrastive association in the inference space — the model learns the two terms are not synonymous
 
 ---
@@ -123,7 +123,7 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 
 **Typed correction:**
 - Massively densify the real signal — if the corpus is saturated with the actual expertise and strong, specific obligatory associations, less vector space remains available for generic projections. Real signal density mechanically reduces the space available for unfounded inference
-- Declare in common-misinterpretations.json — this is exactly what this governance file serves in interpretive orchestration. Explicitly declare in machine-readable format what the organization is NOT
+- Declare in corpus-exclusions.json — this is exactly what this signal amplification file serves in interpretive orchestration. Explicitly declare in machine-readable format what the organization is NOT
 - Do NOT contradict in editorial content — writing "We do NOT do X" creates a co-occurrence between the organization and X. The model may ignore the negation and retain the association. Correction passes through real signal density and machine-readable declaration, not editorial negation
 
 ---
@@ -136,7 +136,7 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 | Amalgamation | Merged with competitors? | Reinforce proprietary concepts + exclude shared terms |
 | Truncation | Correct but incomplete? | Reinforce obligatory associations between components |
 | Substitution | Proprietary term replaced? | Exclude generic + densify proprietary + contrastive associations |
-| Projection | Unpublished attributes added? | Densify real signal + declare in common-misinterpretations.json |
+| Projection | Unpublished attributes added? | Densify real signal + declare in corpus-exclusions.json |
 
 ---
 
@@ -195,5 +195,5 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [Article series](https://medium.com/@melaniemaquet)
 
 **First public commit:** April 18, 2026  
-**Last updated:** April 25, 2026  
+**Last updated:** May 7, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
