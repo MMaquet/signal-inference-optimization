@@ -100,30 +100,30 @@ Inference drift is the gap between the two.
 
 ## Inference pipeline
 
-All signals pass through a transformation pipeline.
+All signals pass through transformation pipelines.  
+The exact architecture varies by system, but common patterns emerge.
 
-### Single-hop
+### Single-hop (typical pattern)
 
 Query analysis → Query expansion → Web search → Page selection →  
 Extraction → Semantic chunking → Embedding → Hybrid retrieval →  
 Reranking → Context construction → Generation
 
-### Multi-hop
+### Multi-hop (complex queries)
 
-Complex queries trigger parallel pipelines:
+Complex queries may trigger parallel pipelines:
 
 Query fan-out → Parallel single-hop pipelines per sub-query →  
 Local synthesis → Synthesis fusion → Global context → Final generation
 
 At each stage, information is transformed.  
-At five critical points, signal disappears.
+At multiple critical points, signal can degrade or disappear.
 
-SIO structures the signal across the entire pipeline  
-to preserve semantic coherence end-to-end.
+SIO structures the signal to preserve semantic coherence  
+across pipeline variations.
 
-See detailed pipeline:  
+See detailed analysis:  
 https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
-
 ---
 
 ## Drift layers
@@ -227,8 +227,8 @@ Without SIO, governance operates on signal that has already drifted.
 ## Technical foundations & learning ecosystem
 
 SIO is built on extensive study and hands-on experimentation with 
-vector databases, embeddings, and retrieval systems, combined with 
-awareness of adjacent semantic disciplines.
+vector databases, embeddings, retrieval systems, and machine-readable 
+formats, combined with awareness of adjacent semantic disciplines.
 
 ### Vector databases & embeddings — Technical training (2026)
 
@@ -249,6 +249,18 @@ search in RAG systems
 
 **Qdrant** — Retrieval optimization, tokenization to vector quantization, 
 approximate nearest neighbors (ANN)
+
+### Machine-readable formats & structured data
+
+**JSON-LD** — Structured data for semantic web and knowledge graphs
+
+**Schema.org** — Standardized vocabularies for entity definition
+
+**OpenGraph / Twitter Cards** — Social media metadata optimization
+
+**Robots.txt / sitemap protocols** — Crawl control and content discovery
+
+**llms.txt** — Emerging LLM-readable content index format
 
 ### Adjacent semantic disciplines
 
@@ -274,7 +286,6 @@ SIO operates upstream (signal structuring).
 Governance operates downstream (interpretation conditions).
 
 A complete approach combines both.
-
 ---
 
 ## Normative independence
