@@ -126,17 +126,20 @@ See detailed analysis:
 https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
 ---
 
-## Drift layers
+## Inference drift
 
-Inference drift does not occur in one place.  
-It accumulates across layers:
+Inference drift is the deviation between intended meaning and 
+reconstructed output — the gap between what enters the interpretive 
+space and what emerges from the inference space.
 
-- **Compression drift** — loss during token reduction  
-- **Semantic drift** — ambiguity in embedding space  
-- **Retrieval drift** — irrelevant or competing chunks selected  
-- **Generation drift** — probabilistic reconstruction errors  
+Signal degradation accumulates across the transformation pipeline.  
+At multiple critical points, signals can degrade or disappear entirely.
 
-SIO identifies and stabilizes these layers.
+SIO structures signals to resist this degradation and preserve 
+semantic coherence through the reconstruction process.
+
+See detailed analysis:  
+https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
 
 ---
 
