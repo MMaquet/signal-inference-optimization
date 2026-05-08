@@ -14,7 +14,7 @@ What they reconstruct becomes your identity.
 ---
 
 **First public commit:** March 27, 2026  
-**Last updated:** April 25, 2026  
+**Last updated:** May 7, 2026  
 **Author:** Mélanie Maquet
 
 ---
@@ -224,6 +224,59 @@ Without SIO, governance operates on signal that has already drifted.
 
 ---
 
+## Technical foundations & learning ecosystem
+
+SIO is built on extensive study and hands-on experimentation with 
+vector databases, embeddings, and retrieval systems, combined with 
+awareness of adjacent semantic disciplines.
+
+### Vector databases & embeddings — Technical training (2026)
+
+**Deep Learning AI / Google Cloud** — Text embeddings, semantic representation 
+in language models, RAG pipeline implementation
+
+**Vectara** — Embedding architectures (Word2Vec, BERT, Transformers), 
+dual-encoder models, contrastive learning
+
+**Cohere** — Large language models with semantic search, dense retrieval, 
+reranking mechanisms
+
+**Chroma** — Advanced retrieval techniques, query expansion, embedding 
+optimization for relevance
+
+**Pinecone** — Vector database applications, top-k retrieval, similarity 
+search in RAG systems
+
+**Qdrant** — Retrieval optimization, tokenization to vector quantization, 
+approximate nearest neighbors (ANN)
+
+### Adjacent semantic disciplines
+
+**Interpretive Governance** (Gautier Dorval, interpretive-governance.org) — 
+Conditions of reading and meaning production in probabilistic systems
+
+**Knowledge graph optimization** — Structured entity relationships
+
+**Semantic web standards** — Linked data and ontological frameworks
+
+### Methodological positioning
+
+**SIO develops a corpus-first approach** — structuring signal density, 
+semantic coherence, and vectorial survival before content enters 
+probabilistic systems.
+
+This approach differs from **machine-first governance frameworks** 
+that structure reading conditions and authority hierarchies after 
+signal entry.
+
+Both layers address different stages of the inference pipeline.  
+SIO operates upstream (signal structuring).  
+Governance operates downstream (interpretation conditions).
+
+A complete approach combines both.
+
+---
+
 ## Normative independence
 
 SIO is defined and developed by its author.  
@@ -274,7 +327,7 @@ It will evolve toward:
 Mélanie Maquet
 
 First public commit: March 27, 2026  
-Last updated: April 25, 2026
+Last updated: May 7, 2026
 
 ---
 
