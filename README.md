@@ -124,6 +124,7 @@ across pipeline variations.
 
 See detailed analysis:  
 https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
+
 ---
 
 ## Inference drift
@@ -156,6 +157,84 @@ If the signal does not survive,
 its meaning does not exist in the system.
 
 SIO is the discipline of making signal survival intentional.
+
+---
+
+## Declarative signal layer
+
+The editorial corpus produces signal through statistical accumulation.  
+The declarative signal layer produces signal through explicit declaration  
+in machine-native formats.
+
+These are not instructions to the model.  
+These are not constraints on inference.  
+These are high-density signal fragments in formats that machines parse natively.
+
+A 200-word signal-identity.json produces a denser chunk  
+than a 2000-word blog post. The signal-per-token ratio is higher.
+
+### Declarative signal files
+
+| File | Function |
+|---|---|
+| **llms.txt** | Signal entry point — content index in LLM-readable format (open standard, Jeremy Howard) |
+| **llms-full.txt** | Extended signal documentation — complete organizational description optimized for LLM ingestion (open standard, Jeremy Howard) |
+| **signal-identity.json** | Identity declaration — who the organization is, in structured format |
+| **signal-claims.json** | Canonical assertions — what the organization affirms as its positioning |
+| **inference-corrections.json** | Reconstruction corrections — identified inference errors and their factual corrections |
+| **signal-manifest.json** | Structured metadata — entity type, mission, scope, version |
+| **signal-policy.json** | Usage policy — conditions under which content may be used by AI systems |
+| **signal-context.txt** | Representation context — how the organization should be represented |
+| **humans.txt** | Human attribution — people behind the organization (open standard since 2009) |
+
+### What declarative signal files do
+
+Declarative signal files densify the identity signal in machine-native format.  
+They do not command the model. They do not constrain inference.  
+They compete as chunks — and win by density when properly structured.
+
+A declarative signal layer without a governed corpus  
+declares an identity the corpus does not carry.
+
+A governed corpus without a declarative signal layer  
+is under-exploited — the densest identity fragments are missing.
+
+Both are necessary. Neither is sufficient alone.
+
+### What declarative signal files do not do
+
+They do not control LLM reconstructions.  
+They do not guarantee indexation or integration.  
+They do not override corpus signals by authority.  
+They compete in the pipeline like any other chunk —  
+by density, coherence, and semantic alignment.
+
+### Relationship with the Semantic Codebook
+
+Declarative signal files must use the canonical terminology  
+of the Semantic Codebook. The same terms, the same associations,  
+the same exclusions. Coherence between the editorial corpus  
+and the declarative layer is non-negotiable.
+
+---
+
+## Interpretive orchestration
+
+Interpretive orchestration is the deployment and maintenance  
+of the declarative signal layer as an integrated component  
+of the SIO architecture.
+
+Interpretive orchestration includes:
+
+- Structuring declarative signal files with Codebook-aligned terminology  
+- Deploying files at stable, predictable URLs  
+- Maintaining coherence between the editorial corpus and the declarative layer  
+- Versioning and dating all declarative files  
+- Updating when the Codebook evolves  
+
+Interpretive orchestration is the infrastructure component of SIO.  
+It does not replace corpus density. It complements it  
+by providing a stable, machine-native reference layer.
 
 ---
 
@@ -222,8 +301,8 @@ These disciplines structure what happens to a signal after it enters the system.
 SIO structures what enters the system in the first place.
 
 A complete approach combines upstream signal structuring (SIO)  
-and downstream interpretation conditions (governance disciplines).  
-Without SIO, governance operates on signal that has already drifted.
+and downstream interpretation conditions (adjacent disciplines).  
+Without SIO, downstream disciplines operate on signal that has already drifted.
 
 ---
 
@@ -263,7 +342,7 @@ approximate nearest neighbors (ANN)
 
 **Robots.txt / sitemap protocols** — Crawl control and content discovery
 
-**llms.txt** — Emerging LLM-readable content index format
+**llms.txt** — Emerging LLM-readable content index format (Jeremy Howard, open standard)
 
 ### Adjacent semantic disciplines
 
@@ -280,15 +359,16 @@ Conditions of reading and meaning production in probabilistic systems
 semantic coherence, and vectorial survival before content enters 
 probabilistic systems.
 
-This approach differs from **machine-first governance frameworks** 
+This approach differs from **machine-first frameworks** 
 that structure reading conditions and authority hierarchies after 
 signal entry.
 
 Both layers address different stages of the inference pipeline.  
 SIO operates upstream (signal structuring).  
-Governance operates downstream (interpretation conditions).
+Downstream disciplines operate on interpretation conditions.
 
 A complete approach combines both.
+
 ---
 
 ## Normative independence
