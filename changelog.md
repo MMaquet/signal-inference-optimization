@@ -15,6 +15,26 @@ This framework follows a deliberate publication cadence — foundational concept
 
 ---
 
+## 2026-05-07
+
+### Technical foundations & methodological positioning
+- **README enrichment**: Added "Technical foundations & learning ecosystem" section documenting 2026 technical training across vector databases, embeddings, and retrieval systems (Deep Learning AI / Google Cloud, Vectara, Cohere, Chroma, Pinecone, Qdrant).
+- **README enrichment**: Added "Machine-readable formats & structured data" subsection (JSON-LD, Schema.org, OpenGraph, Robots.txt, llms.txt).
+- **README enrichment**: Formalized methodological positioning distinguishing SIO's corpus-first approach from machine-first governance frameworks.
+
+### Terminology updates (corpus-first alignment)
+- **concepts.md**: Replaced "Governance layer" with "Declarative layer" in Interpretive orchestration definition.
+- **concepts.md**: Replaced "Governance files" with "Signal amplification files" throughout.
+- **concepts.md**: Updated Interpretive orchestration to list declarative signal amplification files: sio-identity.json, sio-claims.json, sio-glossary.json, corpus-canon.json, corpus-exclusions.json, llms.txt, JSON-LD, Schema.org.
+- **codebook.md**: Updated "Relationship with other SIO components" section to reference signal amplification files instead of governance files.
+- **typed-correction.md**: Replaced "common-misinterpretations.json" with "corpus-exclusions.json" in Operation 5 (Projection) correction protocol.
+
+### Infrastructure clarification
+- Established distinction between declarative/amplification approach (SIO) and governance/hierarchy approach (adjacent disciplines).
+- Documented that SIO files declare and amplify existing corpus signals without imposing reading order or interpretation hierarchy.
+
+---
+
 ## 2026-04-26
 
 ### Concepts enrichment (concepts.md)
