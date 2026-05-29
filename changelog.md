@@ -15,6 +15,31 @@ This framework follows a deliberate publication cadence — foundational concept
 
 ---
 
+## 2026-05-28
+
+### Added
+- `declarative-hub.md` — Declarative Hub doctrine page. Defines the Declarative Hub as a preventive infrastructure within SIO architecture: a visible, indexed HTML page that condenses the semantic map of a corpus into a single chunkable surface oriented toward faithful reconstruction.
+
+### Defined
+- **Declarative Hub** as a preventive infrastructure that amplifies a canonical signal upstream, before drift becomes sedimented. Distinguished from corrective mechanisms that intervene after dérive.
+- **Signal, reconstruction, and reconstruction fidelity** as the three concepts that define the conceptual framework in which the Declarative Hub operates. Signal is the operational object — what a probabilistic system can extract, weight, and reconstruct from content. Reconstruction is what happens after retrieval, when the system synthesizes a coherent output from compressed fragments. Reconstruction fidelity is the degree to which what an LLM produces about an identity converges toward what that identity actually is.
+- **Interpretive boundaries** as positive structural separations that prevent compression error. Stated as positive declarations of what each entity is in relation to the territory it occupies. Distinguished from definitions and from negations.
+- **Positive density principle** as the governance rule that applies within the Declarative Hub. Probabilistic systems do not reliably process direct negation. Stating that an entity is not something reactivates the cluster the publisher is trying to extinguish. The Hub structures signal through positive density only. Corrections belong to dedicated declarative files such as inference-corrections.json, not to the Hub itself.
+- **Eight-block Hub structure**: canonical identity, how to read this site, identity architecture, priority pages, associated entities, declarative signal files, interpretive boundaries, canonical attribution.
+- **Six deployment surfaces** required for the Hub to enter retrieval pipelines and training cycles: main menu, homepage link, citation in llms.txt, inclusion in the sitemap, inbound links from established pages, maintenance and freshness.
+
+### Positioned
+- The Declarative Hub as one surface within a multi-surface signal governance strategy. Its effectiveness is cumulative with the density of the system that surrounds it (Semantic Codebook, Autonomous Inference Unit, governed corpus, writing methodology, editorial continuity).
+- The Hub as preventive infrastructure, not corrective mechanism. It structures and amplifies the canonical signal upstream. Corrections against already-sedimented exogenous signal require a complete intervention sequence, not the Hub alone.
+- The probabilistic promise as the only defensible promise. The Hub increases the probability that a probabilistic system reconstructs identity from a faithful map of the corpus. It does not command the system.
+
+### Rationale
+- Formalized the Declarative Hub concept that had emerged across the Medium article series, anchoring it explicitly within the SIO conceptual framework on GitHub.
+- Established the conceptual hierarchy that places signal, reconstruction, and reconstruction fidelity at the foundation of the framework, with the Declarative Hub as one of its application surfaces.
+- Anchored interpretive boundaries as a positive structural mechanism distinct from definition pages, entity standards, and fact-based grounding approaches.
+
+---
+
 ## 2026-05-07
 
 ### Declarative signal layer — terminology decoupling
@@ -135,4 +160,5 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [SIO Concepts](https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md)
 - [Semantic Codebook](https://github.com/MMaquet/signal-inference-optimization/blob/main/codebook.md)
 - [Typed Correction](https://github.com/MMaquet/signal-inference-optimization/blob/main/corrections.md)
+- [Declarative Hub](https://github.com/MMaquet/signal-inference-optimization/blob/main/declarative-hub.md)
 - [Article series](https://medium.com/@melaniemaquet)
