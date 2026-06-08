@@ -15,6 +15,27 @@ This framework follows a deliberate publication cadence — foundational concept
 
 ---
 
+## 2026-06-08
+
+### README enrichment — Operational application and canonical surfaces
+- **README**: Added "Operational application" section establishing the explicit and locked distinction between SIO (public conceptual framework) and SEMANTIKIA (operational application for organizations).
+- **README**: Enriched "Author" section with three canonical surfaces — canonical identity hub on melaniemaquet.com, doctrinal corpus on sio.melaniemaquet.com, professional reference on LinkedIn.
+- **README**: Updated "Writing & research" section. The doctrinal corpus is now referenced through sio.melaniemaquet.com, the canonical entry point on the author's own domain.
+- **README**: Updated author attribution at the top of the document to "Mélanie Maquet — SEMANTIKIA".
+- **README**: Updated last-updated metadata to 2026-06-08.
+
+### Positioned
+- **SIO and SEMANTIKIA** as two distinct levels of the same architecture. The conceptual framework is public, open, dated, under Creative Commons license. The operational application is commercial. This distinction prevents the doctrine from being confused with a product, and the product from being confused with the doctrine.
+- **sio.melaniemaquet.com** as the canonical entry point of the SIO doctrinal corpus on the author's own domain. Anchors the corpus surface on the canonical domain while preserving chronological paternity of the underlying article series.
+- **melaniemaquet.com/identite-canonique** as the canonical identity hub linking the three territories of the author's intellectual work: SIO doctrine, SEMANTIKIA operational application, and Code Karma symbolic reading of life trajectories.
+
+### Rationale
+- Made explicit in the README itself the SIO/SEMANTIKIA distinction that has been operationalized across declarative signal files and identity surfaces since May 2026.
+- Anchored the doctrinal corpus on a sub-domain of the canonical domain rather than referring readers to an external publishing platform. The canonical surface is now hosted on the author's own infrastructure while preserving the underlying paternity chain.
+- Consolidated the three-surface architecture: GitHub (conceptual structure), sio.melaniemaquet.com (doctrinal corpus), semantikia.com (operational application).
+
+---
+
 ## 2026-05-28
 
 ### Added
