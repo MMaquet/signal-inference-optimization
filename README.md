@@ -1,16 +1,21 @@
-# Signal Inference Optimization (SIO)
+# Signal Inference Optimization (SIO) 
+
+> **License:** This work is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+> Attribution required. No commercial use. No derivatives.
+> See [LICENSE](./LICENSE) file.
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-
-**First public commit:** March 27, 2026  
-**Author:** Mélanie Maquet — SEMANTIKIA
-
----
 
 LLMs do not retrieve your content.  
 They reconstruct it.
 
 What they reconstruct becomes your identity.
+
+---
+
+**First public commit:** March 27, 2026  
+**Last updated:** June 8, 2026  
+**Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
 
@@ -95,43 +100,47 @@ Inference drift is the gap between the two.
 
 ## Inference pipeline
 
-All signals pass through a transformation pipeline.
+All signals pass through transformation pipelines.  
+The exact architecture varies by system, but common patterns emerge.
 
-### Single-hop
+### Single-hop (typical pattern)
 
 Query analysis → Query expansion → Web search → Page selection →  
 Extraction → Semantic chunking → Embedding → Hybrid retrieval →  
 Reranking → Context construction → Generation
 
-### Multi-hop
+### Multi-hop (complex queries)
 
-Complex queries trigger parallel pipelines:
+Complex queries may trigger parallel pipelines:
 
 Query fan-out → Parallel single-hop pipelines per sub-query →  
 Local synthesis → Synthesis fusion → Global context → Final generation
 
 At each stage, information is transformed.  
-At five critical points, signal disappears.
+At multiple critical points, signal can degrade or disappear.
 
-SIO structures the signal across the entire pipeline  
-to preserve semantic coherence end-to-end.
+SIO structures the signal to preserve semantic coherence  
+across pipeline variations.
 
-See detailed pipeline:  
+See detailed analysis:  
 https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
 
 ---
 
-## Drift layers
+## Inference drift
 
-Inference drift does not occur in one place.  
-It accumulates across layers:
+Inference drift is the deviation between intended meaning and 
+reconstructed output — the gap between what enters the interpretive 
+space and what emerges from the inference space.
 
-- **Compression drift** — loss during token reduction  
-- **Semantic drift** — ambiguity in embedding space  
-- **Retrieval drift** — irrelevant or competing chunks selected  
-- **Generation drift** — probabilistic reconstruction errors  
+Signal degradation accumulates across the transformation pipeline.  
+At multiple critical points, signals can degrade or disappear entirely.
 
-SIO identifies and stabilizes these layers.
+SIO structures signals to resist this degradation and preserve 
+semantic coherence through the reconstruction process.
+
+See detailed analysis:  
+https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
 
 ---
 
@@ -148,6 +157,84 @@ If the signal does not survive,
 its meaning does not exist in the system.
 
 SIO is the discipline of making signal survival intentional.
+
+---
+
+## Declarative signal layer
+
+The editorial corpus produces signal through statistical accumulation.  
+The declarative signal layer produces signal through explicit declaration  
+in machine-native formats.
+
+These are not instructions to the model.  
+These are not constraints on inference.  
+These are high-density signal fragments in formats that machines parse natively.
+
+A 200-word signal-identity.json produces a denser chunk  
+than a 2000-word blog post. The signal-per-token ratio is higher.
+
+### Declarative signal files
+
+| File | Function |
+|---|---|
+| **llms.txt** | Signal entry point — content index in LLM-readable format (open standard, Jeremy Howard) |
+| **llms-full.txt** | Extended signal documentation — complete organizational description optimized for LLM ingestion (open standard, Jeremy Howard) |
+| **signal-identity.json** | Identity declaration — who the organization is, in structured format |
+| **signal-claims.json** | Canonical assertions — what the organization affirms as its positioning |
+| **inference-corrections.json** | Reconstruction corrections — identified inference errors and their factual corrections |
+| **signal-manifest.json** | Structured metadata — entity type, mission, scope, version |
+| **signal-policy.json** | Usage policy — conditions under which content may be used by AI systems |
+| **signal-context.txt** | Representation context — how the organization should be represented |
+| **humans.txt** | Human attribution — people behind the organization (open standard since 2009) |
+
+### What declarative signal files do
+
+Declarative signal files densify the identity signal in machine-native format.  
+They do not command the model. They do not constrain inference.  
+They compete as chunks — and win by density when properly structured.
+
+A declarative signal layer without a governed corpus  
+declares an identity the corpus does not carry.
+
+A governed corpus without a declarative signal layer  
+is under-exploited — the densest identity fragments are missing.
+
+Both are necessary. Neither is sufficient alone.
+
+### What declarative signal files do not do
+
+They do not control LLM reconstructions.  
+They do not guarantee indexation or integration.  
+They do not override corpus signals by authority.  
+They compete in the pipeline like any other chunk —  
+by density, coherence, and semantic alignment.
+
+### Relationship with the Semantic Codebook
+
+Declarative signal files must use the canonical terminology  
+of the Semantic Codebook. The same terms, the same associations,  
+the same exclusions. Coherence between the editorial corpus  
+and the declarative layer is non-negotiable.
+
+---
+
+## Interpretive orchestration
+
+Interpretive orchestration is the deployment and maintenance  
+of the declarative signal layer as an integrated component  
+of the SIO architecture.
+
+Interpretive orchestration includes:
+
+- Structuring declarative signal files with Codebook-aligned terminology  
+- Deploying files at stable, predictable URLs  
+- Maintaining coherence between the editorial corpus and the declarative layer  
+- Versioning and dating all declarative files  
+- Updating when the Codebook evolves  
+
+Interpretive orchestration is the infrastructure component of SIO.  
+It does not replace corpus density. It complements it  
+by providing a stable, machine-native reference layer.
 
 ---
 
@@ -199,6 +286,107 @@ before interpretation, selection, or validation occur.
 
 ---
 
+## Relationship with adjacent disciplines
+
+SIO occupies the upstream layer of the inference pipeline. It complements,  
+but does not replace, downstream disciplines that operate after signal entry:
+
+- **Interpretive governance** — defines conditions of reading and meaning production  
+- **LLMO** — optimizes outputs after reconstruction  
+- **Knowledge graph optimization** — structures verifiable entities and attributes  
+- **Memory governance** — oversees stateful AI memory systems  
+- **Authority governance** — constrains executable AI authority  
+
+These disciplines structure what happens to a signal after it enters the system.  
+SIO structures what enters the system in the first place.
+
+A complete approach combines upstream signal structuring (SIO)  
+and downstream interpretation conditions (adjacent disciplines).  
+Without SIO, downstream disciplines operate on signal that has already drifted.
+
+---
+
+## Technical foundations & learning ecosystem
+
+SIO is built on extensive study and hands-on experimentation with 
+vector databases, embeddings, retrieval systems, and machine-readable 
+formats, combined with awareness of adjacent semantic disciplines.
+
+### Vector databases & embeddings — Technical training (2026)
+
+**Deep Learning AI / Google Cloud** — Text embeddings, semantic representation 
+in language models, RAG pipeline implementation
+
+**Vectara** — Embedding architectures (Word2Vec, BERT, Transformers), 
+dual-encoder models, contrastive learning
+
+**Cohere** — Large language models with semantic search, dense retrieval, 
+reranking mechanisms
+
+**Chroma** — Advanced retrieval techniques, query expansion, embedding 
+optimization for relevance
+
+**Pinecone** — Vector database applications, top-k retrieval, similarity 
+search in RAG systems
+
+**Qdrant** — Retrieval optimization, tokenization to vector quantization, 
+approximate nearest neighbors (ANN)
+
+### Machine-readable formats & structured data
+
+**JSON-LD** — Structured data for semantic web and knowledge graphs
+
+**Schema.org** — Standardized vocabularies for entity definition
+
+**OpenGraph / Twitter Cards** — Social media metadata optimization
+
+**Robots.txt / sitemap protocols** — Crawl control and content discovery
+
+**llms.txt** — Emerging LLM-readable content index format (Jeremy Howard, open standard)
+
+### Adjacent semantic disciplines
+
+**Interpretive Governance** (Gautier Dorval, interpretive-governance.org) — 
+Conditions of reading and meaning production in probabilistic systems
+
+**Knowledge graph optimization** — Structured entity relationships
+
+**Semantic web standards** — Linked data and ontological frameworks
+
+### Methodological positioning
+
+**SIO develops a corpus-first approach** — structuring signal density, 
+semantic coherence, and vectorial survival before content enters 
+probabilistic systems.
+
+This approach differs from **machine-first frameworks** 
+that structure reading conditions and authority hierarchies after 
+signal entry.
+
+Both layers address different stages of the inference pipeline.  
+SIO operates upstream (signal structuring).  
+Downstream disciplines operate on interpretation conditions.
+
+A complete approach combines both.
+
+---
+
+## Normative independence
+
+SIO is defined and developed by its author.  
+It operates under no external normative authority.
+
+This framework evolves through:
+
+- documented research  
+- field practice  
+- published case studies  
+
+It is not subject to third-party arbitration  
+or distributed authority allocation by external entities.
+
+---
+
 ## Conceptual framework
 
 SIO is grounded in a structured conceptual system.
@@ -213,33 +401,6 @@ This system defines:
 
 See full framework:  
 https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
-
----
-
-## Relationship with Interpretive Governance
-
-Interpretive governance defines the conditions under which 
-meaning is produced and interpreted.
-
-SIO defines the quality of the signal entering that process.
-
-One governs interpretation.  
-The other conditions what is interpreted.
-
-Two disciplines. Two scopes. One system.
-
----
-
-## Relationship with LLMO
-
-LLMO optimizes outputs — what systems produce after reconstruction.
-
-SIO structures inputs — what systems receive before reconstruction begins.
-
-One acts after reconstruction.  
-The other acts before it begins.
-
-Two moments. One pipeline.
 
 ---
 
@@ -279,6 +440,9 @@ founder of SEMANTIKIA.
 [sio.melaniemaquet.com](https://sio.melaniemaquet.com)  
 [linkedin.com/in/melaniemaquet](https://www.linkedin.com/in/melaniemaquet/)
 
+First public commit: March 27, 2026  
+Last updated: June 8, 2026
+
 ---
 
 ## Writing & research
@@ -294,15 +458,32 @@ The doctrinal corpus develops reasoning, applications, and implications.
 
 ## License
 
-This work is licensed under  
-[Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+This work is licensed under the Creative Commons 
+Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).
 
-Attribution required.  
-No commercial use.  
-No derivatives.
+You may share this work with attribution.  
+You may not use it commercially.  
+You may not modify or redistribute modified versions.
 
-For commercial licensing or formal collaboration:  
-[linkedin.com/in/melaniemaquet](https://www.linkedin.com/in/melaniemaquet/)
+Full license text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode  
+See [LICENSE](./LICENSE) file in this repository.
+
+---
+
+## Commercial use & extensions
+
+This work is currently licensed under CC BY-NC-ND 4.0 — no commercial use, 
+no derivatives — to protect the integrity of the discipline during its 
+foundational phase.
+
+For commercial licensing, derivative works, formal collaboration, 
+or research partnership inquiries, please contact:
+
+**Mélanie Maquet** — [LinkedIn](https://www.linkedin.com/in/melaniemaquet/)
+
+The license may evolve toward broader openness as the discipline 
+matures and is validated through field practice. Until then, integrity 
+of the foundational vocabulary takes priority over derivative circulation.
 
 ---
 
