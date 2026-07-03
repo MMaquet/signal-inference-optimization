@@ -15,6 +15,26 @@ This framework follows a deliberate publication cadence — foundational concept
 
 ---
 
+## 2026-07-03
+
+### Concepts enrichment (concepts.md)
+- Added **Acknowledgment of presence** in Section 8 (Core SIO Concepts), positioned between *Inference center of gravity* and *Stable reconstruction*.
+
+### Defined
+- **Acknowledgment of presence** as the observable status indicating that the source signal has been detected and displayed as a reference by the probabilistic system in its response, without that display constituting control over the reconstruction produced. Acknowledgment of presence attests visibility; it does not guarantee fidelity.
+- The distinction between **passive acknowledgment** (observed on the model's output) and **active signal declaration** (posed by the organization through declarative signal files). The two concepts are complementary but architecturally distinct: one is constated, the other is engineered.
+
+### Positioned
+- Acknowledgment of presence as a foundational analytical distinction within SIO practice. Being cited proves the signal was seen, not that it was faithfully reconstructed. The concept dismantles the reflex assumption that citation equates to control over reconstruction — a core misconception separating GEO from SIO.
+- The concept as a diagnostic anchor within the three-thesaurus framework: it identifies where the machine thesaurus registers presence without necessarily producing fidelity. Presence and fidelity are two independent measurements, not two names for the same phenomenon.
+
+### Rationale
+- Formalized a distinction that was implicit across the doctrinal corpus but not named as a canonical concept. The term makes explicit that citation, visibility, and reference display are observable events — not evidence of reconstruction fidelity.
+- Anchored the passive/active axis (acknowledgment of presence / signal declaration) as a structural pair within the framework. This axis clarifies why declarative signal files and inference audit are complementary interventions: one engineers the signal upstream, the other measures the observable status downstream.
+- Terminology anteriority verified across three surfaces (Google AI overview, Google Web, Google Scholar) prior to canonical publication. LinkedIn phrase-exact verification pending; term released as canonical based on convergence of the three surfaces.
+
+---
+
 ## 2026-06-08
 
 ### README enrichment — Operational application and canonical surfaces
