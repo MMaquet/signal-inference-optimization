@@ -5,7 +5,7 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 **First public commit:** March 27, 2026  
-**Last updated:** May 7, 2026  
+**Last updated:** July 3, 2026  
 **Author:** Mélanie Maquet
 
 ---
@@ -270,6 +270,8 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 - **Inference center of gravity** — the convergence point toward which embeddings and probabilistic trajectories converge in the inference space. The observable effect of the reconstruction produced by the model. This is what you measure.
 
+- **Acknowledgment of presence** — observable status indicating that the source signal has been detected and displayed as a reference by the probabilistic system in its response, without that display constituting control over the reconstruction produced. Acknowledgment of presence attests visibility; it does not guarantee fidelity. The distinction is foundational to SIO practice: being cited proves the signal was seen, not that it was faithfully reconstructed. Acknowledgment of presence is passive (observed on the model's output); it is distinct from signal declaration, which is active (posed by the organization through amplification files). The concept dismantles the reflex assumption that citation equates to control over reconstruction — a core misconception separating GEO from SIO.
+
 - **Stable reconstruction** — consistent output across contexts and probabilistic variations.
 
 - **Inference drift** — deviation between intended meaning and reconstructed output. The gap between interpretive space (what you inject) and inference space (what the model produces).
@@ -357,5 +359,5 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [Article series](https://medium.com/@melaniemaquet)
 
 **First public commit:** March 27, 2026  
-**Last updated:** May 7, 2026  
+**Last updated:** July 3, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
