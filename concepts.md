@@ -5,7 +5,7 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 **First public commit:** March 27, 2026  
-**Last updated:** July 3, 2026  
+**Last updated:** July 4, 2026  
 **Author:** Mélanie Maquet
 
 ---
@@ -51,6 +51,10 @@ Signal degradation follows identifiable patterns:
 
 - **Interpretive diagenesis** — the process by which nascent sedimentation (still reversible at reasonable cost) transforms into consolidated sedimentation (structurally rigid, asymmetrically expensive to correct). The geological metaphor is deliberate: loose sediments become rock.
 
+- **Stochastic fixation** — application-layer mechanism by which one probabilistic realization of a non-deterministic model is captured, associated with a cluster of semantically similar queries, and re-served as if it were the canonical response for that cluster. Stochastic fixation differs from sedimentation: sedimentation consolidates slowly through corpus ingestion and model updates; fixation operates instantly at delivery time through caching or orchestration layers.
+
+- **Delivered reconstruction drift** — divergence between what a model would reconstruct natively and what an application actually serves to users after caching, retrieval orchestration, response reuse, or freshness decay. Delivered drift is not always visible through direct model interrogation because the drift may originate outside the model.
+
 ---
 
 ## 2. Spaces and Mechanisms
@@ -73,6 +77,10 @@ Inference drift is the gap between the two.
 - **Fragmentary autonomy** — independent reconstruction of partial signals without global coherence guarantees. The fragment is the unit of meaning for LLMs; the document is the unit of meaning for humans.
 
 - **Probabilistic reconstruction** — generation of meaning from compressed distributions rather than direct retrieval. Reconstruction is inference, not description. It produces the most probable version, not the most accurate version.
+
+- **Semantic caching** — application-layer reuse of query-response pairs indexed by semantic proximity rather than exact string identity. In classical computing, caching or memoization assumes deterministic output. In LLM applications, the cached response may be one sample from a non-deterministic distribution. Semantic caching improves latency and cost efficiency, but it can also freeze a stochastic reconstruction and distribute it at scale.
+
+- **Delivery layer** — the application layer through which an end user receives an AI-generated or AI-mediated response. The delivery layer may include semantic caches, RAG orchestration, prompt templates, retrieval policies, model routing, response filters, and freshness rules. It is distinct from the model layer and the corpus layer. SIO can influence corpus-level reconstruction conditions, but the delivery layer can preserve, distort, reuse, or make obsolete the final response independently of current corpus quality.
 
 - **Inference pipeline** — sequence of transformations shaping output. Two modes exist:
 
@@ -124,6 +132,16 @@ The distinction matters: typicality bias operates at two levels. The global leve
 
 - **Context window** — the token limit a model can process simultaneously during generation. A mechanical constraint that forces compression and selection of signals. When available embeddings exceed the context window capacity, the model must arbitrate aggressively, amplifying variance. This constraint is particularly acute for users of free or lightweight interfaces, where reduced context windows compound compression effects.
 
+### Delivery layer
+
+- **Native reconstruction** — response produced by direct interrogation of a model without an intermediate application layer that can reuse, cache, filter, or orchestrate the output. Native reconstruction is the object measured when extracting the native machine thesaurus.
+
+- **Delivered reconstruction** — response actually served to an end user through a deployed application, assistant, chatbot, answer engine, or enterprise interface. Delivered reconstruction includes the effects of the model plus the effects of caching, orchestration, retrieval configuration, response reuse, and freshness policy.
+
+- **Native vs delivered machine thesaurus** — distinction between the conceptual vocabulary reconstructed by the model itself and the conceptual vocabulary served by a specific application surface. A clean native machine thesaurus can coexist with a distorted delivered machine thesaurus if the delivery layer reuses a stale, incomplete, or inaccurate reconstruction.
+
+- **Freshness decoupling** — condition in which the delivered response no longer reflects the current state of the corpus or the current state of the world because it was generated at an earlier moment and reused without visible freshness metadata. The user receives a plausible response without knowing when it was generated, under which model version, from which source context, or whether it has since become obsolete.
+
 ---
 
 ## 3. Fundamental Laws
@@ -147,6 +165,10 @@ These are not recommendations. They are structural constraints. Violating one we
 - **Law of hierarchy** — not all signals are equivalent. Pillar content carries the central signal. Peripheral content illustrates and contextualizes. This hierarchy must be intentional.
 - **Law of fragmentary autonomy** — each passage must be able to exist alone, be understood, be relevant, and carry complete information without depending on adjacent passages.
 - **Law of freshness** — a static corpus degrades. Signals must be renewed regularly to maintain weight against model update cycles and continuous informational competition.
+
+### Delivery constraint
+
+- Corpus freshness and delivered freshness are distinct. A corpus can be current while an application continues serving a cached reconstruction generated before the correction. The law of freshness governs the signal made available to probabilistic systems; it does not guarantee that every delivery layer has invalidated stale responses.
 
 ---
 
@@ -210,7 +232,9 @@ It emerges from the interaction between signals and probabilistic systems.
 
 - **Signal amplification files** — machine-readable files that declare canonical signals and amplify corpus structure for AI systems. These files make existing corpus signals explicitly accessible without imposing reading order or interpretation hierarchy.
 
-- **Inference audit** — systematic multi-model, multi-run, multi-angle interrogation of LLMs to extract the machine thesaurus. The audit measures what probabilistic systems actually reconstruct from a corpus. Method: same entity queried across ChatGPT, Perplexity, Gemini, with multiple runs per query, multiple query angles per entity, comparison against projected and expressed thesauri. The audit identifies which variance operation is dominant, where in the pipeline signal dies, and which corrective intervention is structurally appropriate.
+- **Inference audit** — systematic multi-model, multi-run, multi-angle interrogation of LLMs to extract the machine thesaurus. The audit measures what probabilistic systems reconstruct from a corpus. Method: same entity queried across ChatGPT, Perplexity, Gemini, with multiple runs per query, multiple query angles per entity, comparison against projected and expressed thesauri. The audit identifies which variance operation is dominant, where in the pipeline signal dies, and which corrective intervention is structurally appropriate. When applications or deployed assistants are audited, inference audit must distinguish native model behavior from delivered application behavior.
+
+- **Delivery audit** — systematic interrogation of a deployed AI surface to measure what users actually receive after application-layer caching, retrieval orchestration, response reuse, and freshness constraints. Delivery audit extracts the delivered machine thesaurus. It does not replace native inference audit: it answers a different question. Native audit asks what the model reconstructs; delivery audit asks what the application serves.
 
 - **Typed correction** — diagnostic-driven intervention adapted to the specific variance operation identified. Generic correction in a probabilistic system is random correction. Typed correction matches intervention to cause:
   - **Generalization** → densify the central concept, rebalance core/periphery ratio
@@ -244,6 +268,8 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 - **Attractive density** — capacity of a dense, coherent signal to dominate reconstruction through mass and coherence. The vectorial mechanism that produces the interpretive center of gravity. Attractive density is the engine; the center of gravity is the observable result.
 
+- **Delivery fidelity** — degree to which the response actually served by an AI application preserves the intended meaning reconstructed from the corpus. Delivery fidelity depends on model behavior, but also on application-layer choices outside corpus governance: cache invalidation, semantic similarity thresholds, temperature at first generation, retrieval scope, source freshness, and response reuse policy.
+
 ---
 
 ## 7. Limits and Risks
@@ -258,13 +284,23 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 - **Training bias** — inherited distortions from underlying model training data. A structural limit that corpus engineering alone cannot neutralize.
 
+- **Application-layer fixation** — structural limit in which a delivery surface preserves one reconstruction independently of subsequent corpus corrections or model changes. Semantic caching is the clearest mechanism: the cache consults its stored response, not the current corpus. Corpus engineering can improve future native reconstruction, but it cannot directly alter a cached response served by an application operator.
+
+- **Opaque cache state** — risk created when users, organizations, and auditors cannot know whether a response was freshly generated or retrieved from a semantic cache. Without generation timestamp, model version, source context, cache age, and invalidation policy, the freshness and fidelity of the delivered reconstruction cannot be fully assessed from the interface alone.
+
+- **Randomness monopoly** — condition in which semantic caching eliminates output variance by locking one stochastic sample and serving it repeatedly. Stability increases, but not necessarily toward truth or fidelity. Variance is not resolved by convergence; it is replaced by one fixed draw.
+
 - **Asymmetric correction** — correcting consolidated sedimentation requires the correct signal to be simultaneously dominant, coherent, and repeated over time. Publishing correct content does not erase sedimentary layers.
+
+- **Cache-inert correction** — correction failure mode in which the corpus has been corrected but the delivery layer continues serving a pre-correction response from cache. The correction exists in the interpretive space but has not reached the delivered reconstruction.
 
 ---
 
 ## 8. Core SIO Concepts
 
 - **Signal Inference Optimization (SIO)** — the discipline of structuring the signal made available to probabilistic systems in order to reduce inference drift and orient LLM reconstructions toward a version faithful to intended meaning. SIO does not optimize inference. It optimizes the signal that enters the inference process. The name reads: optimization of the signal *for* inference — not optimization *of* inference itself. SIO is the discipline of signal resilience through a destructive pipeline.
+
+- **Reconstruction fidelity** — degree to which a probabilistic system preserves intended meaning during reconstruction. Fidelity is not equivalent to citation, visibility, or mention frequency. In delivery contexts, fidelity must be evaluated twice: native fidelity at the model layer and delivery fidelity at the application layer.
 
 - **Interpretive center of gravity** — the dominant cluster in the interpretive space. The source signal sufficiently dense and coherent to orient reconstructions toward a chosen version. This is what you build.
 
@@ -286,6 +322,8 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 - **Diagnostic methodology cycle** — the operational sequence: diagnostic → codebook → inference audit → corrective → re-audit. The cycle is not linear but iterative. Each re-audit informs the next diagnostic. The Codebook evolves with the corpus. The audit recalibrates with model updates and corpus growth.
 
+- **Native-delivered split** — methodological distinction between direct model reconstruction and application-served reconstruction. The split prevents a false diagnostic conclusion: a reconstruction error observed in an application may originate in the corpus, the model, the retrieval layer, the cache, or the delivery configuration. Without the split, SIO risks treating an application-layer fixation as a corpus-level failure.
+
 ---
 
 ## 9. Diagnostic Methodology
@@ -299,6 +337,8 @@ It measures the gap between what an organization believes it signals, what it ac
 - **Projected thesaurus** — the conceptual vocabulary an organization believes it is communicating. Reflects strategic intent and self-perception.
 - **Expressed thesaurus** — the conceptual vocabulary actually present in the informational corpus, both endogenous and controlled exogenous. Reflects what is genuinely available to probabilistic systems for reconstruction.
 - **Machine thesaurus** — the conceptual vocabulary effectively reconstructed by LLMs, extracted through systematic multi-model, multi-run interrogation.
+  - **Native machine thesaurus** — conceptual vocabulary reconstructed through direct model interrogation, without application-layer caching or orchestration.
+  - **Delivered machine thesaurus** — conceptual vocabulary served through a specific deployed application, including semantic cache, retrieval orchestration, prompt templates, model routing, and freshness constraints.
 
 ### Diagnostic gaps
 
@@ -306,17 +346,21 @@ It measures the gap between what an organization believes it signals, what it ac
 
 - Gap between expressed and machine thesaurus reveals signal failure — inference drift, chunking loss, or dilution through retrieval and reconstruction.
 
+- Gap between native and delivered machine thesaurus reveals delivery-layer distortion — cache fixation, stale response reuse, orchestration drift, retrieval misconfiguration, or freshness decoupling.
+
 - The projected thesaurus is never compared directly to the machine thesaurus. The expressed corpus is the only observable and actionable terrain.
 
 ### Service sequence
 
-diagnostic → codebook → inference audit → corrective → re-audit
+diagnostic → codebook → native inference audit → delivery audit when applicable → corrective → re-audit
 
 ### Foundational principle
 
 The objective is not measurement for its own sake. It is corrective.
 
 The goal is to ensure that the concepts, relationships, and meaning present in the projected and expressed thesaurus survive the inference pipeline — chunking, embedding, retrieval, reranking, and generation — and emerge intact in the machine thesaurus.
+
+When a delivery layer is involved, the standard extends further: the reconstructed meaning must also survive caching, orchestration, response reuse, and freshness constraints. A faithful native reconstruction is necessary but not sufficient if the delivered reconstruction remains stale or distorted.
 
 Signal structure is not sufficient.  
 Signal survival through transformation is the standard.
@@ -359,5 +403,5 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [Article series](https://medium.com/@melaniemaquet)
 
 **First public commit:** March 27, 2026  
-**Last updated:** July 3, 2026  
+**Last updated:** July 4, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
