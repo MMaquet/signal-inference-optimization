@@ -15,6 +15,41 @@ This framework follows a deliberate publication cadence — foundational concept
 
 ---
 
+## 2026-07-04
+
+### README optimization — repository navigation and delivery-layer risk
+- **README**: Added "Repository map" section linking the main doctrinal files: concepts.md, codebook.md, corrections.md, declarative-hub.md, technical-foundations.md, and changelog.md.
+- **README**: Added application-layer delivery to the inference pipeline by extending the single-hop sequence from Generation to Generation → Delivery.
+- **README**: Added response caching as an explicit degradation point in "The problem".
+- **README**: Added "Semantic caching and application-layer fixation" section defining the delivery-layer risk created when AI applications store and re-serve generated responses.
+- **README**: Replaced the long "Technical foundations & learning ecosystem" section with a concise "Technical foundations" section linking to the dedicated technical-foundations.md page.
+- **README**: Updated "Conceptual framework" scope to include application-layer risks such as semantic caching and stochastic fixation.
+- **README**: Updated last-updated metadata to 2026-07-04.
+
+### Added
+- `technical-foundations.md` — Technical Foundations of Signal Inference Optimization. Defines the technical claim of SIO and documents the systems SIO accounts for: retrieval, embeddings, vector search, RAG and grounding pipelines, machine-readable formats, declarative signal infrastructure, semantic caching, and delivery layers.
+
+### Defined
+- **Technical claim of SIO**: SIO is not a technical implementation framework. It is a corpus-first discipline built with direct awareness of the technical systems that transform, compress, retrieve, reconstruct, cache, and deliver signals.
+- **Semantic caching and application-layer fixation** as a delivery-layer fidelity risk: a probabilistic output can be stored, associated with semantically similar queries, and re-served as if it were canonical.
+- **Stochastic fixation** as the mechanism by which one model output, produced under probabilistic conditions, is frozen by an application layer and redistributed through cache or orchestration.
+- **Native machine thesaurus** as what the model reconstructs through direct interrogation.
+- **Delivered machine thesaurus** as what a deployed application actually serves to users after caching, orchestration, routing, filtering, or reuse policies.
+
+### Positioned
+- Semantic caching as a structural limit adjacent to, but distinct from, interpretive sedimentation. Sedimentation consolidates slowly through corpus ingestion, republication, and model update cycles. Stochastic fixation operates at delivery time, when an application layer captures one model output and re-serves it.
+- The delivery layer as a new diagnostic concern for SIO: a corpus can be current, coherent, and well-governed while an application continues serving an older cached reconstruction.
+- `technical-foundations.md` as a credibility and boundary-setting document. It clarifies the technical systems SIO is built to account for while explicitly stating what SIO does not claim: it does not control LLM outputs, command models through files, replace technical SEO, replace knowledge graphs, replace RAG engineering, guarantee citation, or guarantee cache invalidation.
+- The README as the repository entry point rather than the full conceptual framework. Detailed conceptual material remains in concepts.md; technical grounding now lives in technical-foundations.md.
+
+### Rationale
+- Added a repository map to make the GitHub project easier to navigate and to separate entry-point, conceptual, methodological, declarative, corrective, and technical materials.
+- Moved technical foundations out of the README to prevent the repository homepage from reading as a training inventory. The new technical-foundations.md page preserves technical credibility while protecting the corpus-first positioning of SIO.
+- Integrated semantic caching into the README because the article on stochastic fixation introduces a new structural limit: corpus engineering can influence native reconstruction, but it cannot directly govern cached responses served by application layers.
+- Established the native/delivered distinction as necessary for future inference audits. Without this distinction, an application-layer fixation can be misdiagnosed as a corpus failure or native model drift.
+
+---
+
 ## 2026-07-03
 
 ### Concepts enrichment (concepts.md)
@@ -202,4 +237,6 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [Semantic Codebook](https://github.com/MMaquet/signal-inference-optimization/blob/main/codebook.md)
 - [Typed Correction](https://github.com/MMaquet/signal-inference-optimization/blob/main/corrections.md)
 - [Declarative Hub](https://github.com/MMaquet/signal-inference-optimization/blob/main/declarative-hub.md)
+- [Technical Foundations](https://github.com/MMaquet/signal-inference-optimization/blob/main/technical-foundations.md)
 - [Article series](https://medium.com/@melaniemaquet)
+
