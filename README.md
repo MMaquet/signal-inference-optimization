@@ -14,7 +14,7 @@ What they reconstruct becomes your identity.
 ---
 
 **First public commit:** March 27, 2026  
-**Last updated:** June 8, 2026  
+**Last updated:** July 4, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
@@ -36,6 +36,17 @@ The name reads: optimization of the signal **for** inference —
 not optimization **of** inference itself.
 
 **SIO is the discipline of signal resilience through a destructive pipeline.**
+
+---
+
+## Repository map
+
+- [Conceptual framework](./concepts.md) — core concepts, mechanisms, laws, diagnostic methodology
+- [Semantic Codebook](./codebook.md) — terminological governance infrastructure
+- [Typed corrections](./corrections.md) — variance operations and correction pathways
+- [Declarative Hub](./declarative-hub.md) — visible compression surface for canonical signal
+- [Technical foundations](./technical-foundations.md) — technical systems SIO is built to account for
+- [Changelog](./changelog.md) — doctrine evolution
 
 ---
 
@@ -70,6 +81,7 @@ During this process:
 - signals are fragmented  
 - context is reduced  
 - meaning is approximated  
+- responses may be cached and re-served by application layers  
 
 Unstructured signals drift.  
 Drift produces distortion.  
@@ -107,7 +119,7 @@ The exact architecture varies by system, but common patterns emerge.
 
 Query analysis → Query expansion → Web search → Page selection →  
 Extraction → Semantic chunking → Embedding → Hybrid retrieval →  
-Reranking → Context construction → Generation
+Reranking → Context construction → Generation → Delivery
 
 ### Multi-hop (complex queries)
 
@@ -118,6 +130,11 @@ Local synthesis → Synthesis fusion → Global context → Final generation
 
 At each stage, information is transformed.  
 At multiple critical points, signal can degrade or disappear.
+
+After generation, the response may also pass through a delivery layer:  
+semantic cache, application orchestration, response filters, or reuse policies.  
+This layer can preserve, distort, or freeze a reconstruction independently  
+of the current corpus.
 
 SIO structures the signal to preserve semantic coherence  
 across pipeline variations.
@@ -157,6 +174,39 @@ If the signal does not survive,
 its meaning does not exist in the system.
 
 SIO is the discipline of making signal survival intentional.
+
+---
+
+## Semantic caching and application-layer fixation
+
+SIO primarily governs the signal made available to probabilistic systems.  
+But users do not always receive a fresh native model reconstruction.
+
+In deployed AI applications, a generated response may be stored in a  
+semantic cache and reused for semantically similar queries. This creates  
+a distinct fidelity risk: one probabilistic output can be frozen and  
+served repeatedly as if it were the canonical response.
+
+This mechanism is called **stochastic fixation**.
+
+Stochastic fixation differs from interpretive sedimentation:
+
+- **Interpretive sedimentation** consolidates slowly through corpus ingestion,  
+  republication, and model update cycles.
+- **Stochastic fixation** operates at delivery time, when an application layer  
+  captures one model output and re-serves it through cache or orchestration.
+
+This distinction introduces two diagnostic objects:
+
+- **Native machine thesaurus** — what the model reconstructs through direct interrogation.
+- **Delivered machine thesaurus** — what a deployed application actually serves to users.
+
+A corpus can be current, coherent, and well-governed while an application  
+continues serving an older cached reconstruction. In that case, the problem  
+is not only inference drift. It is delivery drift.
+
+The corpus governs the conditions of reconstruction.  
+It does not directly govern the cache.
 
 ---
 
@@ -306,68 +356,15 @@ Without SIO, downstream disciplines operate on signal that has already drifted.
 
 ---
 
-## Technical foundations & learning ecosystem
+## Technical foundations
 
-SIO is built on extensive study and hands-on experimentation with 
-vector databases, embeddings, retrieval systems, and machine-readable 
-formats, combined with awareness of adjacent semantic disciplines.
+SIO is not a technical implementation framework.  
+It is a corpus-first discipline built with direct awareness of the technical  
+systems that transform, compress, retrieve, reconstruct, cache, and deliver signals.
 
-### Vector databases & embeddings — Technical training (2026)
+The technical foundations of SIO are documented separately:
 
-**Deep Learning AI / Google Cloud** — Text embeddings, semantic representation 
-in language models, RAG pipeline implementation
-
-**Vectara** — Embedding architectures (Word2Vec, BERT, Transformers), 
-dual-encoder models, contrastive learning
-
-**Cohere** — Large language models with semantic search, dense retrieval, 
-reranking mechanisms
-
-**Chroma** — Advanced retrieval techniques, query expansion, embedding 
-optimization for relevance
-
-**Pinecone** — Vector database applications, top-k retrieval, similarity 
-search in RAG systems
-
-**Qdrant** — Retrieval optimization, tokenization to vector quantization, 
-approximate nearest neighbors (ANN)
-
-### Machine-readable formats & structured data
-
-**JSON-LD** — Structured data for semantic web and knowledge graphs
-
-**Schema.org** — Standardized vocabularies for entity definition
-
-**OpenGraph / Twitter Cards** — Social media metadata optimization
-
-**Robots.txt / sitemap protocols** — Crawl control and content discovery
-
-**llms.txt** — Emerging LLM-readable content index format (Jeremy Howard, open standard)
-
-### Adjacent semantic disciplines
-
-**Interpretive Governance** (Gautier Dorval, interpretive-governance.org) — 
-Conditions of reading and meaning production in probabilistic systems
-
-**Knowledge graph optimization** — Structured entity relationships
-
-**Semantic web standards** — Linked data and ontological frameworks
-
-### Methodological positioning
-
-**SIO develops a corpus-first approach** — structuring signal density, 
-semantic coherence, and vectorial survival before content enters 
-probabilistic systems.
-
-This approach differs from **machine-first frameworks** 
-that structure reading conditions and authority hierarchies after 
-signal entry.
-
-Both layers address different stages of the inference pipeline.  
-SIO operates upstream (signal structuring).  
-Downstream disciplines operate on interpretation conditions.
-
-A complete approach combines both.
+[technical-foundations.md](./technical-foundations.md)
 
 ---
 
@@ -398,6 +395,7 @@ This system defines:
 - principles of informational identity  
 - methods for semantic structuring  
 - diagnostic methodology for measuring signal integrity  
+- application-layer risks such as semantic caching and stochastic fixation  
 
 See full framework:  
 https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
@@ -441,7 +439,7 @@ founder of SEMANTIKIA.
 [linkedin.com/in/melaniemaquet](https://www.linkedin.com/in/melaniemaquet/)
 
 First public commit: March 27, 2026  
-Last updated: June 8, 2026
+Last updated: July 4, 2026
 
 ---
 
