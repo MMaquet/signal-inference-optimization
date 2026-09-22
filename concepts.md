@@ -290,11 +290,20 @@ It emerges from the interaction between signals and probabilistic systems.
 
 - **Signal amplification files** — machine-readable files that declare canonical signals and amplify corpus structure for AI systems. These files make existing corpus signals explicitly accessible without imposing reading order or interpretation hierarchy.
 
-- **Inferential audit** — systematic observation of what generative AI systems reconstruct from an entity's informational signal. It extracts the machine thesaurus, identifies the reconstruction gap, distinguishes native reconstruction behavior from delivery-layer behavior, and establishes the observation state required for subsequent comparison. The complete sampling, qualification, comparison, and reporting methodology remains operational.
+- **Inferential audit** — systematic multi-model, multi-run, multi-angle interrogation of generative AI systems to extract the machine thesaurus. The audit observes what those systems reconstruct from an entity's informational signal. Method: the same entity is queried across several systems, with multiple runs per query and multiple query angles per entity. The projected thesaurus is first compared with the expressed thesaurus to measure the production gap. The expressed thesaurus is then compared with the machine thesaurus to measure the reconstruction gap. No direct diagnostic gap is defined between projected and machine. The audit identifies which variance operation is dominant, at which stage signal is lost, and which corrective intervention is structurally appropriate. When applications or deployed assistants are audited, inferential audit must distinguish native model behavior from delivered application behavior. The sampling thresholds, qualification rules, and reporting frame remain operational.
 
 - **Delivery audit** — systematic interrogation of a deployed AI surface to measure what users actually receive after application-layer caching, retrieval orchestration, response reuse, and freshness constraints. Delivery audit extracts the delivered machine thesaurus. It does not replace native inferential audit: it answers a different question. Native audit asks what the model reconstructs; delivery audit asks what the application serves.
 
-- **Typed correction** — corrective intervention selected according to the variance operation identified during inferential analysis. Generic correction in a probabilistic system is random correction. Typed correction preserves the principle that different reconstruction failures require different forms of intervention. The correspondence between observed conditions, corrective actions, sequencing, and validation rules belongs to the operational methodology.
+- **Typed correction** — diagnostic-driven intervention adapted to the specific variance operation identified. Generic correction in a probabilistic system is random correction. Typed correction matches intervention to cause:
+  - **Generalization** → densify the central concept, rebalance the core/periphery ratio
+  - **Amalgamation** → reinforce proprietary concepts, exclude shared terms from the core
+  - **Truncation** → strengthen obligatory co-occurrences between concept components
+  - **Substitution** → exclude the generic equivalent, densify the proprietary term, create contrastive associations
+  - **Projection** → saturate the real signal, declare exclusions in machine-readable files (sio-corrections.json), avoid editorial negation
+  
+  Priority order: loss → distortion → pollution. Loss of identity (amalgamation, substitution) is treated first, because no other correction has effect without a distinct identity. Distortion (generalization) is treated second. Incomplete signal (truncation) third. Polluted signal (projection) last, because correction through density and declaration is the slowest to produce observable effects.
+  
+  Detection method, dominant causes, and the full correction and priority matrices are documented in [corrections.md](https://github.com/MMaquet/signal-inference-optimization/blob/main/corrections.md).
 
 ### The rule of three autonomies
 
@@ -311,7 +320,7 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 - **Informational ecology** — management of signal environments and interactions. Three dimensions:
   - **Sectoral semantic monitoring** — mapping the ecosystem in which the corpus exists
   - **Corpus discipline** — maintaining internal coherence and terminological stability
-  - **Inferential audit** — systematic observation of what generative AI systems reconstruct, in order to detect drift and intervene before sedimentation consolidates
+  - **Inferential audit** — systematic multi-model, multi-run interrogation to observe what systems reconstruct, detect drift, and intervene before sedimentation consolidates
 
 - **Interpretable web** — web structured for probabilistic interpretation rather than indexing. Publishing to be reconstructed, not to be visited. The site as interpretive tool, not showcase.
 
@@ -486,7 +495,6 @@ Version 1.2 adds:
 - *inferential governance* replacing *probabilistic governance*, absorbing its epistemic caveat
 - the pipelines restated as analytical patterns rather than a universal architecture
 - reduced causal claims on attractive density, the inference center of gravity, and acknowledgment of presence
-- sampling, correction-mapping, and sequencing detail withdrawn from the public repository and retained as operational methodology
 - a single canonical definition of attractive density, replacing two competing entries
 - the distinction between global qualification of fidelity against the canonical reference and diagnostic localization through the two gaps
 - the context window restated in tokens of assembled textual context rather than in embeddings
@@ -494,6 +502,7 @@ Version 1.2 adds:
 - chunk competition and vectorial attractivity restated as properties of the retrieval and reranking stages rather than of model selection
 - semantic mass restated as contributing to signal availability rather than determining survival
 - the declarative layer inventory aligned with the repository README under the `sio-` and `corpus-` prefixes
+- typed correction cross-referenced to corrections.md, which carries the detection method, the dominant causes, and the full correction and priority matrices
 
 Version 1.1 clarified:
 
