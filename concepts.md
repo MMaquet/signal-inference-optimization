@@ -267,7 +267,7 @@ It emerges from the interaction between signals and probabilistic systems.
 - **Autonomous Inference Unit (AIU)** — paragraph or content block containing complete signal independently, designed to survive chunking with its proprietary terminology intact. An AIU does not depend on other paragraphs to be understood, contains no orphan pronouns, and carries the canonical term of the concept it develops. The AIU is the smallest content unit on which the Governed Writing Protocol applies. The unit name reads: a block (Unit) constructed for the model's reconstruction process (Inference) that carries its meaning independently of its origin context (Autonomous).
 
 - **Declarative orchestration** — the technical infrastructure that makes canonical corpus signals explicitly accessible and amplified for AI systems. Encompasses machine-readable files that declare and amplify existing signal:
-  - **Declarative layer**: sio-identity.json, sio-claims.json, sio-glossary.json, corpus-canon.json, corpus-exclusions.json, llms.txt, JSON-LD, Schema.org
+  - **Declarative layer**: llms.txt, llms-full.txt, sio-identity.json, sio-claims.json, sio-glossary.json, sio-corrections.json, sio-manifest.json, sio-policy.json, sio-context.txt, corpus-canon.json, corpus-exclusions.json, humans.txt, JSON-LD, Schema.org. The `sio-` prefix designates what the entity declares about itself; the `corpus-` prefix designates what its corpus canonically contains or excludes. The complete inventory and the function of each file are documented in the repository README.
   - **Thematic corpus layer**: structured Markdown files, one per key domain, optimized for retrieval by RAG systems
   
   Declarative orchestration is the infrastructure through which declarative governance is operationalized: orchestration designates the deployment and coordination of the declarative surfaces, while declarative governance designates the governed content, rules, attributions, and limits those surfaces carry.
@@ -493,6 +493,7 @@ Version 1.2 adds:
 - the five signal-loss points restated as recurrent rather than systematic
 - chunk competition and vectorial attractivity restated as properties of the retrieval and reranking stages rather than of model selection
 - semantic mass restated as contributing to signal availability rather than determining survival
+- the declarative layer inventory aligned with the repository README under the `sio-` and `corpus-` prefixes
 
 Version 1.1 clarified:
 
