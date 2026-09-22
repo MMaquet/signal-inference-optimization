@@ -1,9 +1,11 @@
 > **License:** This work is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+> Attribution required. No commercial use. No derivatives.
 > See [LICENSE](./LICENSE) file.
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-**Author:** Mélanie Maquet
+**Last updated:** September 22, 2026  
+**Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
 
@@ -12,6 +14,78 @@
 All notable changes to the Signal Inference Optimization (SIO) conceptual framework are documented in this file.
 
 This framework follows a deliberate publication cadence — foundational concepts established first, technical operationalization deployed progressively, field validation conducted before public claims.
+
+---
+
+## 2026-09-22
+
+### Version 1.2 — doctrinal architecture, lexical governance, and claim scoping
+
+Applies to `README.md`, `concepts.md`, `codebook.md`, `corrections.md`, and `declarative-hub.md`. All five files carry version 1.2 and the same date.
+
+### Added
+- **The three pillars of SIO** — inferential audit, canonical reference formalization, inferential governance. Stated in README, concepts.md (section 8) and codebook.md. Former sections 8 and 9 of concepts.md renumbered to 9 and 10.
+- **Lexical family rule**, governing four families across the repository.
+- **Declarative Hub** defined in concepts.md and codebook.md as a surface within declarative orchestration, having previously existed only as its own file.
+- **Governed translation** of *canonical reference* and *référence déclarée*, inscribed in codebook.md.
+- **Declarative governance and embedded governance** as the two vehicles of inferential governance.
+- **The five variance manifestations** defined individually in codebook.md alongside the five variance operations.
+- **Qualification against the canonical reference** distinguished from diagnostic localization through the two gaps: canonical reference to machine thesaurus qualifies fidelity; projected to expressed and expressed to machine localize where the deviation originates.
+- License block, version, date, and author header on `declarative-hub.md`, which had none. Version number on `corrections.md`, which had none.
+
+### Defined
+- **Lexical family rule** — where a third party occupies an adjacent territory under a given lexical family, that family is admitted for describing phenomena and excluded for naming the entity's own practices and instruments. Applied to four families: *interpretive* describes the space and what occurs within it; *inference* names mechanisms and spaces; *inferential* names the practices; *declarative* names the machine-format layer.
+- **Declarative orchestration** — the deployment, coordination, versioning, and maintenance of the declarative surfaces. Replaces *interpretive orchestration*.
+- **Declarative Hub** — a public, indexable HTML surface deployed within declarative orchestration. Three levels remain distinct: the Hub is the surface, declarative orchestration is the infrastructure that deploys it, declarative governance is the normative content it carries.
+- **Inferential governance** — replaces *probabilistic governance* and absorbs its epistemic caveat: correlation between signal intervention and reconstruction change is observable; causality is not provable.
+- **Boundaries of interpretation** — replaces *interpretive boundaries* in `declarative-hub.md`.
+
+### Changed
+- *Interpretive orchestration* becomes *declarative orchestration*, in README, concepts.md and codebook.md.
+- *Inference audit* becomes *inferential audit* for the practice. *Inference drift*, *inference pipeline*, *inference space* and *inference center of gravity* are retained: they name mechanisms and spaces.
+- *Admitted synonyms* becomes *admitted variants*. The absolute non-synonymization rule for the proprietary conceptual core is replaced by controlled variants: acronyms, governed translations, grammatical variations, and formally admitted short forms.
+- The Semantic Codebook entry structure gains *attributions and relationships* and *limits*, and is aligned across concepts.md and codebook.md.
+- The five variance manifestations are named in their canonical bare form — distortion, divergence, instability, amplification, dilution — replacing two competing forms within concepts.md.
+- The priority order reads *loss → distortion → pollution* in both concepts.md and corrections.md, replacing *deformation* in corrections.md.
+- In the README terminology table, the French form of *canonical reference* becomes *référence déclarée*. *Référentiel canonique* is withdrawn.
+- **Declarative file inventory unified** under two prefixes: `sio-` designates what the entity declares about itself, `corpus-` designates what its corpus canonically contains or excludes. This reverses the decision of 2026-05-07, which adopted the `signal-` prefix in order to anchor the files in the foundational concept rather than in the discipline name. The reversal is deliberate: README and concepts.md carried two divergent inventories with no overlap on the JSON file names, and a single inventory takes precedence over the earlier rationale. `inference-corrections.json` becomes `sio-corrections.json`. `sio-glossary.json`, `corpus-canon.json` and `corpus-exclusions.json` enter the README inventory with their functions.
+- *Signal amplification files* becomes *declarative signal files* in concepts.md. The change was recorded on 2026-05-07 but not applied.
+- *Organization* becomes *entity* where it designates the subject of analysis, consistent with the definition of **Entity** in concepts.md.
+- In `corrections.md`, *dominant cause* becomes *probable cause* at all five operations.
+
+### Scoped
+- **The pipelines** are stated as analytical patterns describing recurrent transformation stages, not as a universal architecture. Query decomposition is presented as one possible retrieval-augmented design.
+- **The five signal disappearance points** become five recurrent signal-loss points, stated as conditional.
+- **Chunk competition and vectorial attractivity** are restated as properties of the retrieval and reranking stages rather than of model selection. *Lexical alignment* added as a governable dimension.
+- **The context window** is restated in tokens of assembled textual context. The previous formulation referred to embeddings, which do not occupy the context window.
+- **The law of density** places its cluster in the interpretive space, not in the inference space, consistent with the dual space architecture.
+- **The inference center of gravity** is the recurrent representational pattern toward which observed reconstructions tend to converge. It is inferred from repeated observation of outputs, not from inspection of the model's internal state.
+- **Attractive density** receives a single canonical definition, replacing two competing entries in concepts.md, and is inferred from observable changes in reconstruction patterns rather than from internal vectorial mechanisms.
+- **Semantic mass** contributes to signal availability rather than determining survival.
+- **Acknowledgment of presence** attests presence in the delivered output. It no longer claims that citation proves the signal was seen.
+- **Signal survival** is the survival of declared meanings, relationships, attributions, and limits, not of literal text.
+- **Declarative signal files** no longer claim to win retrieval by density. When retrieved, they enter the same candidate set as any other passage.
+- **The Declarative Hub** states what its publication does and does not establish. Training crawlers and real-time retrieval crawlers are distinguished: availability to one does not imply mobilization by the other. A sitemap declares a page to indexing bots; it does not force discovery, crawling, or indexing.
+- **Reconstruction fidelity** in `declarative-hub.md` is conformity to the declared canonical reference, not to what an identity actually is.
+- **The status of llms.txt, llms-full.txt and humans.txt** is corrected: public proposals and initiatives, not adopted standards.
+
+### Resolved
+- **The contradiction between Substitution and Projection on editorial negation.** Substitution prescribes contrastive association — *X is not Y*. Projection forbids editorial negation. The scope of the difference is now stated: under Substitution the generic term is already massively co-occurrent with the entity, so the intervention qualifies an association that already exists; under Projection the attribute is not yet associated, so naming it in order to deny it creates the co-occurrence from nothing.
+
+### Removed
+- **Editorial negation of a third-party proprietary term** from the README. Declared exclusions belong in the declarative layer, in `corpus-exclusions.json`, not in repository prose. The adjacent discipline is now designated by a generic descriptor.
+
+### Fixed
+- Broken reference to `semantic-codebook.md` in `declarative-hub.md`. The file is `codebook.md`.
+- Incomplete cross-reference blocks in `concepts.md`, `corrections.md` and `declarative-hub.md`. Each file now references the other four and `technical-foundations.md`.
+- Author line in `declarative-hub.md`, which described the author through a role the Semantic Codebook excludes.
+- Author attribution harmonized to *Mélanie Maquet — SEMANTIKIA* across all files.
+
+### Rationale
+- A third-party francophone actor occupies the *interpretive* family on an adjacent territory. The lexical family rule resolves what a blanket exclusion could not: *interpretive space* is the spine of the dual architecture and cannot be withdrawn, while *interpretive orchestration* and *interpretive boundaries* named instruments of the discipline and had to move. Description stays; nomination moves.
+- The three pillars separate what SIO does from what it describes. Without that separation, the operations of the discipline and the mechanisms it observes were read as one register.
+- Claim scoping across the repository responds to a single standard: an assertion about internal model behaviour that cannot be observed from outputs is not defensible before a technical reader. Vector positions, embedding cancellation, training-cycle entry and cache state are not observable from the corpus side. What can be measured is measured; what cannot be measured is named.
+- The unified file inventory takes precedence over the 2026-05-07 prefix rationale because two divergent inventories in the same repository produce two incompatible client implementations, which is a heavier defect than the loss of the concept-anchored prefix.
 
 ---
 
@@ -239,4 +313,3 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [Declarative Hub](https://github.com/MMaquet/signal-inference-optimization/blob/main/declarative-hub.md)
 - [Technical Foundations](https://github.com/MMaquet/signal-inference-optimization/blob/main/technical-foundations.md)
 - [Article series](https://medium.com/@melaniemaquet)
-
