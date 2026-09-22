@@ -7,7 +7,7 @@
 **First public commit:** March 27, 2026  
 **Version:** 1.2  
 **Last updated:** September 22, 2026  
-**Author:** Mélanie Maquet
+**Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
 
@@ -44,11 +44,11 @@ Signal degradation follows identifiable patterns:
   - **Projection** — the system attributes typical category properties to the entity
 
 - **Variance manifestations** — five observable symptoms resulting from variance operations:
-  - **Interpretive distortion** — reconstruction diverges from the canonical reference
-  - **Interpretive divergence** — two systems or two close interactions produce incompatible reconstructions
-  - **Response instability** — same system generates different responses to similar queries
-  - **Probabilistic amplification** — a minority signal becomes dominant through fragment selection
-  - **Signal dilution** — no trajectory dominates, producing vague and generic outputs
+  - **Distortion** — the reconstruction diverges from the canonical reference
+  - **Divergence** — two systems, or two close interactions, produce incompatible reconstructions
+  - **Instability** — the same system generates different responses to similar queries
+  - **Amplification** — a minority signal becomes dominant through fragment selection
+  - **Dilution** — no trajectory dominates, producing vague and generic outputs
 
 - **Interpretive sedimentation** — progressive accumulation of plausible inaccuracy layers that consolidate into the reference version used by probabilistic systems. Sedimentation follows a propagation cycle: corpus → ingestion → erroneous reconstruction → republication → re-ingestion → consolidation.
 
@@ -214,7 +214,7 @@ SIO operates under these constraints.
 
 These are not recommendations. They are structural constraints. Violating one weakens the other four. They operate simultaneously, not sequentially.
 
-- **Law of density** — a signal exists only if it reaches the statistical threshold sufficient to form an interpretive cluster in the inference space.
+- **Law of density** — a signal exists only if it reaches the statistical threshold sufficient to form a distinct and recurrent cluster in the interpretive space.
 - **Law of coherence** — the same realities must be designated by the same terms, in the same conceptual associations, across all channels, teams, and periods.
 - **Law of hierarchy** — not all signals are equivalent. Pillar content carries the central signal. Peripheral content illustrates and contextualizes. This hierarchy must be intentional.
 - **Law of fragmentary autonomy** — each passage must be able to exist alone, be understood, be relevant, and carry complete information without depending on adjacent passages.
@@ -233,7 +233,7 @@ These are not recommendations. They are structural constraints. Violating one we
   - **Offensive dominance** — deliberate construction of dominant signals through oriented production, canonical structuring, and multi-source distribution.
   - **Defensive dominance** — preservation of constructed dominance through inferential audit and continuous semantic monitoring.
 - **Informational corpus** — total available signal contributing to reconstruction, structured in three zones:
-  - **Endogenous corpus** — internally controlled signal production (site, signal amplification files, institutional documents)
+  - **Endogenous corpus** — internally controlled signal production (site, declarative signal files, institutional documents)
   - **Exogenous corpus with partial control** — off-site signals with influence but not final control (LinkedIn, interviews, solicited press, aligned partners)
   - **Exogenous corpus beyond control** — signals neither produced nor modifiable (forums, Reddit, third-party comparisons, unsolicited press)
 - **Signal** — structured informational input entering probabilistic systems. The primary unit of influence in probabilistic reconstruction.
@@ -272,7 +272,8 @@ It emerges from the interaction between signals and probabilistic systems.
   
   Declarative orchestration is the infrastructure through which declarative governance is operationalized: orchestration designates the deployment and coordination of the declarative surfaces, while declarative governance designates the governed content, rules, attributions, and limits those surfaces carry.
 
-**Lexical family rule.** The *interpretive* family is admitted for describing the space and the phenomena occurring within it — interpretive space, interpretive sedimentation, interpretive diagenesis, interpretive distortion, interpretive divergence, interpretive center of gravity, interpretable web. It is excluded for naming the practices and instruments of SEMANTIKIA, where the canonical family is *inferential* — inferential audit, inferential governance — or *declarative* for the machine-format layer.
+
+- **Declarative Hub** — a public, indexable HTML surface deployed within declarative orchestration. It assembles selected elements of the canonical reference into compact, autonomous blocks intended to remain interpretable when retrieved independently. Its publication can create an additional path for discovery and retrieval. It does not establish that the page will be crawled, indexed, selected, incorporated into training data, or used in a reconstruction. See dedicated document: [declarative-hub.md](https://github.com/MMaquet/signal-inference-optimization/blob/main/declarative-hub.md).
 
 - **Semantic sobriety** — editorial discipline opposing semantic obesity. One concept per textual space, explicit hierarchization, elimination of unanchored abstractions, Codebook compliance.
 
@@ -288,7 +289,7 @@ It emerges from the interaction between signals and probabilistic systems.
 
 - **Corpus architecture** — global organization of content ensuring consistency and density across the three corpus zones.
 
-- **Signal amplification files** — machine-readable files that declare canonical signals and amplify corpus structure for AI systems. These files make existing corpus signals explicitly accessible without imposing reading order or interpretation hierarchy.
+- **Declarative signal files** — machine-readable files that declare canonical signals and amplify corpus structure for AI systems. These files make existing corpus signals explicitly accessible without imposing reading order or interpretation hierarchy. The complete inventory is documented in the repository README.
 
 - **Inferential audit** — systematic multi-model, multi-run, multi-angle interrogation of generative AI systems to extract the machine thesaurus. The audit observes what those systems reconstruct from an entity's informational signal. Method: the same entity is queried across several systems, with multiple runs per query and multiple query angles per entity. The projected thesaurus is first compared with the expressed thesaurus to measure the production gap. The expressed thesaurus is then compared with the machine thesaurus to measure the reconstruction gap. No direct diagnostic gap is defined between projected and machine. The audit identifies which variance operation is dominant, at which stage signal is lost, and which corrective intervention is structurally appropriate. When applications or deployed assistants are audited, inferential audit must distinguish native model behavior from delivered application behavior. The sampling thresholds, qualification rules, and reporting frame remain operational.
 
@@ -312,6 +313,17 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 - **Fragment autonomy** — each passage contains its central concept explicitly named, understandable without surrounding context.
 - **Page autonomy** — each article carries one dominant concept; others illustrate it without competing.
 - **Corpus autonomy** — each concept is designated by a stable, unique term across all channels and periods.
+
+### Lexical family rule
+
+Where a third party occupies an adjacent territory under a given lexical family, that family is admitted for describing phenomena and excluded for naming the entity's own practices and instruments.
+
+Applied to SIO, four families are governed:
+
+- **interpretive** — describes the space and what occurs within it: interpretive space, interpretive sedimentation, interpretive diagenesis, interpretive center of gravity, interpretable web.
+- **inference** — names mechanisms and spaces: inference drift, inference pipeline, inference space, inference center of gravity. It is not used to name a practice.
+- **inferential** — names the practices: inferential audit, inferential governance.
+- **declarative** — names the machine-format layer: declarative orchestration, declarative governance, declarative signal files, Declarative Hub.
 
 ---
 
@@ -488,7 +500,7 @@ Version 1.2 adds:
 
 - the three pillars of SIO, with the distinction between the operations of the discipline and the mechanisms it describes
 - declarative orchestration as the canonical designation of the machine-format infrastructure, replacing the previous designation
-- the lexical family rule governing the *interpretive*, *inferential*, and *declarative* families
+- the lexical family rule governing the *interpretive*, *inference*, *inferential*, and *declarative* families, stated as its own subsection
 - alignment of the Semantic Codebook definition and entry structure with codebook.md
 - controlled variants replacing the absolute non-synonymization rule for the proprietary conceptual core
 - *inferential audit* replacing *inference audit* for the practice, under the lexical family rule
@@ -503,6 +515,10 @@ Version 1.2 adds:
 - semantic mass restated as contributing to signal availability rather than determining survival
 - the declarative layer inventory aligned with the repository README under the `sio-` and `corpus-` prefixes
 - typed correction cross-referenced to corrections.md, which carries the detection method, the dominant causes, and the full correction and priority matrices
+- the five variance manifestations named in their canonical bare form, matching codebook.md
+- the law of density corrected: a cluster forms in the interpretive space, not in the inference space
+- signal amplification files renamed declarative signal files, matching the repository README
+- the Declarative Hub defined as a surface within declarative orchestration, distinguishing the HTML surface from the infrastructure that deploys it and from the governance it carries
 
 Version 1.1 clarified:
 
@@ -547,6 +563,9 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 
 - [SIO README](https://github.com/MMaquet/signal-inference-optimization/blob/main/README.md)
 - [Semantic Codebook](https://github.com/MMaquet/signal-inference-optimization/blob/main/codebook.md)
+- [Typed Corrections](https://github.com/MMaquet/signal-inference-optimization/blob/main/corrections.md)
+- [Declarative Hub](https://github.com/MMaquet/signal-inference-optimization/blob/main/declarative-hub.md)
+- [Technical Foundations](https://github.com/MMaquet/signal-inference-optimization/blob/main/technical-foundations.md)
 - [Article series](https://medium.com/@melaniemaquet)
 
 **First public commit:** March 27, 2026  

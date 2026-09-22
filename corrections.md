@@ -5,17 +5,18 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 **First public commit:** April 18, 2026  
-**Last updated:** May 7, 2026  
-**Author:** Mélanie Maquet
+**Version:** 1.2  
+**Last updated:** September 22, 2026  
+**Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
 
 # Typed Correction of LLM Reconstructions
 
-Probabilistic systems do not produce random errors.  
-They deform signals through identifiable operations.
+Reconstruction deviations are not uniformly random.  
+Recurrent ones can be classified through identifiable operations.
 
-Each operation has a structural cause, an observable effect, and a specific correction.
+Each operation has a probable cause, an observable effect, and a corresponding intervention. These operations are analytical categories inferred from observable outputs. They do not establish direct knowledge of the internal mechanism that produced a reconstruction.
 
 Generic correction — publishing more content — fails because it ignores this specificity.  
 Typed correction identifies the dominant operation and applies the corresponding structural intervention.
@@ -38,15 +39,15 @@ Each question identifies a specific variance operation:
 
 In practice, variance operations are often combined. A reconstruction can be simultaneously generalized and truncated. Typed correction identifies the dominant operation — the one whose correction will produce the most structural effect — and prioritizes accordingly.
 
-### Priority order: loss → deformation → pollution
+### Priority order: loss → distortion → pollution
 
 When multiple operations are active simultaneously, triage follows a structural principle:
 
 **Priority 1 — Identity loss: amalgamation and substitution.**  
-Differentiation has disappeared. The organization is interchangeable with competitors or its proprietary term has been neutralized. Without distinct identity in the inference space, no other correction has effect. Treat first.
+Differentiation has disappeared. The entity is interchangeable with competitors or its proprietary term has been neutralized. Without distinct identity in the inference space, no other correction has effect. Treat first.
 
-**Priority 2 — Identity deformation: generalization.**  
-The organization exists but in generic version. The signal is present but distorted. Treat second.
+**Priority 2 — Identity distortion: generalization.**  
+The entity exists but in generic version. The signal is present but distorted. Treat second.
 
 **Priority 3 — Incomplete signal: truncation.**  
 Positioning is partially correct but amputated. Repairable through reinforcement of obligatory associations between concept components. Treat third.
@@ -58,11 +59,11 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 
 ## Operation 1 — Generalization
 
-**Mechanism:** The model broadens the organization's scope beyond actual identity. A pointed expertise is reconstructed in its broadest categorical version.
+**Mechanism:** The model broadens the entity's scope beyond actual identity. A pointed expertise is reconstructed in its broadest categorical version.
 
-**Detection in inference audit:** Direct queries produce responses describing the sectoral category rather than the distinctive expertise. Generic sector terms dominate. Proprietary terms appear in secondary position or disappear.
+**Detection in inferential audit:** Direct queries produce responses describing the sectoral category rather than the distinctive expertise. Generic sector terms dominate. Proprietary terms appear in secondary position or disappear.
 
-**Dominant cause:** The central concept is not sufficiently dense in the corpus — insufficient repetition, insufficient stable co-occurrences. Or peripheral concepts are denser than the central concept.
+**Probable cause:** The central concept is not sufficiently dense in the corpus — insufficient repetition, insufficient stable co-occurrences. Or peripheral concepts are denser than the central concept.
 
 **Typed correction:**
 - Densify the central concept — increase canonical term frequency in endogenous corpus, reinforce co-occurrences with obligatory associations, produce pillar content where the central concept dominates
@@ -72,14 +73,14 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 
 ## Operation 2 — Amalgamation
 
-**Mechanism:** The model merges the organization with competitors or with the entire sectoral category. Identity boundaries dissolve. The organization becomes an interchangeable representative of its category.
+**Mechanism:** The model merges the entity with competitors or with the entire sectoral category. Identity boundaries dissolve. The entity becomes an interchangeable representative of its category.
 
-**Detection in inference audit:** Comparative queries produce responses that find no clear distinction. Direct queries produce descriptions applicable to any sector actor.
+**Detection in inferential audit:** Comparative queries produce responses that find no clear distinction. Direct queries produce descriptions applicable to any sector actor.
 
-**Dominant cause:** The organization's corpus uses the same vocabulary as its competitors. Same terms, same associations, same formulations. The model finds no distinctive signal sufficient to separate entities.
+**Probable cause:** The entity's corpus uses the same vocabulary as its competitors. Same terms, same associations, same formulations. The model finds no distinctive signal sufficient to separate entities.
 
 **Typed correction:**
-- Reinforce proprietary concepts — identify or create terms no one else uses. The named methodology, the proprietary conceptual framework, the expressions that belong only to this organization. Repeat with intention and coherence across the entire corpus
+- Reinforce proprietary concepts — identify or create terms no one else uses. The named methodology, the proprietary conceptual framework, the expressions that belong only to this entity. Repeat with intention and coherence across the entire corpus
 - Exclude shared terms from the conceptual core — terms all competitors use should not occupy the center of the signal. They may appear in context. They must not be in the conceptual nucleus. The Codebook formalizes this exclusion
 
 ---
@@ -88,42 +89,42 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 
 **Mechanism:** The model retains only part of the positioning. The complete expertise is amputated. What remains is correct but incomplete, and incompleteness changes meaning.
 
-**Detection in inference audit:** Distinctive attributes disappear from reconstructions. Pointed queries do not cite the organization. Generic queries cite it without distinction.
+**Detection in inferential audit:** Distinctive attributes disappear from reconstructions. Pointed queries do not cite the entity. Generic queries cite it without distinction.
 
-**Dominant cause:** The concept is composite — multiple words that must stay together to carry complete meaning. During probabilistic compression, the model tends to retain the word with the most statistical mass alone and eliminate qualifying terms. The concept's components are not sufficiently linked in the corpus to resist separation.
+**Probable cause:** The concept is composite — multiple words that must stay together to carry complete meaning. During probabilistic compression, the model tends to retain the word with the most statistical mass alone and eliminate qualifying terms. The concept's components are not sufficiently linked in the corpus to resist separation.
 
 **Typed correction:**
-- Reinforce obligatory associations between concept components — every time the root term appears in the corpus, the qualifying term must be nearby. The objective is to create a co-occurrence so stable that the model cannot separate the components. In vector space, both terms must occupy positions close enough to form a single cluster
+- Reinforce obligatory associations between concept components — every time the root term appears in the corpus, the qualifying term must be nearby. The objective is to make the co-occurrence stable enough that the components are unlikely to be separated during compression. The two terms are treated as one unit rather than as a head noun and a qualifier
 - This is not mechanical repetition. It is co-occurrence engineering — same terms, in varied but always joint contexts, so their association becomes a statistical regularity the model retains
 
 ---
 
 ## Operation 4 — Substitution
 
-**Mechanism:** The model replaces a proprietary concept with its generic sectoral equivalent. The term the organization built, defined, and publicly established disappears in favor of standard vocabulary.
+**Mechanism:** The model replaces a proprietary concept with its generic sectoral equivalent. The term the entity built, defined, and publicly established disappears in favor of standard vocabulary.
 
-**Detection in inference audit:** The proprietary term does not appear in reconstructions. It is systematically replaced by the generic equivalent. Queries using the proprietary term may produce responses that do not cite the organization that created it.
+**Detection in inferential audit:** The proprietary term does not appear in reconstructions. It is systematically replaced by the generic equivalent. Queries using the proprietary term may produce responses that do not cite the entity that created it.
 
-**Dominant cause:** The generic term is massively denser in the global interpretive space — thousands of sources use it. The proprietary term exists in a limited endogenous corpus. Statistical mass asymmetry favors the generic during reconstruction.
+**Probable cause:** The generic term is massively denser in the global interpretive space — thousands of sources use it. The proprietary term exists in a limited endogenous corpus. Statistical mass asymmetry favors the generic during reconstruction.
 
 **Typed correction:**
 - Exclude the generic term from the Codebook — it must not appear as a central term in the corpus. It may exist in context, as explicit contrast, never as equivalent
 - Densify the proprietary term — it must appear in every pillar content, declarative signal files, structured metadata, satellite content. Frequency must be sufficient to create an autonomous cluster
-- Create explicit contrastive associations — produce content that explicitly opposes the proprietary term to the generic: "X is not Y. It intervenes upstream, on the structure itself." This creates a contrastive association in the inference space — the model learns the two terms are not synonymous
+- Create explicit contrastive associations — produce content that qualifies the proprietary term against the generic one: "X is not Y. It intervenes upstream, on the structure itself." This is admitted here and excluded under Projection, and the scope of that difference is deliberate. Under Substitution, the generic term is already massively co-occurrent with the entity: the association exists, and the intervention qualifies it. Under Projection, the attribute is not yet associated: naming it in order to deny it creates the co-occurrence from nothing
 
 ---
 
 ## Operation 5 — Projection
 
-**Mechanism:** The model attributes properties the organization does not have, because these properties are statistically typical of its category. The organization published nothing on the subject. The model inferred it.
+**Mechanism:** The model attributes properties the entity does not have, because these properties are statistically typical of its category. The entity published nothing on the subject. The model inferred it.
 
-**Detection in inference audit:** Attributes appear in reconstructions with no identifiable source in the endogenous corpus. Pointed queries receive affirmative responses based on no real signal.
+**Detection in inferential audit:** Attributes appear in reconstructions with no identifiable source in the endogenous corpus. Pointed queries receive affirmative responses based on no real signal.
 
-**Dominant cause:** The corpus does not explicitly state what the organization does NOT do. The model fills silence zones with what is statistically probable for the category. Silence is not neutral in a probabilistic system — it is an invitation to project.
+**Probable cause:** The corpus does not explicitly state what the entity does NOT do. The model fills silence zones with what is statistically probable for the category. Silence is not neutral in a probabilistic system — it is an invitation to project.
 
 **Typed correction:**
-- Massively densify the real signal — if the corpus is saturated with the actual expertise and strong, specific obligatory associations, less vector space remains available for generic projections. Real signal density mechanically reduces the space available for unfounded inference
-- Declare in inference-corrections.json — this is exactly what this declarative signal file serves in interpretive orchestration. Explicitly declare in machine-readable format what the organization is NOT
+- Massively densify the real signal — a corpus saturated with the actual expertise and with strong, specific obligatory associations leaves fewer unsupported openings for generic attribution. Density does not prevent projection; it reduces the room available for it
+- Declare in sio-corrections.json — this is exactly what this declarative signal file serves in declarative orchestration. Explicitly declare in machine-readable format what the entity is NOT
 - Do NOT contradict in editorial content — writing "We do NOT do X" creates a co-occurrence between the organization and X. The model may ignore the negation and retain the association. Correction passes through real signal density and machine-readable declaration, not editorial negation
 
 ---
@@ -136,7 +137,7 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 | Amalgamation | Merged with competitors? | Reinforce proprietary concepts + exclude shared terms |
 | Truncation | Correct but incomplete? | Reinforce obligatory associations between components |
 | Substitution | Proprietary term replaced? | Exclude generic + densify proprietary + contrastive associations |
-| Projection | Unpublished attributes added? | Densify real signal + declare in inference-corrections.json |
+| Projection | Unpublished attributes added? | Densify real signal + declare in sio-corrections.json |
 
 ---
 
@@ -145,11 +146,11 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 | Priority | Type | Operations | Principle |
 |---|---|---|---|
 | 1 | Identity loss | Amalgamation, Substitution | Without distinct identity, nothing else matters |
-| 2 | Identity deformation | Generalization | Signal present but distorted |
+| 2 | Identity distortion | Generalization | Signal present but distorted |
 | 3 | Incomplete signal | Truncation | Signal present but amputated |
 | 4 | Polluted signal | Projection | Noise added, not signal lost |
 
-Structural principle: **loss → deformation → pollution.**  
+Structural principle: **loss → distortion → pollution.**  
 Restore what disappeared. Correct what is distorted. Clean what was added.
 
 ---
@@ -160,11 +161,11 @@ Typed correction does not guarantee reconstruction correction. The box remains o
 
 Typed correction does not produce immediate effects. Latency between corrective signal injection and integration in reconstructions varies by model, update cycle, and retrieval mechanism. Latency is structural, not accidental.
 
-Some deformations resist endogenous correction because their cause is primarily exogenous — a competing signal massively denser in the global interpretive space. In these cases, typed correction reduces the deformation without eliminating it. Recognizing this limit is part of the discipline.
+Some distortions resist endogenous correction because their cause is primarily exogenous — a competing signal massively denser in the global interpretive space. In these cases, typed correction reduces the distortion without eliminating it. Recognizing this limit is part of the discipline.
 
-Typed correction requires prior diagnosis — a systematic inference audit that identifies not only that reconstruction is deformed, but which type of deformation is active. Without diagnosis, correction remains generic. And generic correction in a probabilistic system is random correction.
+Typed correction requires prior diagnosis — a systematic inferential audit that identifies not only that reconstruction is distorted, but which type of distortion is active. Without diagnosis, correction remains generic. And generic correction in a probabilistic system is random correction.
 
-**Typed correction is applied probabilistic governance. Not control. A structured, measurable, repeatable intervention — in a system no one controls.**
+**Typed correction is inferential governance applied. Not control. A structured, repeatable intervention whose effect is observable but not guaranteed — in a system no one controls.**
 
 ---
 
@@ -192,8 +193,11 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [SIO README](https://github.com/MMaquet/signal-inference-optimization/blob/main/README.md)
 - [SIO Concepts](https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md)
 - [Semantic Codebook](https://github.com/MMaquet/signal-inference-optimization/blob/main/codebook.md)
+- [Declarative Hub](https://github.com/MMaquet/signal-inference-optimization/blob/main/declarative-hub.md)
+- [Technical Foundations](https://github.com/MMaquet/signal-inference-optimization/blob/main/technical-foundations.md)
 - [Article series](https://medium.com/@melaniemaquet)
 
 **First public commit:** April 18, 2026  
-**Last updated:** May 7, 2026  
+**Version:** 1.2  
+**Last updated:** September 22, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA

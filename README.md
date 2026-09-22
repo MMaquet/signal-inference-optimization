@@ -14,8 +14,8 @@ What they reconstruct becomes your identity.
 ---
 
 **First public commit:** March 27, 2026  
-**Version:** 1.1  
-**Last updated:** September 21, 2026  
+**Version:** 1.2  
+**Last updated:** September 22, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
@@ -43,6 +43,36 @@ The name reads: optimization of the signal **for** inference —
 not optimization **of** inference itself.
 
 **SIO is the discipline of signal resilience through a destructive pipeline.**
+
+---
+
+## The three pillars
+
+SIO is exercised through three governing operations.
+
+**01 — Inferential audit**  
+Observe what the entity intends to establish, what its corpus expresses,
+and what generative AI systems reconstruct. Identify the applicable gaps.
+Establish the T0 observation state.
+
+**02 — Canonical reference formalization**  
+Formalize the meanings, terms, variants, relationships, attributions,
+exclusions, and limits the entity intends to govern. The canonical
+reference is the required object. The Semantic Codebook is the instrument
+through which it is formalized, versioned, and maintained.
+
+**03 — Inferential governance**  
+Govern the conditions under which the informational signal is produced,
+declared, maintained, and evaluated — without claiming to control the
+systems that reconstruct it.
+
+Audit the reconstruction.  
+Formalize the canonical reference.  
+Govern the informational signal.
+
+The pillars designate what SIO does. The conceptual framework describes
+the mechanisms they act on. The two levels are related and must not be
+conflated.
 
 ---
 
@@ -126,8 +156,9 @@ It is a degradation process, not a measurement.
 
 ## Inference pipeline
 
-All signals pass through transformation pipelines.  
-The exact architecture varies by system, but common patterns emerge.
+Signals mobilized by a generative AI system may pass through one or  
+several transformation stages. The exact architecture varies by system,  
+but recurrent patterns emerge.
 
 ### Single-hop (typical pattern)
 
@@ -193,7 +224,7 @@ the signal, the states being compared, and the gaps used for measurement.
 | **Écart de production** | **Production gap** | Measurement: projected → expressed |
 | **Thésaurus projeté / exprimé / machine** | **Projected / expressed / machine thesaurus** | Descriptive states |
 | **T0 / T1 / Tn** | **T0 / T1 / Tn** | Successive observation states |
-| **Référentiel canonique** | **Canonical reference** | Stable anchor established through the Semantic Codebook |
+| **Référence déclarée** | **Canonical reference** | Stable anchor established through the Semantic Codebook |
 | **Entité** | **Entity** | Subject of the definition |
 
 ### Three descriptive states
@@ -247,12 +278,14 @@ limit on the possibility of qualifying fidelity globally.
 Structuring the signal is necessary.  
 But the real standard is survival.
 
-A signal must survive the inference pipeline intact —  
-chunking, embedding, retrieval, reranking, generation —  
-and emerge in a reconstruction faithful to the canonical reference.
+What must survive the pipeline is not the literal text.  
+It is the meanings, relationships, attributions, and limits  
+the entity has declared.
 
-If the signal does not survive,  
-its meaning does not exist in the system.
+A signal survives when a reconstruction produced after chunking,  
+retrieval, reranking, and generation still conforms to the canonical  
+reference. When those elements do not survive, they are absent from  
+the reconstruction, whatever the corpus contains.
 
 SIO is the discipline of making signal survival intentional.
 
@@ -295,34 +328,46 @@ It does not directly govern the cache.
 
 The editorial corpus produces signal through statistical accumulation.  
 The declarative signal layer produces signal through explicit declaration  
-in machine-native formats.
+in machine-readable formats.
 
 These are not instructions to the model.  
 These are not constraints on inference.  
-These are high-density signal fragments in formats that machines parse natively.
+These are high-density signal fragments in formats designed to be parsed  
+without prior extraction from a page.
 
-A 200-word signal-identity.json produces a denser chunk  
-than a 2000-word blog post. The signal-per-token ratio is higher.
+A 200-word sio-identity.json carries a higher signal-per-token ratio  
+than a 2000-word blog post. Whether that density is retrieved and  
+retained depends on the chunking, retrieval, reranking, and context  
+configuration of the system, which the entity does not control.
 
 ### Declarative signal files
 
+Two prefixes are used. `sio-` designates what the entity declares about
+itself. `corpus-` designates what its corpus canonically contains or
+excludes. Files published under an existing public convention keep their
+established names.
+
 | File | Function |
 |---|---|
-| **llms.txt** | Signal entry point — content index in LLM-readable format (open standard, Jeremy Howard) |
-| **llms-full.txt** | Extended signal documentation — complete organizational description optimized for LLM ingestion (open standard, Jeremy Howard) |
-| **signal-identity.json** | Identity declaration — who the organization is, in structured format |
-| **signal-claims.json** | Canonical assertions — what the organization affirms as its positioning |
-| **inference-corrections.json** | Reconstruction corrections — identified inference errors and their factual corrections |
-| **signal-manifest.json** | Structured metadata — entity type, mission, scope, version |
-| **signal-policy.json** | Usage policy — conditions under which content may be used by AI systems |
-| **signal-context.txt** | Representation context — how the organization should be represented |
-| **humans.txt** | Human attribution — people behind the organization (open standard since 2009) |
+| **llms.txt** | Signal entry point — content index in LLM-readable format (public proposal, Jeremy Howard, llmstxt.org) |
+| **llms-full.txt** | Extended signal documentation — expanded description deployed alongside llms.txt. Not part of the canonical llms.txt proposal |
+| **sio-identity.json** | Identity declaration — who the entity is, in structured format |
+| **sio-claims.json** | Canonical assertions — what the entity affirms as its positioning |
+| **sio-glossary.json** | Canonical terminology — the terms carrying the central signal, with their admitted variants |
+| **sio-corrections.json** | Reconstruction corrections — identified reconstruction errors and their factual corrections |
+| **sio-manifest.json** | Structured metadata — entity type, mission, scope, version |
+| **sio-policy.json** | Usage policy — conditions under which content may be used by AI systems |
+| **sio-context.txt** | Representation context — how the entity should be represented |
+| **corpus-canon.json** | Canonical reference — the meanings, terms, associations, attributions, and limits the entity governs |
+| **corpus-exclusions.json** | Declared exclusions — formulations, categorizations, and associations the entity excludes from its signal |
+| **humans.txt** | Human attribution — people behind the entity (public initiative, humanstxt.org, since 2009) |
 
 ### What declarative signal files do
 
-Declarative signal files densify the identity signal in machine-native format.  
+Declarative signal files densify the identity signal in machine-readable format.  
 They do not command the model. They do not constrain inference.  
-They compete as chunks — and win by density when properly structured.
+When retrieved, they enter the same candidate set as any other passage,  
+where density, coherence, and semantic alignment may work in their favour.
 
 A declarative signal layer without a governed corpus  
 declares an identity the corpus does not carry.
@@ -349,13 +394,13 @@ and the declarative layer is non-negotiable.
 
 ---
 
-## Interpretive orchestration
+## Declarative orchestration
 
-Interpretive orchestration is the deployment and maintenance  
+Declarative orchestration is the deployment and maintenance  
 of the declarative signal layer as an integrated component  
 of the SIO architecture.
 
-Interpretive orchestration includes:
+Declarative orchestration includes:
 
 - Structuring declarative signal files with Codebook-aligned terminology  
 - Deploying files at stable, predictable URLs  
@@ -363,9 +408,13 @@ Interpretive orchestration includes:
 - Versioning and dating all declarative files  
 - Updating when the Codebook evolves  
 
-Interpretive orchestration is the infrastructure component of SIO.  
+Declarative orchestration is the infrastructure component of SIO.  
 It does not replace corpus density. It complements it  
-by providing a stable, machine-native reference layer.
+by providing a stable, machine-readable reference layer.
+
+Declarative orchestration designates the deployment and coordination of  
+the declarative surfaces. Declarative governance designates the governed  
+content, rules, attributions, and limits those surfaces carry.
 
 ---
 
@@ -377,11 +426,15 @@ SIO produces two observable anchors:
   in the interpretive space. The source signal sufficiently dense  
   and coherent to orient reconstructions. This is what you build.
 
-- **Inference center of gravity** — the convergence point  
-  in the inference space toward which embeddings converge.  
+- **Inference center of gravity** — the recurrent representational  
+  pattern toward which observed reconstructions tend to converge  
+  across comparable conditions. Inferred from repeated observation  
+  of outputs, not from inspection of the model's internal state.  
   This is what you measure.
 
-**Attractive density** is the mechanism that produces both.
+**Attractive density** contributes to the formation of both. It is inferred  
+from observable changes in reconstruction patterns, not from direct access  
+to internal vectorial mechanisms.
 
 ---
 
@@ -408,7 +461,6 @@ how signals enter the system.
 - Not semantic SEO  
 - Not GEO  
 - Not knowledge graph optimization  
-- Not interpretive governance  
 - Not LLMO  
 
 SIO is not defined by an exclusive technique, format, or intervention layer.  
@@ -424,7 +476,7 @@ SIO neither replaces nor subsumes adjacent disciplines and architectures.
 - **GEO** seeks to increase presence, selection, citation, or influence in generative answers.  
 - **Entity disambiguation and representation** stabilize the identification and attribution of entities.  
 - **Knowledge graph architectures** formalize entities, attributes, and relationships in explicit structures.  
-- **Interpretive governance** defines conditions of reading and meaning production.  
+- **Reading and interpretation governance frameworks** define conditions of reading and meaning production.  
 - **Memory governance** oversees stateful AI memory systems.  
 - **Authority governance** constrains executable AI authority.  
 
@@ -497,7 +549,7 @@ Its operational application through Reconstruction Fidelity™ is commercial.
 
 This distinction is explicit and locked.
 
-For diagnostics, Semantic Codebooks, inference audits, and corrections:  
+For diagnostics, Semantic Codebooks, inferential audits, and corrections:  
 [semantikia.com](https://semantikia.com)
 
 ---
@@ -506,7 +558,20 @@ For diagnostics, Semantic Codebooks, inference audits, and corrections:
 
 This repository establishes and versions the canonical conceptual foundation of SIO.
 
-Version 1.1 clarifies:
+Version 1.2 adds:
+
+- the three pillars of SIO — inferential audit, canonical reference formalization, inferential governance  
+- declarative orchestration as the canonical designation of the machine-format infrastructure  
+- the lexical family rule: the *interpretive* family describes the space and its phenomena; the *inference* forms name mechanisms and spaces; the *inferential* family names the practices; the *declarative* family names the machine-format layer  
+- *référence déclarée* as the governed French form of *canonical reference*, aligned with the Semantic Codebook  
+- a single inventory of declarative signal files, under the `sio-` and `corpus-` prefixes, replacing two divergent naming schemes  
+- signal survival restated as the survival of declared meanings, relationships, attributions, and limits, not of literal text  
+- reduced causal claims on the inference center of gravity, attractive density, and the retrieval of declarative files  
+- the status of llms.txt, llms-full.txt, and humans.txt corrected: public proposals and initiatives, not adopted standards  
+- the Declarative Hub positioned as a surface within declarative orchestration  
+- declared exclusions moved to the declarative layer rather than stated as editorial negation  
+
+Version 1.1 clarified:
 
 - reconstruction fidelity as the optimization objective of SIO  
 - inference drift as a degradation process rather than a measurement  
@@ -518,7 +583,7 @@ Version 1.1 clarifies:
 
 It will evolve toward:
 
-- inference audit methodologies  
+- inferential audit methodologies  
 - signal integrity diagnostics  
 - operational structuring frameworks  
 
@@ -534,8 +599,8 @@ founder of SEMANTIKIA.
 [linkedin.com/in/melaniemaquet](https://www.linkedin.com/in/melaniemaquet/)
 
 First public commit: March 27, 2026  
-Version: 1.1  
-Last updated: September 21, 2026
+Version: 1.2  
+Last updated: September 22, 2026
 
 ---
 

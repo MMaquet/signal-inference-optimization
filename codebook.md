@@ -480,7 +480,7 @@ A proprietary concept repeated coherently across multiple contexts can develop a
 
 Where a third party occupies an adjacent territory under a given lexical family, that family is admitted for describing phenomena and excluded for naming the entity's own practices and instruments.
 
-Applied to SIO: the *interpretive* family describes the space and what occurs within it; the *inferential* family names the practices — inferential audit, inferential governance; the *declarative* family names the machine-format layer — declarative orchestration, declarative governance. The *inference* forms are reserved for mechanisms and spaces — inference drift, inference pipeline, inference space, inference center of gravity — and are not used to name a practice.
+Applied to SIO: the *interpretive* family describes the space and what occurs within it; the *inferential* family names the practices — inferential audit, inferential governance; the *declarative* family names the machine-format layer — declarative orchestration, declarative governance, Declarative Hub. The *inference* forms are reserved for mechanisms and spaces — inference drift, inference pipeline, inference space, inference center of gravity — and are not used to name a practice.
 
 ---
 
@@ -523,7 +523,7 @@ It converts canonical terms and relationships into content capable of surviving 
 
 ### Declarative governance
 
-Declarative governance states the boundaries of interpretation through surfaces and files in native machine format — declarative signal files, structured data, thematic machine-readable resources. The infrastructure through which it is operationalized is designated *declarative orchestration*: orchestration designates the deployment and coordination of the declarative surfaces, while declarative governance designates the governed content, rules, attributions, and limits those surfaces carry.
+Declarative governance states the boundaries of interpretation through surfaces and files in machine-readable format — declarative signal files, structured data, thematic machine-readable resources. The infrastructure through which it is operationalized is designated *declarative orchestration*: orchestration designates the deployment and coordination of the declarative surfaces, while declarative governance designates the governed content, rules, attributions, and limits those surfaces carry.
 
 These surfaces must reflect the canonical reference. They must preserve:
 
@@ -533,6 +533,12 @@ These surfaces must reflect the canonical reference. They must preserve:
 - the same attributions;
 - the same exclusions;
 - the same limits.
+
+### Declarative Hub
+
+The Declarative Hub is a public, indexable HTML surface deployed within declarative orchestration. It assembles selected elements of the canonical reference into compact, autonomous blocks intended to remain interpretable when retrieved independently.
+
+Three levels must remain distinct: the Hub is the surface, declarative orchestration is the infrastructure that deploys and maintains it, and declarative governance is the normative content it carries.
 
 ### Embedded governance
 
@@ -744,6 +750,7 @@ Version 1.2 adds:
 - declarative governance and embedded governance as the two vehicles of inferential governance, replacing the previous designation of this component;
 - the lexical family rule governing the *interpretive*, *inferential*, *inference*, and *declarative* families;
 - *canonical reference formalization* as the second pillar, removing the competing designation introduced in draft;
+- the Declarative Hub distinguished from declarative orchestration and declarative governance: the surface, the infrastructure that deploys it, the content it carries;
 - concrete illustration of the conflict between ungoverned keyword variation and canonical anchoring.
 
 Version 1.1 clarified:
