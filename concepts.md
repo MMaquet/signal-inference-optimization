@@ -5,8 +5,8 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 **First public commit:** March 27, 2026  
-**Version:** 1.1  
-**Last updated:** September 21, 2026  
+**Version:** 1.2  
+**Last updated:** September 22, 2026  
 **Author:** Mélanie Maquet
 
 ---
@@ -102,6 +102,8 @@ T0 is not a reference competing with the canonical reference. It is the preserve
 
 No direct diagnostic gap is defined between the projected thesaurus and the machine thesaurus. The production gap and reconstruction gap are kept separate so that the analysis can locate whether fidelity was lost during production or during reconstruction.
 
+Reconstruction fidelity may nevertheless be qualified against the canonical reference. This global qualification expresses the conformity of the reconstructed representation to the governed reference. It is not treated as a diagnostic gap because it does not localize whether the observed deviation originates in production or in reconstruction.
+
 **Reconstruction Fidelity™** is the operational framework through which SEMANTIKIA observes, evaluates, and improves reconstruction fidelity for organizations.
 
 ### Fidelity and stability
@@ -130,11 +132,13 @@ A non-stabilized reconstruction does not constitute a level of reconstruction fi
 
 - **Delivery layer** — the application layer through which an end user receives an AI-generated or AI-mediated response. The delivery layer may include semantic caches, RAG orchestration, prompt templates, retrieval policies, model routing, response filters, and freshness rules. It is distinct from the model layer and the corpus layer. SIO can influence corpus-level reconstruction conditions, but the delivery layer can preserve, distort, reuse, or make obsolete the final response independently of current corpus quality.
 
-- **Inference pipeline** — sequence of transformations shaping output. Two modes exist:
+- **Inference pipeline** — sequence of transformations shaping output. Two modes are described below.
+
+The following pipelines are analytical patterns used to describe recurrent transformation stages. They do not claim that every generative AI system implements the same architecture, sequence, retrieval process, or delivery layer.
 
 ### Single-hop pipeline
 
-  1. **Query analysis** — intent, entities, freshness assessment. The model decides whether to search the web.
+  1. **Query analysis** — intent, entities, freshness assessment. In web-enabled systems, the application or model determines whether external retrieval is required.
   2. **Query expansion** — the query is reformulated with lexical variants, synonyms, and associated terms. The search surface extends beyond the original wording.
   3. **Web search** — lexical relevance, domain authority, freshness. This is where SEO remains necessary. It conditions entry into the pipeline. But entering the pipeline is not surviving it.
   4. **Page selection** — relevant pages are identified and retrieved.
@@ -148,37 +152,39 @@ A non-stabilized reconstruction does not constitute a level of reconstruction fi
 
 ### Multi-hop pipeline
 
-  Complex queries trigger multiple pipelines simultaneously.
+  In some retrieval-augmented architectures, complex queries may be decomposed into multiple subqueries processed through distinct retrieval paths.
 
   1. **Complexity analysis** — multi-intent detection, dependency mapping.
   2. **Query fan-out** — decomposition into distinct sub-queries.
   3. **Parallel pipelines per sub-query** — each sub-query follows its own full single-hop pipeline: expansion → web search → selection → extraction → chunking → embedding → retrieval → reranking → **local synthesis**.
-  4. **Local synthesis** — intermediate synthesis produced for each sub-query before assembly. This is where drift becomes maximal: chunks from different sources using divergent terminology for the same concept produce divergent embeddings that partially cancel each other instead of reinforcing.
+  4. **Local synthesis** — intermediate synthesis produced for each sub-query before assembly. Intermediate synthesis can introduce additional variance when evidence is distributed across sources that use inconsistent terminology, incompatible categorizations, or different levels of specificity.
   5. **Synthesis fusion** — alignment, deduplication, divergence resolution across local syntheses.
   6. **Global context construction** — final selection and compression.
   7. **Final generation** — response produced from the fused global context.
 
-### Five signal disappearance points
+### Five recurrent signal-loss points
 
-  Signal does not disappear all at once. It dies stage by stage:
+  Signal loss can occur at several stages of a retrieval-augmented reconstruction pipeline. It is cumulative rather than instantaneous:
 
-  1. **Extraction** — structurally ambiguous content (dense paragraphs, unclear sections, mixed concepts) produces uninterpretable blocks. Everything downstream fails.
-  2. **Chunking** — a chunk that depends on previous context to be understood is a dead chunk. The model sees isolated fragments, not your article.
-  3. **Retrieval** — each chunk competes directly against chunks from all other selected sources. A semantically weak or terminologically unstable signal loses this competition even if the page was selected by web search.
-  4. **Internal non-competition** — chunks from the same corpus compete against each other. A redundant corpus dilutes its own vectorial signal. A corpus can fight against itself and lose.
-  5. **Multi-hop synthesis** — presence across multiple sub-queries with divergent terminology does not reinforce. It partially cancels during synthesis. Terminological stability across an entire corpus is not an editorial detail. It is a survival condition.
+  1. **Extraction** — structurally ambiguous content may produce blocks that are difficult to isolate or interpret, reducing their usefulness downstream.
+  2. **Chunking** — a fragment that depends on missing context may become ambiguous or incomplete once isolated.
+  3. **Retrieval** — a semantically weak or terminologically unstable fragment may not be selected when competing passages appear more relevant to the query, even when its source page was retrieved.
+  4. **Internal competition** — redundant or inconsistent fragments from the same corpus may compete for limited retrieval and context capacity rather than reinforce one another.
+  5. **Multi-hop synthesis** — signals distributed across subqueries may fail to reinforce one another when their terminology, attribution, or conceptual framing diverges.
+
+  Terminological stability across a corpus is therefore not an editorial detail. It is a condition of signal survival.
 
 ### Local chunk competition
 
-- **Chunk competition** — operational mechanism by which LLMs select which chunks survive in the final response when multiple chunks describe the same subject. For each query, only a limited subset of chunks is mobilized in the competition window. Within that window, your chunks compete directly against those of other organizations covering the same territory. The competition is local to the query, not global to the sector.
+- **Chunk competition** — analytical description of how retrieval and reranking stages in retrieval-augmented systems select a limited subset of candidate passages for a given query. Competition is local to the query and to the candidate set made available by the system; it does not constitute a global ranking of all content published within a sector.
 
-- **Vectorial attractivity** — what makes one chunk preferred over another in the local competition window. Determined by four governable dimensions: semantic coherence (stable terminology, predictable co-occurrences), fragmentary autonomy (chunk understandable in isolation), conceptual precision (explicit distinctive markers), resistance to compression (central concept early, clear hierarchy).
+- **Vectorial attractivity** — relative likelihood that a fragment will be retrieved or retained within a local candidate set. It may be influenced by semantic coherence (stable terminology, predictable co-occurrences), fragmentary autonomy (fragment understandable in isolation), conceptual precision (explicit distinctive markers), lexical alignment, and resistance to compression (central concept early, clear hierarchy). These dimensions are governable properties of the signal; their individual causal contribution cannot be isolated from the retrieval and reranking configuration.
 
-The distinction matters: typicality bias operates at two levels. The global level pulls identity toward the sectoral prototype — accessible only to organizations with massive accumulation. The local level operates in chunk competition windows — accessible to any organization that applies the discipline. Local victory is the operational terrain of SIO.
+Typicality bias may operate at both a broader distributional level and within local retrieval conditions. The two levels are not equally addressable. Shifting a sectoral prototype at the distributional level presupposes an accumulation of signal that few entities can reach. The governable properties of a fragment, by contrast, remain within reach of any entity that applies the discipline, whatever its size. SIO intervenes on those properties. It does not claim control over global model representations or third-party retrieval configurations.
 
 ### Context window
 
-- **Context window** — the token limit a model can process simultaneously during generation. A mechanical constraint that forces compression and selection of signals. When available embeddings exceed the context window capacity, the model must arbitrate aggressively, amplifying variance. This constraint is particularly acute for users of free or lightweight interfaces, where reduced context windows compound compression effects.
+- **Context window** — the maximum amount of tokenized input a model can process during a generation event. When the textual context assembled for generation exceeds that capacity, the system or application must select, truncate, or compress candidate information. These operations can remove or alter signals before generation.
 
 ### Delivery layer
 
@@ -225,7 +231,7 @@ These are not recommendations. They are structural constraints. Violating one we
 - **Probabilistic informational identity** — identity as reconstructed outputs, not retrieved facts. A statistical distribution of possible versions of an entity, never directly accessible, only observable through sampling.
 - **Informational dominance** — relative influence of a signal within competing reconstruction candidates. Rests on four dimensions: density, coherence, repetition, freshness.
   - **Offensive dominance** — deliberate construction of dominant signals through oriented production, canonical structuring, and multi-source distribution.
-  - **Defensive dominance** — preservation of constructed dominance through inference audit and continuous semantic monitoring.
+  - **Defensive dominance** — preservation of constructed dominance through inferential audit and continuous semantic monitoring.
 - **Informational corpus** — total available signal contributing to reconstruction, structured in three zones:
   - **Endogenous corpus** — internally controlled signal production (site, signal amplification files, institutional documents)
   - **Exogenous corpus with partial control** — off-site signals with influence but not final control (LinkedIn, interviews, solicited press, aligned partners)
@@ -249,7 +255,7 @@ It emerges from the interaction between signals and probabilistic systems.
 
 ### Core tools
 
-- **Semantic Codebook** — the central governance infrastructure structuring how an organization codes its canonical concepts, terms, obligatory associations, and excluded formulations to produce a stable signal readable by AI systems. Structure: canonical term → definition → admitted synonyms → excluded formulations → obligatory associations → coherence note. See dedicated document: [codebook.md](https://github.com/MMaquet/signal-inference-optimization/blob/main/codebook.md).
+- **Semantic Codebook** — the governance infrastructure through which an entity formalizes the meanings, terms, relationships, attributions, and limits it intends to establish. It is the instrument of the second pillar of SIO and formalizes the canonical reference. Structure of an entry: canonical term → definition → admitted variants → excluded formulations → obligatory associations → attributions and relationships → limits → coherence note. See dedicated document: [codebook.md](https://github.com/MMaquet/signal-inference-optimization/blob/main/codebook.md).
 
 - **Governed Writing Protocol** — the methodological framework that produces content surviving the inference pipeline. The Protocol operationalizes the five laws of linguistic engineering through three structural rules applied to every content unit:
   - **Semantic autonomy** — each passage must be extractable from its context and remain comprehensible. No orphan pronouns, no internal references requiring prior context.
@@ -260,13 +266,17 @@ It emerges from the interaction between signals and probabilistic systems.
 
 - **Autonomous Inference Unit (AIU)** — paragraph or content block containing complete signal independently, designed to survive chunking with its proprietary terminology intact. An AIU does not depend on other paragraphs to be understood, contains no orphan pronouns, and carries the canonical term of the concept it develops. The AIU is the smallest content unit on which the Governed Writing Protocol applies. The unit name reads: a block (Unit) constructed for the model's reconstruction process (Inference) that carries its meaning independently of its origin context (Autonomous).
 
-- **Interpretive orchestration** — the technical infrastructure that makes canonical corpus signals explicitly accessible and amplified for AI systems. Encompasses machine-readable files that declare and amplify existing signal:
+- **Declarative orchestration** — the technical infrastructure that makes canonical corpus signals explicitly accessible and amplified for AI systems. Encompasses machine-readable files that declare and amplify existing signal:
   - **Declarative layer**: sio-identity.json, sio-claims.json, sio-glossary.json, corpus-canon.json, corpus-exclusions.json, llms.txt, JSON-LD, Schema.org
   - **Thematic corpus layer**: structured Markdown files, one per key domain, optimized for retrieval by RAG systems
+  
+  Declarative orchestration is the infrastructure through which declarative governance is operationalized: orchestration designates the deployment and coordination of the declarative surfaces, while declarative governance designates the governed content, rules, attributions, and limits those surfaces carry.
+
+**Lexical family rule.** The *interpretive* family is admitted for describing the space and the phenomena occurring within it — interpretive space, interpretive sedimentation, interpretive diagenesis, interpretive distortion, interpretive divergence, interpretive center of gravity, interpretable web. It is excluded for naming the practices and instruments of SEMANTIKIA, where the canonical family is *inferential* — inferential audit, inferential governance — or *declarative* for the machine-format layer.
 
 - **Semantic sobriety** — editorial discipline opposing semantic obesity. One concept per textual space, explicit hierarchization, elimination of unanchored abstractions, Codebook compliance.
 
-- **Proprietary conceptual core** — controlled semantic structure designed to resist compression and guide reconstruction. Non-synonymizable. Non-negotiable.
+- **Proprietary conceptual core** — controlled semantic structure designed to resist compression and guide reconstruction. Controlled variants only: acronyms, governed translations, grammatical variations, and formally admitted short forms may coexist with the canonical term when they preserve its meaning and attribution. Generic substitutes are excluded from the core.
 
 - **Core/Periphery architecture** — structural distribution of terminology within content, organizing the relationship between proprietary terms and market terms:
   - **Core** — proprietary terms from the Semantic Codebook. Occupy dominant positions: titles, opening paragraphs, definitions, repeated conceptual anchors. The core is what the model retains under compression.
@@ -280,18 +290,11 @@ It emerges from the interaction between signals and probabilistic systems.
 
 - **Signal amplification files** — machine-readable files that declare canonical signals and amplify corpus structure for AI systems. These files make existing corpus signals explicitly accessible without imposing reading order or interpretation hierarchy.
 
-- **Inference audit** — systematic multi-model, multi-run, multi-angle interrogation of LLMs to extract the machine thesaurus. The audit measures what probabilistic systems reconstruct from a corpus. Method: same entity queried across ChatGPT, Perplexity, Gemini, with multiple runs per query and multiple query angles per entity. The projected thesaurus is first compared with the expressed thesaurus to measure the production gap. The expressed thesaurus is then compared with the machine thesaurus to measure the reconstruction gap. No direct diagnostic gap is defined between projected and machine. The audit identifies which variance operation is dominant, where in the pipeline signal dies, and which corrective intervention is structurally appropriate. When applications or deployed assistants are audited, inference audit must distinguish native model behavior from delivered application behavior.
+- **Inferential audit** — systematic observation of what generative AI systems reconstruct from an entity's informational signal. It extracts the machine thesaurus, identifies the reconstruction gap, distinguishes native reconstruction behavior from delivery-layer behavior, and establishes the observation state required for subsequent comparison. The complete sampling, qualification, comparison, and reporting methodology remains operational.
 
-- **Delivery audit** — systematic interrogation of a deployed AI surface to measure what users actually receive after application-layer caching, retrieval orchestration, response reuse, and freshness constraints. Delivery audit extracts the delivered machine thesaurus. It does not replace native inference audit: it answers a different question. Native audit asks what the model reconstructs; delivery audit asks what the application serves.
+- **Delivery audit** — systematic interrogation of a deployed AI surface to measure what users actually receive after application-layer caching, retrieval orchestration, response reuse, and freshness constraints. Delivery audit extracts the delivered machine thesaurus. It does not replace native inferential audit: it answers a different question. Native audit asks what the model reconstructs; delivery audit asks what the application serves.
 
-- **Typed correction** — diagnostic-driven intervention adapted to the specific variance operation identified. Generic correction in a probabilistic system is random correction. Typed correction matches intervention to cause:
-  - **Generalization** → densify the central concept, rebalance core/periphery ratio
-  - **Amalgamation** → reinforce proprietary concepts, exclude shared terms from the core
-  - **Truncation** → strengthen obligatory co-occurrences between concept components
-  - **Substitution** → exclude generic equivalent, densify proprietary term, create contrastive associations
-  - **Projection** → saturate real signal, declare exclusions in machine-readable files (corpus-exclusions.json), avoid editorial negation
-  
-  Priority order: loss → distortion → pollution. Loss of identity (amalgamation, substitution) treats first because no other correction has effect without identity. Distortion (generalization) treats second. Incomplete signal (truncation) treats third. Polluted signal (projection) treats last.
+- **Typed correction** — corrective intervention selected according to the variance operation identified during inferential analysis. Generic correction in a probabilistic system is random correction. Typed correction preserves the principle that different reconstruction failures require different forms of intervention. The correspondence between observed conditions, corrective actions, sequencing, and validation rules belongs to the operational methodology.
 
 ### The rule of three autonomies
 
@@ -308,13 +311,11 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 - **Informational ecology** — management of signal environments and interactions. Three dimensions:
   - **Sectoral semantic monitoring** — mapping the ecosystem in which the corpus exists
   - **Corpus discipline** — maintaining internal coherence and terminological stability
-  - **Inference audit** — systematic multi-model, multi-run interrogation to measure what systems reconstruct, detect drift, and intervene before sedimentation consolidates
+  - **Inferential audit** — systematic observation of what generative AI systems reconstruct, in order to detect drift and intervene before sedimentation consolidates
 
 - **Interpretable web** — web structured for probabilistic interpretation rather than indexing. Publishing to be reconstructed, not to be visited. The site as interpretive tool, not showcase.
 
-- **Consensus engineering** — deliberate shaping of shared interpretations through structured signal. The result of Codebook + five laws + interpretive orchestration + corpus architecture + informational ecology applied together. Four conditions: abandonment of parasitic terms, proprietary conceptual core, mastered repetition over time, signal hierarchy. Four measurement signals: inter-contextual stability, reformulation resistance, multi-query coherence, semantic convergence.
-
-- **Attractive density** — capacity of a dense, coherent signal to dominate reconstruction through mass and coherence. The vectorial mechanism that produces the interpretive center of gravity. Attractive density is the engine; the center of gravity is the observable result.
+- **Consensus engineering** — deliberate shaping of shared interpretations through structured signal. The result of Codebook + five laws + declarative orchestration + corpus architecture + informational ecology applied together. Four conditions: abandonment of parasitic terms, proprietary conceptual core, mastered repetition over time, signal hierarchy. Four measurement signals: inter-contextual stability, reformulation resistance, multi-query coherence, semantic convergence.
 
 - **Delivery fidelity** — degree to which the response actually served by an AI application conforms to the canonical reference. Delivery fidelity depends on model behavior, but also on application-layer choices outside corpus governance: cache invalidation, semantic similarity thresholds, temperature at first generation, retrieval scope, source freshness, and response reuse policy.
 
@@ -344,7 +345,29 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 ---
 
-## 8. Core SIO Concepts
+## 8. The Three Pillars of SIO
+
+Signal Inference Optimization is exercised through three pillars.
+
+These pillars designate the three governing operations of the discipline. They do not replace the mechanisms, pathologies, descriptive states, or measurements defined elsewhere in this conceptual framework.
+
+- **01 — Inferential audit** — observe what the entity intends to establish, what its corpus expresses, and what generative AI systems reconstruct, in order to identify the applicable gaps and establish the T0 observation state.
+- **02 — Canonical reference formalization** — formalize the meanings, terms, variants, relationships, attributions, exclusions, and limits the entity intends to govern. The canonical reference is the required object. The Semantic Codebook is the instrument through which it is formalized, versioned, and maintained.
+- **03 — Inferential governance** — govern the conditions under which the entity's informational signal is produced, declared, maintained, and evaluated, without claiming to control the generative AI systems that reconstruct it.
+
+The three pillars define what SIO does:
+
+Audit the reconstruction.  
+Formalize the canonical reference.  
+Govern the informational signal.
+
+The conceptual framework defined in this document describes the mechanisms on which these operations act: dual spaces, thesaurus states, gaps, variance operations, signal pathologies, reconstruction stability, and delivery-layer effects.
+
+The operational pillars and the observed mechanisms are related, but they must not be conflated.
+
+---
+
+## 9. Core SIO Concepts
 
 - **Signal Inference Optimization (SIO)** — the discipline of structuring and governing the controllable informational signal of an entity in order to reduce inference drift and the gaps affecting its reconstruction by generative AI systems. Its optimization objective is reconstruction fidelity. SIO does not optimize inference. It optimizes the signal that enters the inference process. SIO does not control reconstruction. It structures the conditions that make faithful reconstruction more likely. The name reads: optimization of the signal *for* inference — not optimization *of* inference itself. SIO is the discipline of signal resilience through a destructive pipeline.
 
@@ -356,9 +379,9 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 - **Interpretive center of gravity** — the dominant cluster in the interpretive space. The source signal sufficiently dense and coherent to orient reconstructions toward a chosen version. This is what you build.
 
-- **Inference center of gravity** — the convergence point toward which embeddings and probabilistic trajectories converge in the inference space. The observable effect of the reconstruction produced by the model. This is what you measure.
+- **Inference center of gravity** — the recurrent representational pattern toward which observed reconstructions tend to converge across comparable conditions. It is inferred from repeated observation of outputs, not from direct inspection of the model's internal state. This is what you measure.
 
-- **Acknowledgment of presence** — observable status indicating that the source signal has been detected and displayed as a reference by the probabilistic system in its response, without that display constituting control over the reconstruction produced. Acknowledgment of presence attests visibility; it does not guarantee fidelity. The distinction is foundational to SIO practice: being cited proves the signal was seen, not that it was faithfully reconstructed. Acknowledgment of presence is passive (observed on the model's output); it is distinct from signal declaration, which is active (posed by the organization through amplification files). The concept dismantles the reflex assumption that citation equates to control over reconstruction — a core misconception separating GEO from SIO.
+- **Acknowledgment of presence** — observable status indicating that a source, entity, or informational element has been surfaced or cited in a generated response. Acknowledgment of presence attests presence in the delivered output; it does not establish reconstruction fidelity, causal influence, or complete integration of the source signal. It is passive, observed on the model's output; it is distinct from signal declaration, which is the active publication of governed information by the entity through editorial or declarative surfaces. The distinction separates SIO from approaches that treat citation as evidence of control over reconstruction.
 
 - **Stable reconstruction** — a reconstruction sufficiently recurrent across comparable observations to support a stable characterization. Stability does not establish fidelity.
 
@@ -380,11 +403,11 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 - **Canonical reference** — stable reference established through the Semantic Codebook. It formalizes the entity's intended meanings, canonical terms, admitted variants, obligatory associations, exclusions, attributions, relationships, and limits.
 
-- **Semantic mass** — weight of a concept determined by density, coherence, and repetition. Semantic mass determines whether a signal survives probabilistic compression.
+- **Semantic mass** — weight of a concept determined by density, coherence, and repetition. Semantic mass contributes to the likelihood that a signal will remain available through probabilistic compression and reconstruction.
 
-- **Attractive density** — capacity of a dense, coherent endogenous corpus to reduce the relative weight of uncontrolled exogenous signals in LLM reconstruction. The underlying vectorial mechanism that produces the interpretive center of gravity.
+- **Attractive density** — relative capacity of a dense, coherent, repeated, and hierarchically structured signal to acquire greater salience under comparable reconstruction conditions. A dense endogenous corpus can in this way reduce the relative weight of uncontrolled exogenous signals in the reconstruction. Attractive density is inferred from observable changes in reconstruction patterns. It does not imply direct access to, or proof of, the internal vectorial mechanisms of a generative AI system. It contributes to the formation of the interpretive center of gravity, which is its observable result.
 
-- **Probabilistic governance** — the posture of governing signal inputs to influence reconstruction outputs, with full acknowledgment that correlation is observable but causality is not provable. Not control. Influence under structural uncertainty.
+- **Inferential governance** — the governance of the conditions under which an entity's informational signal is produced, declared, maintained, and evaluated for reconstruction by generative AI systems. Inferential governance acts on controllable signal conditions. It does not control model behavior or guarantee reconstruction outcomes. The posture it entails is explicit: correlation between signal intervention and reconstruction change is observable; causality is not provable. Influence under structural uncertainty, not control.
 
 - **Variance operations vs variance manifestations** — analytical distinction between the underlying transformations applied by probabilistic systems (operations: generalization, amalgamation, truncation, substitution, projection) and their observable symptoms in reconstructions (manifestations: distortion, divergence, instability, amplification, dilution). The distinction matters diagnostically: manifestations are what the audit observes; operations are what corrective intervention must address. Treating manifestations without identifying operations produces generic correction, which in a probabilistic system equals random correction.
 
@@ -394,7 +417,7 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 ---
 
-## 9. Observation and Comparison Principles
+## 10. Observation and Comparison Principles
 
 The three-thesaurus framework defines the diagnostic foundation of SIO practice.
 
@@ -428,6 +451,11 @@ T0 is an observation state, not a competing reference. T0 and subsequent observa
 
 - No direct diagnostic gap is defined between the projected thesaurus and the machine thesaurus. Keeping production gap and reconstruction gap separate preserves causal localization: the expressed corpus remains the observable and actionable terrain between intent and reconstruction.
 
+- Reconstruction fidelity may nevertheless be qualified against the canonical reference. This global qualification expresses conformity; it does not localize where the deviation originates. Qualification and localization are distinct operations:
+  - canonical reference ↔ machine thesaurus — qualification of fidelity;
+  - projected ↔ expressed — localization of the production gap;
+  - expressed ↔ machine — localization of the reconstruction gap.
+
 ### Foundational principle
 
 The objective is not measurement for its own sake. It is corrective.
@@ -447,7 +475,26 @@ Signal survival through transformation is the standard.
 
 This repository establishes and versions the canonical conceptual foundation of SIO.
 
-Version 1.1 clarifies:
+Version 1.2 adds:
+
+- the three pillars of SIO, with the distinction between the operations of the discipline and the mechanisms it describes
+- declarative orchestration as the canonical designation of the machine-format infrastructure, replacing the previous designation
+- the lexical family rule governing the *interpretive*, *inferential*, and *declarative* families
+- alignment of the Semantic Codebook definition and entry structure with codebook.md
+- controlled variants replacing the absolute non-synonymization rule for the proprietary conceptual core
+- *inferential audit* replacing *inference audit* for the practice, under the lexical family rule
+- *inferential governance* replacing *probabilistic governance*, absorbing its epistemic caveat
+- the pipelines restated as analytical patterns rather than a universal architecture
+- reduced causal claims on attractive density, the inference center of gravity, and acknowledgment of presence
+- sampling, correction-mapping, and sequencing detail withdrawn from the public repository and retained as operational methodology
+- a single canonical definition of attractive density, replacing two competing entries
+- the distinction between global qualification of fidelity against the canonical reference and diagnostic localization through the two gaps
+- the context window restated in tokens of assembled textual context rather than in embeddings
+- the five signal-loss points restated as recurrent rather than systematic
+- chunk competition and vectorial attractivity restated as properties of the retrieval and reranking stages rather than of model selection
+- semantic mass restated as contributing to signal availability rather than determining survival
+
+Version 1.1 clarified:
 
 - reconstruction fidelity as the optimization objective of SIO
 - inference drift as a degradation process rather than a measurement
@@ -462,7 +509,7 @@ Version 1.1 clarifies:
 This framework will continue to be refined through:
 
 - applied methodologies
-- inference audits
+- inferential audits
 - real-world implementations
 
 ---
@@ -493,6 +540,6 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [Article series](https://medium.com/@melaniemaquet)
 
 **First public commit:** March 27, 2026  
-**Version:** 1.1  
-**Last updated:** September 21, 2026  
+**Version:** 1.2  
+**Last updated:** September 22, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
