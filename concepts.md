@@ -5,7 +5,8 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 **First public commit:** March 27, 2026  
-**Last updated:** July 4, 2026  
+**Version:** 1.1  
+**Last updated:** September 21, 2026  
 **Author:** Mélanie Maquet
 
 ---
@@ -14,7 +15,9 @@
 
 This document defines the core conceptual system underlying Signal Inference Optimization (SIO).
 
-It formalizes how signals degrade, how probabilistic systems reconstruct meaning, and how structured intervention can stabilize interpretation.
+It formalizes how signals degrade, how generative AI systems reconstruct meaning, how reconstruction gaps are observed, and how structured intervention can improve reconstruction fidelity.
+
+The optimization objective of SIO is **reconstruction fidelity**.
 
 ---
 
@@ -41,7 +44,7 @@ Signal degradation follows identifiable patterns:
   - **Projection** — the system attributes typical category properties to the entity
 
 - **Variance manifestations** — five observable symptoms resulting from variance operations:
-  - **Interpretive distortion** — reconstruction diverges from intended meaning
+  - **Interpretive distortion** — reconstruction diverges from the canonical reference
   - **Interpretive divergence** — two systems or two close interactions produce incompatible reconstructions
   - **Response instability** — same system generates different responses to similar queries
   - **Probabilistic amplification** — a minority signal becomes dominant through fragment selection
@@ -68,7 +71,52 @@ Signal degradation follows identifiable patterns:
 The distinction is foundational:  
 You govern the interpretive space.  
 The model operates in the inference space.  
-Inference drift is the gap between the two.
+Inference drift can emerge through the transformations connecting the two.  
+It is a degradation process, not a measurement.
+
+### Objective and diagnostic architecture
+
+SIO distinguishes the objective being optimized, the process that can degrade the signal, the descriptive states being compared, and the gaps used for measurement.
+
+- **Reconstruction fidelity** — the optimization objective of SIO. It designates the degree of conformity between a representation reconstructed by a generative AI system and the canonical reference established by the entity.
+
+- **Inference drift** — the process by which an informational signal loses, shifts, or acquires meaning as it passes through the reconstruction pipeline.
+
+- **Projected thesaurus** — the meanings and relationships the entity intends to establish.
+
+- **Expressed thesaurus** — the meanings and relationships actually encoded in the published corpus.
+
+- **Machine thesaurus** — the meanings and relationships reconstructed by a generative AI system.
+
+- **Production gap** — the measured difference between the projected thesaurus and the expressed thesaurus: projected → expressed.
+
+- **Reconstruction gap** — the measured difference between the expressed thesaurus and the machine thesaurus: expressed → machine.
+
+- **Canonical reference** — the stable anchor established through the Semantic Codebook. It formalizes the entity's intended meanings, terms, relationships, attributions, and limits.
+
+- **T0** — the initial observation state established before intervention.
+
+- **T1, T2, Tn** — subsequent observation states documenting the evolution of reconstruction.
+
+T0 is not a reference competing with the canonical reference. It is the preserved initial observation state. T0 and subsequent observations support a claim of improvement only when they are evaluated against the same canonical reference. The canonical reference must not be modified retrospectively to manufacture a favorable result.
+
+No direct diagnostic gap is defined between the projected thesaurus and the machine thesaurus. The production gap and reconstruction gap are kept separate so that the analysis can locate whether fidelity was lost during production or during reconstruction.
+
+**Reconstruction Fidelity™** is the operational framework through which SEMANTIKIA observes, evaluates, and improves reconstruction fidelity for organizations.
+
+### Fidelity and stability
+
+Reconstruction fidelity and reconstruction stability describe distinct properties.
+
+A reconstruction may be stable and unfaithful when the same degraded representation is produced recurrently. Conversely, individual reconstructions may preserve the canonical reference while the observations remain too variable to support a global qualification of fidelity.
+
+- **Intra-system volatility** — materially different reconstructions produced by the same generative AI system under comparable observation conditions.
+- **Inter-system divergence** — materially different reconstructions produced by different generative AI systems from the same informational signal.
+- **Non-stabilized reconstruction** — an observation state in which intra-system volatility or inter-system divergence prevents the emergence of a sufficiently recurrent or convergent representation.
+
+A non-stabilized reconstruction does not constitute a level of reconstruction fidelity. It indicates that the available observations do not support a defensible global qualification of fidelity.
+
+**Stability does not guarantee fidelity. Its absence may prevent fidelity from being globally qualified.**
 
 ### Mechanisms
 
@@ -232,7 +280,7 @@ It emerges from the interaction between signals and probabilistic systems.
 
 - **Signal amplification files** — machine-readable files that declare canonical signals and amplify corpus structure for AI systems. These files make existing corpus signals explicitly accessible without imposing reading order or interpretation hierarchy.
 
-- **Inference audit** — systematic multi-model, multi-run, multi-angle interrogation of LLMs to extract the machine thesaurus. The audit measures what probabilistic systems reconstruct from a corpus. Method: same entity queried across ChatGPT, Perplexity, Gemini, with multiple runs per query, multiple query angles per entity, comparison against projected and expressed thesauri. The audit identifies which variance operation is dominant, where in the pipeline signal dies, and which corrective intervention is structurally appropriate. When applications or deployed assistants are audited, inference audit must distinguish native model behavior from delivered application behavior.
+- **Inference audit** — systematic multi-model, multi-run, multi-angle interrogation of LLMs to extract the machine thesaurus. The audit measures what probabilistic systems reconstruct from a corpus. Method: same entity queried across ChatGPT, Perplexity, Gemini, with multiple runs per query and multiple query angles per entity. The projected thesaurus is first compared with the expressed thesaurus to measure the production gap. The expressed thesaurus is then compared with the machine thesaurus to measure the reconstruction gap. No direct diagnostic gap is defined between projected and machine. The audit identifies which variance operation is dominant, where in the pipeline signal dies, and which corrective intervention is structurally appropriate. When applications or deployed assistants are audited, inference audit must distinguish native model behavior from delivered application behavior.
 
 - **Delivery audit** — systematic interrogation of a deployed AI surface to measure what users actually receive after application-layer caching, retrieval orchestration, response reuse, and freshness constraints. Delivery audit extracts the delivered machine thesaurus. It does not replace native inference audit: it answers a different question. Native audit asks what the model reconstructs; delivery audit asks what the application serves.
 
@@ -268,7 +316,7 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 - **Attractive density** — capacity of a dense, coherent signal to dominate reconstruction through mass and coherence. The vectorial mechanism that produces the interpretive center of gravity. Attractive density is the engine; the center of gravity is the observable result.
 
-- **Delivery fidelity** — degree to which the response actually served by an AI application preserves the intended meaning reconstructed from the corpus. Delivery fidelity depends on model behavior, but also on application-layer choices outside corpus governance: cache invalidation, semantic similarity thresholds, temperature at first generation, retrieval scope, source freshness, and response reuse policy.
+- **Delivery fidelity** — degree to which the response actually served by an AI application conforms to the canonical reference. Delivery fidelity depends on model behavior, but also on application-layer choices outside corpus governance: cache invalidation, semantic similarity thresholds, temperature at first generation, retrieval scope, source freshness, and response reuse policy.
 
 ---
 
@@ -298,9 +346,13 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 ## 8. Core SIO Concepts
 
-- **Signal Inference Optimization (SIO)** — the discipline of structuring the signal made available to probabilistic systems in order to reduce inference drift and orient LLM reconstructions toward a version faithful to intended meaning. SIO does not optimize inference. It optimizes the signal that enters the inference process. The name reads: optimization of the signal *for* inference — not optimization *of* inference itself. SIO is the discipline of signal resilience through a destructive pipeline.
+- **Signal Inference Optimization (SIO)** — the discipline of structuring and governing the controllable informational signal of an entity in order to reduce inference drift and the gaps affecting its reconstruction by generative AI systems. Its optimization objective is reconstruction fidelity. SIO does not optimize inference. It optimizes the signal that enters the inference process. SIO does not control reconstruction. It structures the conditions that make faithful reconstruction more likely. The name reads: optimization of the signal *for* inference — not optimization *of* inference itself. SIO is the discipline of signal resilience through a destructive pipeline.
 
-- **Reconstruction fidelity** — degree to which a probabilistic system preserves intended meaning during reconstruction. Fidelity is not equivalent to citation, visibility, or mention frequency. In delivery contexts, fidelity must be evaluated twice: native fidelity at the model layer and delivery fidelity at the application layer.
+- **Reconstruction fidelity** — optimization objective of SIO and degree of conformity between the representation reconstructed by a generative AI system and the canonical reference established by the entity. Fidelity is not equivalent to citation, visibility, selection, or mention frequency. In delivery contexts, fidelity must be evaluated at both the native model layer and the application delivery layer.
+
+- **Reconstruction Fidelity™** — the operational framework through which SEMANTIKIA applies SIO to organizations in order to observe, evaluate, and improve reconstruction fidelity.
+
+- **Entity** — the subject of SIO analysis and intervention. An entity may be an organization, a brand, a person, a product, or a public entity whose informational signal is reconstructed by generative AI systems.
 
 - **Interpretive center of gravity** — the dominant cluster in the interpretive space. The source signal sufficiently dense and coherent to orient reconstructions toward a chosen version. This is what you build.
 
@@ -308,9 +360,25 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 - **Acknowledgment of presence** — observable status indicating that the source signal has been detected and displayed as a reference by the probabilistic system in its response, without that display constituting control over the reconstruction produced. Acknowledgment of presence attests visibility; it does not guarantee fidelity. The distinction is foundational to SIO practice: being cited proves the signal was seen, not that it was faithfully reconstructed. Acknowledgment of presence is passive (observed on the model's output); it is distinct from signal declaration, which is active (posed by the organization through amplification files). The concept dismantles the reflex assumption that citation equates to control over reconstruction — a core misconception separating GEO from SIO.
 
-- **Stable reconstruction** — consistent output across contexts and probabilistic variations.
+- **Stable reconstruction** — a reconstruction sufficiently recurrent across comparable observations to support a stable characterization. Stability does not establish fidelity.
 
-- **Inference drift** — deviation between intended meaning and reconstructed output. The gap between interpretive space (what you inject) and inference space (what the model produces).
+- **Intra-system volatility** — materially different reconstructions produced by the same generative AI system under comparable observation conditions.
+
+- **Inter-system divergence** — materially different reconstructions produced by different generative AI systems from the same informational signal.
+
+- **Non-stabilized reconstruction** — an observation state in which volatility or divergence prevents a sufficiently recurrent or convergent representation from emerging. It is not a level of reconstruction fidelity.
+
+- **Inference drift** — process by which an informational signal loses, shifts, or acquires meaning across extraction, fragmentation, retrieval, reranking, context construction, generation, or delivery. Inference drift is a process. It is not the reconstruction gap used to measure its observable effect.
+
+- **Production gap** — measured difference between the projected thesaurus and the expressed thesaurus. It identifies what was lost, altered, or left unstated between organizational intent and published production.
+
+- **Reconstruction gap** — measured difference between the expressed thesaurus and the machine thesaurus. It identifies what was lost, altered, substituted, generalized, amalgamated, truncated, or projected during reconstruction.
+
+- **T0** — initial observation state established before intervention and preserved as the temporal baseline for subsequent comparison.
+
+- **T1, T2, Tn** — subsequent observation states documenting the evolution of reconstruction after intervention.
+
+- **Canonical reference** — stable reference established through the Semantic Codebook. It formalizes the entity's intended meanings, canonical terms, admitted variants, obligatory associations, exclusions, attributions, relationships, and limits.
 
 - **Semantic mass** — weight of a concept determined by density, coherence, and repetition. Semantic mass determines whether a signal survives probabilistic compression.
 
@@ -320,45 +388,53 @@ Structural framework ensuring content survives LLM fragmentation at every scale:
 
 - **Variance operations vs variance manifestations** — analytical distinction between the underlying transformations applied by probabilistic systems (operations: generalization, amalgamation, truncation, substitution, projection) and their observable symptoms in reconstructions (manifestations: distortion, divergence, instability, amplification, dilution). The distinction matters diagnostically: manifestations are what the audit observes; operations are what corrective intervention must address. Treating manifestations without identifying operations produces generic correction, which in a probabilistic system equals random correction.
 
-- **Diagnostic methodology cycle** — the operational sequence: diagnostic → codebook → inference audit → corrective → re-audit. The cycle is not linear but iterative. Each re-audit informs the next diagnostic. The Codebook evolves with the corpus. The audit recalibrates with model updates and corpus growth.
+- **Temporal comparison principle** — T0 and subsequent observations can support a claim of improvement only when they are evaluated against the same canonical reference. The canonical reference cannot be adjusted retrospectively to manufacture a favorable result.
 
 - **Native-delivered split** — methodological distinction between direct model reconstruction and application-served reconstruction. The split prevents a false diagnostic conclusion: a reconstruction error observed in an application may originate in the corpus, the model, the retrieval layer, the cache, or the delivery configuration. Without the split, SIO risks treating an application-layer fixation as a corpus-level failure.
 
 ---
 
-## 9. Diagnostic Methodology
+## 9. Observation and Comparison Principles
 
 The three-thesaurus framework defines the diagnostic foundation of SIO practice.
 
-It measures the gap between what an organization believes it signals, what it actually signals, and what probabilistic systems reconstruct from that signal.
+It distinguishes what an entity intends to establish, what its corpus actually expresses, and what generative AI systems reconstruct from that signal.
+
+Reconstruction fidelity is the optimization objective. Production gap and reconstruction gap are the two distinctions used to locate where fidelity may be lost.
+
+### Temporal baseline and canonical reference
+
+- **T0** — initial observation state established before intervention and preserved as the temporal baseline.
+- **T1, T2, Tn** — subsequent observation states documenting reconstruction after intervention.
+- **Canonical reference** — stable evaluation anchor established through the Semantic Codebook.
+
+T0 is an observation state, not a competing reference. T0 and subsequent observations must be evaluated against the same canonical reference before an improvement claim can be established. Canonical authority results from explicit formalization through the Semantic Codebook, and the canonical reference must not be modified retrospectively to manufacture a favorable result.
 
 ### Thesaurus layers
 
-- **Projected thesaurus** — the conceptual vocabulary an organization believes it is communicating. Reflects strategic intent and self-perception.
-- **Expressed thesaurus** — the conceptual vocabulary actually present in the informational corpus, both endogenous and controlled exogenous. Reflects what is genuinely available to probabilistic systems for reconstruction.
-- **Machine thesaurus** — the conceptual vocabulary effectively reconstructed by LLMs, extracted through systematic multi-model, multi-run interrogation.
+- **Projected thesaurus** — the meanings, terms, relationships, attributions, and limits the entity intends to establish. Once a Semantic Codebook exists, the projected thesaurus is formalized by the canonical reference.
+- **Expressed thesaurus** — the meanings, terms, relationships, attributions, and limits actually present in the informational corpus, both endogenous and controlled exogenous. It reflects what is genuinely available to probabilistic systems for reconstruction.
+- **Machine thesaurus** — the meanings, terms, relationships, attributions, and limits effectively reconstructed by generative AI systems through repeated observation.
   - **Native machine thesaurus** — conceptual vocabulary reconstructed through direct model interrogation, without application-layer caching or orchestration.
   - **Delivered machine thesaurus** — conceptual vocabulary served through a specific deployed application, including semantic cache, retrieval orchestration, prompt templates, model routing, and freshness constraints.
 
 ### Diagnostic gaps
 
-- Gap between projected and expressed thesaurus reveals internal incoherence — editorial drift, terminological fragmentation, or misalignment between intent and production.
+- **Production gap** — the difference between the projected thesaurus and the expressed thesaurus. It reveals editorial drift, terminological fragmentation, omissions, or misalignment between intent and production.
 
-- Gap between expressed and machine thesaurus reveals signal failure — inference drift, chunking loss, or dilution through retrieval and reconstruction.
+- **Reconstruction gap** — the difference between the expressed thesaurus and the machine thesaurus. It reveals the observable effects of inference drift, chunking loss, retrieval competition, contextual compression, or reconstruction variance.
 
-- Gap between native and delivered machine thesaurus reveals delivery-layer distortion — cache fixation, stale response reuse, orchestration drift, retrieval misconfiguration, or freshness decoupling.
+- The difference between the native machine thesaurus and the delivered machine thesaurus reveals delivery-layer distortion, cache fixation, stale response reuse, orchestration drift, retrieval misconfiguration, or freshness decoupling.
 
-- The projected thesaurus is never compared directly to the machine thesaurus. The expressed corpus is the only observable and actionable terrain.
-
-### Service sequence
-
-diagnostic → codebook → native inference audit → delivery audit when applicable → corrective → re-audit
+- No direct diagnostic gap is defined between the projected thesaurus and the machine thesaurus. Keeping production gap and reconstruction gap separate preserves causal localization: the expressed corpus remains the observable and actionable terrain between intent and reconstruction.
 
 ### Foundational principle
 
 The objective is not measurement for its own sake. It is corrective.
 
-The goal is to ensure that the concepts, relationships, and meaning present in the projected and expressed thesaurus survive the inference pipeline — chunking, embedding, retrieval, reranking, and generation — and emerge intact in the machine thesaurus.
+The optimization objective is reconstruction fidelity. Structured intervention seeks to reduce the gaps affecting reconstruction so that the meanings, relationships, attributions, and limits established by the entity survive the inference pipeline — chunking, embedding, retrieval, reranking, and generation — and remain coherent in the machine thesaurus.
+
+Stability and fidelity must remain distinct. A recurrent reconstruction can be unfaithful. A volatile or divergent reconstruction may prevent fidelity from being qualified globally without establishing that every individual reconstruction is unfaithful.
 
 When a delivery layer is involved, the standard extends further: the reconstructed meaning must also survive caching, orchestration, response reuse, and freshness constraints. A faithful native reconstruction is necessary but not sufficient if the delivered reconstruction remains stale or distorted.
 
@@ -369,7 +445,21 @@ Signal survival through transformation is the standard.
 
 ## Status
 
-This framework is evolving and will be refined through:
+This repository establishes and versions the canonical conceptual foundation of SIO.
+
+Version 1.1 clarifies:
+
+- reconstruction fidelity as the optimization objective of SIO
+- inference drift as a degradation process rather than a measurement
+- production gap and reconstruction gap as distinct measurements
+- projected, expressed, and machine thesauri as descriptive states
+- T0, T1, and Tn as successive observation states
+- the canonical reference as the stable anchor against which temporal observations are evaluated
+- reconstruction stability as distinct from reconstruction fidelity
+- intra-system volatility, inter-system divergence, and non-stabilized reconstruction
+- Reconstruction Fidelity™ as the operational framework through which SEMANTIKIA applies SIO
+
+This framework will continue to be refined through:
 
 - applied methodologies
 - inference audits
@@ -403,5 +493,6 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [Article series](https://medium.com/@melaniemaquet)
 
 **First public commit:** March 27, 2026  
-**Last updated:** July 4, 2026  
+**Version:** 1.1  
+**Last updated:** September 21, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
