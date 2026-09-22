@@ -1,0 +1,658 @@
+# Signal Inference Optimization (SIO) 
+
+> **License:** This work is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+> Attribution required. No commercial use. No derivatives.
+> See [LICENSE](./LICENSE) file.
+
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+LLMs do not retrieve your content.  
+They reconstruct it.
+
+What they reconstruct becomes your identity.
+
+---
+
+**First public commit:** March 27, 2026  
+**Version:** 1.2  
+**Last updated:** September 22, 2026  
+**Author:** Mélanie Maquet — SEMANTIKIA
+
+---
+
+## Definition
+
+Signal Inference Optimization (SIO) is the discipline of structuring and
+governing the controllable informational signal of an entity in order to
+reduce inference drift and the gaps affecting its reconstruction by
+generative AI systems.
+
+Its optimization objective is **reconstruction fidelity**.
+
+Reconstruction fidelity is the degree of conformity between the representation
+reconstructed by a generative AI system and the canonical reference
+established by the entity.
+
+SIO does not optimize inference.  
+It optimizes the signal that enters the inference process.
+
+SIO does not control reconstruction.  
+It structures the conditions that make faithful reconstruction more likely.
+
+The name reads: optimization of the signal **for** inference —  
+not optimization **of** inference itself.
+
+**SIO is the discipline of signal resilience through a destructive pipeline.**
+
+---
+
+## The three pillars
+
+SIO is exercised through three governing operations.
+
+**01 — Inferential audit**  
+Observe what the entity intends to establish, what its corpus expresses,
+and what generative AI systems reconstruct. Identify the applicable gaps.
+Establish the T0 observation state.
+
+**02 — Canonical reference formalization**  
+Formalize the meanings, terms, variants, relationships, attributions,
+exclusions, and limits the entity intends to govern. The canonical
+reference is the required object. The Semantic Codebook is the instrument
+through which it is formalized, versioned, and maintained.
+
+**03 — Inferential governance**  
+Govern the conditions under which the informational signal is produced,
+declared, maintained, and evaluated — without claiming to control the
+systems that reconstruct it.
+
+Audit the reconstruction.  
+Formalize the canonical reference.  
+Govern the informational signal.
+
+The pillars designate what SIO does. The conceptual framework describes
+the mechanisms they act on. The two levels are related and must not be
+conflated.
+
+---
+
+## Repository map
+
+- [Conceptual framework](./concepts.md) — core concepts, mechanisms, laws, and observation principles
+- [Semantic Codebook](./codebook.md) — terminological governance infrastructure
+- [Typed corrections](./corrections.md) — variance operations and correction pathways
+- [Declarative Hub](./declarative-hub.md) — visible compression surface for canonical signal
+- [Technical foundations](./technical-foundations.md) — technical systems SIO is built to account for
+- [Changelog](./changelog.md) — doctrine evolution
+
+---
+
+## Core shift
+
+In traditional systems, meaning is retrieved.  
+In probabilistic systems, meaning is reconstructed.
+
+You are no longer indexed.  
+You are inferred.
+
+---
+
+## Positioning
+
+- **SEO** — improves access and visibility: being found  
+- **GEO** — improves presence, selection, citation, or influence in generative answers  
+- **Entity disambiguation and representation** — stabilize identification and attribution  
+- **Knowledge graph architectures** — formalize entities, attributes, and relationships  
+- **SIO** — optimizes reconstruction fidelity  
+
+These approaches can operate on the same informational surfaces: content, 
+terminology, semantic relationships, structured data, and machine-readable files.
+
+The distinction does not lie in exclusive techniques or an exclusive intervention 
+layer. It lies in the objective being optimized.
+
+**Same intervention surface. Different objective.**
+
+---
+
+## The problem
+
+Probabilistic systems compress and reconstruct information.
+
+During this process:
+
+- signals are fragmented  
+- context is reduced  
+- meaning is approximated  
+- responses may be cached and re-served by application layers  
+
+Unstructured signals drift.  
+Drift produces distortion.  
+Distortion becomes representation.
+
+Without SIO, you are not represented.  
+You are approximated.
+
+---
+
+## Dual space architecture
+
+SIO operates across two distinct spaces:
+
+- **Interpretive space** — the global informational environment  
+  where signals circulate (all corpora, all sources, the full web).  
+  This is the signal source. This is where you act.
+
+- **Inference space** — the internal vectorial/probabilistic space  
+  of the LLM where embeddings distribute and reconstruction occurs.  
+  This is signal processing. This is what you influence.
+
+You govern the interpretive space.  
+The model operates in the inference space.  
+Inference drift can emerge through the transformations connecting the two.  
+It is a degradation process, not a measurement.
+
+---
+
+## Inference pipeline
+
+Signals mobilized by a generative AI system may pass through one or  
+several transformation stages. The exact architecture varies by system,  
+but recurrent patterns emerge.
+
+### Single-hop (typical pattern)
+
+Query analysis → Query expansion → Web search → Page selection →  
+Extraction → Semantic chunking → Embedding → Hybrid retrieval →  
+Reranking → Context construction → Generation → Delivery
+
+### Multi-hop (complex queries)
+
+Complex queries may trigger parallel pipelines:
+
+Query fan-out → Parallel single-hop pipelines per sub-query →  
+Local synthesis → Synthesis fusion → Global context → Final generation
+
+At each stage, information is transformed.  
+At multiple critical points, signal can degrade or disappear.
+
+After generation, the response may also pass through a delivery layer:  
+semantic cache, application orchestration, response filters, or reuse policies.  
+This layer can preserve, distort, or freeze a reconstruction independently  
+of the current corpus.
+
+SIO structures the signal to preserve semantic coherence  
+across pipeline variations.
+
+See detailed analysis:  
+https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
+
+---
+
+## Inference drift
+
+Inference drift is the process by which an informational signal loses, shifts, 
+or acquires meaning as it passes through the reconstruction pipeline.
+
+Signal degradation accumulates across the transformation pipeline.  
+At multiple critical points, signals can degrade or disappear entirely.
+
+SIO structures signals to resist this degradation and preserve 
+semantic coherence through the reconstruction process.
+
+The observable result of this process is not inference drift itself.  
+It is measured through the **reconstruction gap** between the expressed 
+thesaurus and the machine thesaurus.
+
+See detailed analysis:  
+https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
+
+---
+
+## Optimization objective and measurement architecture
+
+SIO distinguishes the objective being optimized, the process that can degrade 
+the signal, the states being compared, and the gaps used for measurement.
+
+| French term | English term | Status |
+|---|---|---|
+| **Signal Inference Optimization (SIO)** | **Signal Inference Optimization (SIO)** | Discipline |
+| **Fidélité de reconstruction** | **Reconstruction fidelity** | Optimization objective |
+| **Reconstruction Fidelity™** | **Reconstruction Fidelity™** | Operational framework |
+| **Dérive d'inférence** | **Inference drift** | Degradation process along the pipeline |
+| **Écart de reconstruction** | **Reconstruction gap** | Measurement: expressed → machine |
+| **Écart de production** | **Production gap** | Measurement: projected → expressed |
+| **Thésaurus projeté / exprimé / machine** | **Projected / expressed / machine thesaurus** | Descriptive states |
+| **T0 / T1 / Tn** | **T0 / T1 / Tn** | Successive observation states |
+| **Référence déclarée** | **Canonical reference** | Stable anchor established through the Semantic Codebook |
+| **Entité** | **Entity** | Subject of the definition |
+
+### Three descriptive states
+
+- **Projected thesaurus** — the meanings and relationships the entity intends to establish.
+- **Expressed thesaurus** — the meanings and relationships actually encoded in its published corpus.
+- **Machine thesaurus** — the meanings and relationships reconstructed by a generative AI system.
+
+The **production gap** separates the projected thesaurus from the expressed 
+thesaurus. The **reconstruction gap** separates the expressed thesaurus from 
+the machine thesaurus.
+
+### Temporal observations and canonical reference
+
+- **T0** — the initial observation state established before intervention.
+- **T1, T2, Tn** — subsequent observation states documenting the evolution of reconstruction.
+- **Canonical reference** — the stable reference established through the Semantic Codebook. It formalizes the entity's intended meanings, terms, relationships, attributions, and limits.
+
+T0 is not a reference competing with the canonical reference. It is the preserved
+initial state of observation. T0 and subsequent observations can support a claim
+of improvement only when they are evaluated against the same canonical reference.
+The canonical reference must not be modified retrospectively to manufacture a
+favorable result.
+
+Reconstruction fidelity is the optimization objective of SIO. Production gap and
+reconstruction gap are diagnostic measurements used to locate where fidelity
+is lost across the chain.
+
+### Fidelity and stability
+
+Reconstruction fidelity and reconstruction stability describe distinct properties.
+
+A reconstruction may be stable and unfaithful when the same degraded representation
+is produced recurrently. Conversely, individual reconstructions may preserve the
+canonical reference while the observations remain too variable to support a global
+qualification of fidelity.
+
+- **Intra-system volatility** occurs when the same generative AI system produces materially different reconstructions under comparable observation conditions.
+- **Inter-system divergence** occurs when different generative AI systems produce materially different reconstructions from the same informational signal.
+- **Non-stabilized reconstruction** describes an observation state in which volatility or divergence prevents a sufficiently recurrent or convergent representation from emerging.
+
+A non-stabilized reconstruction is not a level of reconstruction fidelity. It is a
+limit on the possibility of qualifying fidelity globally.
+
+**Stability does not guarantee fidelity. Its absence may prevent fidelity from being globally qualified.**
+
+---
+
+## Signal survival
+
+Structuring the signal is necessary.  
+But the real standard is survival.
+
+What must survive the pipeline is not the literal text.  
+It is the meanings, relationships, attributions, and limits  
+the entity has declared.
+
+A signal survives when a reconstruction produced after chunking,  
+retrieval, reranking, and generation still conforms to the canonical  
+reference. When those elements do not survive, they are absent from  
+the reconstruction, whatever the corpus contains.
+
+SIO is the discipline of making signal survival intentional.
+
+---
+
+## Semantic caching and application-layer fixation
+
+SIO primarily governs the signal made available to probabilistic systems.  
+But users do not always receive a fresh native model reconstruction.
+
+In deployed AI applications, a generated response may be stored in a  
+semantic cache and reused for semantically similar queries. This creates  
+a distinct fidelity risk: one probabilistic output can be frozen and  
+served repeatedly as if it were the canonical response.
+
+This mechanism is called **stochastic fixation**.
+
+Stochastic fixation differs from interpretive sedimentation:
+
+- **Interpretive sedimentation** consolidates slowly through corpus ingestion,  
+  republication, and model update cycles.
+- **Stochastic fixation** operates at delivery time, when an application layer  
+  captures one model output and re-serves it through cache or orchestration.
+
+This distinction introduces two diagnostic objects:
+
+- **Native machine thesaurus** — what the model reconstructs through direct interrogation.
+- **Delivered machine thesaurus** — what a deployed application actually serves to users.
+
+A corpus can be current, coherent, and well-governed while an application  
+continues serving an older cached reconstruction. In that case, the problem  
+is not only inference drift. It is delivery drift.
+
+The corpus governs the conditions of reconstruction.  
+It does not directly govern the cache.
+
+---
+
+## Declarative signal layer
+
+The editorial corpus produces signal through statistical accumulation.  
+The declarative signal layer produces signal through explicit declaration  
+in machine-readable formats.
+
+These are not instructions to the model.  
+These are not constraints on inference.  
+These are high-density signal fragments in formats designed to be parsed  
+without prior extraction from a page.
+
+A 200-word sio-identity.json carries a higher signal-per-token ratio  
+than a 2000-word blog post. Whether that density is retrieved and  
+retained depends on the chunking, retrieval, reranking, and context  
+configuration of the system, which the entity does not control.
+
+### Declarative signal files
+
+Two prefixes are used. `sio-` designates what the entity declares about
+itself. `corpus-` designates what its corpus canonically contains or
+excludes. Files published under an existing public convention keep their
+established names.
+
+| File | Function |
+|---|---|
+| **llms.txt** | Signal entry point — content index in LLM-readable format (public proposal, Jeremy Howard, llmstxt.org) |
+| **llms-full.txt** | Extended signal documentation — expanded description deployed alongside llms.txt. Not part of the canonical llms.txt proposal |
+| **sio-identity.json** | Identity declaration — who the entity is, in structured format |
+| **sio-claims.json** | Canonical assertions — what the entity affirms as its positioning |
+| **sio-glossary.json** | Canonical terminology — the terms carrying the central signal, with their admitted variants |
+| **sio-corrections.json** | Reconstruction corrections — identified reconstruction errors and their factual corrections |
+| **sio-manifest.json** | Structured metadata — entity type, mission, scope, version |
+| **sio-policy.json** | Usage policy — conditions under which content may be used by AI systems |
+| **sio-context.txt** | Representation context — how the entity should be represented |
+| **corpus-canon.json** | Canonical reference — the meanings, terms, associations, attributions, and limits the entity governs |
+| **corpus-exclusions.json** | Declared exclusions — formulations, categorizations, and associations the entity excludes from its signal |
+| **humans.txt** | Human attribution — people behind the entity (public initiative, humanstxt.org, since 2009) |
+
+### What declarative signal files do
+
+Declarative signal files densify the identity signal in machine-readable format.  
+They do not command the model. They do not constrain inference.  
+When retrieved, they enter the same candidate set as any other passage,  
+where density, coherence, and semantic alignment may work in their favour.
+
+A declarative signal layer without a governed corpus  
+declares an identity the corpus does not carry.
+
+A governed corpus without a declarative signal layer  
+is under-exploited — the densest identity fragments are missing.
+
+Both are necessary. Neither is sufficient alone.
+
+### What declarative signal files do not do
+
+They do not control LLM reconstructions.  
+They do not guarantee indexation or integration.  
+They do not override corpus signals by authority.  
+They compete in the pipeline like any other chunk —  
+by density, coherence, and semantic alignment.
+
+### Relationship with the Semantic Codebook
+
+Declarative signal files must use the canonical terminology  
+of the Semantic Codebook. The same terms, the same associations,  
+the same exclusions. Coherence between the editorial corpus  
+and the declarative layer is non-negotiable.
+
+---
+
+## Declarative orchestration
+
+Declarative orchestration is the deployment and maintenance  
+of the declarative signal layer as an integrated component  
+of the SIO architecture.
+
+Declarative orchestration includes:
+
+- Structuring declarative signal files with Codebook-aligned terminology  
+- Deploying files at stable, predictable URLs  
+- Maintaining coherence between the editorial corpus and the declarative layer  
+- Versioning and dating all declarative files  
+- Updating when the Codebook evolves  
+
+Declarative orchestration is the infrastructure component of SIO.  
+It does not replace corpus density. It complements it  
+by providing a stable, machine-readable reference layer.
+
+Declarative orchestration designates the deployment and coordination of  
+the declarative surfaces. Declarative governance designates the governed  
+content, rules, attributions, and limits those surfaces carry.
+
+---
+
+## Centers of gravity
+
+SIO produces two observable anchors:
+
+- **Interpretive center of gravity** — the dominant cluster  
+  in the interpretive space. The source signal sufficiently dense  
+  and coherent to orient reconstructions. This is what you build.
+
+- **Inference center of gravity** — the recurrent representational  
+  pattern toward which observed reconstructions tend to converge  
+  across comparable conditions. Inferred from repeated observation  
+  of outputs, not from inspection of the model's internal state.  
+  This is what you measure.
+
+**Attractive density** contributes to the formation of both. It is inferred  
+from observable changes in reconstruction patterns, not from direct access  
+to internal vectorial mechanisms.
+
+---
+
+## Informational identity
+
+In probabilistic systems, identity is not stored.  
+It is reconstructed.
+
+What emerges from inference becomes your informational identity.
+
+This identity is:
+
+- probabilistic  
+- context-dependent  
+- shaped by available signals  
+
+SIO stabilizes this identity by structuring  
+how signals enter the system.
+
+---
+
+## What SIO is not
+
+- Not semantic SEO  
+- Not GEO  
+- Not knowledge graph optimization  
+- Not LLMO  
+
+SIO is not defined by an exclusive technique, format, or intervention layer.  
+It is defined by its optimization objective: reconstruction fidelity.
+
+---
+
+## Relationship with adjacent disciplines
+
+SIO neither replaces nor subsumes adjacent disciplines and architectures.
+
+- **SEO** structures access and visibility in search environments.  
+- **GEO** seeks to increase presence, selection, citation, or influence in generative answers.  
+- **Entity disambiguation and representation** stabilize the identification and attribution of entities.  
+- **Knowledge graph architectures** formalize entities, attributes, and relationships in explicit structures.  
+- **Reading and interpretation governance frameworks** define conditions of reading and meaning production.  
+- **Memory governance** oversees stateful AI memory systems.  
+- **Authority governance** constrains executable AI authority.  
+
+Several of these approaches can modify the same source content, semantic 
+relationships, structured data, or machine-readable surfaces. Shared techniques 
+do not imply a shared discipline.
+
+SIO is distinguished by the objective it assigns to these interventions: 
+reducing the gaps that affect an entity's reconstruction and optimizing toward 
+reconstruction fidelity.
+
+**Same intervention surface. Different objective.**
+
+---
+
+## Technical foundations
+
+SIO is not a technical implementation framework.  
+It is a corpus-first discipline built with direct awareness of the technical  
+systems that transform, compress, retrieve, reconstruct, cache, and deliver signals.
+
+The technical foundations of SIO are documented separately:
+
+[technical-foundations.md](./technical-foundations.md)
+
+---
+
+## Normative independence
+
+SIO is defined and developed by its author.  
+It operates under no external normative authority.
+
+This framework evolves through:
+
+- documented research  
+- field practice  
+- published case studies  
+
+It is not subject to third-party arbitration  
+or distributed authority allocation by external entities.
+
+---
+
+## Conceptual framework
+
+SIO is grounded in a structured conceptual system.
+
+This system defines:
+
+- pathologies of signal degradation  
+- mechanisms of probabilistic reconstruction  
+- principles of informational identity  
+- methods for semantic structuring  
+- diagnostic methodology for measuring signal integrity  
+- application-layer risks such as semantic caching and stochastic fixation  
+
+See full framework:  
+https://github.com/MMaquet/signal-inference-optimization/blob/main/concepts.md
+
+---
+
+## Operational application
+
+SIO is the public conceptual discipline.  
+**Reconstruction Fidelity™** is the operational framework through which 
+SEMANTIKIA observes, evaluates, and improves reconstruction fidelity for organizations.
+
+The discipline is public.  
+Its operational application through Reconstruction Fidelity™ is commercial.
+
+This distinction is explicit and locked.
+
+For diagnostics, Semantic Codebooks, inferential audits, and corrections:  
+[semantikia.com](https://semantikia.com)
+
+---
+
+## Status
+
+This repository establishes and versions the canonical conceptual foundation of SIO.
+
+Version 1.2 adds:
+
+- the three pillars of SIO — inferential audit, canonical reference formalization, inferential governance  
+- declarative orchestration as the canonical designation of the machine-format infrastructure  
+- the lexical family rule: the *interpretive* family describes the space and its phenomena; the *inference* forms name mechanisms and spaces; the *inferential* family names the practices; the *declarative* family names the machine-format layer  
+- *référence déclarée* as the governed French form of *canonical reference*, aligned with the Semantic Codebook  
+- a single inventory of declarative signal files, under the `sio-` and `corpus-` prefixes, replacing two divergent naming schemes  
+- signal survival restated as the survival of declared meanings, relationships, attributions, and limits, not of literal text  
+- reduced causal claims on the inference center of gravity, attractive density, and the retrieval of declarative files  
+- the status of llms.txt, llms-full.txt, and humans.txt corrected: public proposals and initiatives, not adopted standards  
+- the Declarative Hub positioned as a surface within declarative orchestration  
+- declared exclusions moved to the declarative layer rather than stated as editorial negation  
+
+Version 1.1 clarified:
+
+- reconstruction fidelity as the optimization objective of SIO  
+- inference drift as a degradation process rather than a measurement  
+- production gap and reconstruction gap as distinct measurements  
+- T0, T1, and Tn as successive observation states evaluated against the same canonical reference  
+- the distinction between reconstruction fidelity and reconstruction stability  
+- non-stabilized reconstruction as a limit of global qualification, not a fidelity level  
+- the distinction between SIO and adjacent approaches by objective rather than intervention surface  
+
+It will evolve toward:
+
+- inferential audit methodologies  
+- signal integrity diagnostics  
+- operational structuring frameworks  
+
+---
+
+## Author
+
+Mélanie Maquet — originator of Signal Inference Optimization,  
+founder of SEMANTIKIA.
+
+[melaniemaquet.com/identite-canonique](https://www.melaniemaquet.com/identite-canonique)  
+[sio.melaniemaquet.com](https://sio.melaniemaquet.com)  
+[linkedin.com/in/melaniemaquet](https://www.linkedin.com/in/melaniemaquet/)
+
+First public commit: March 27, 2026  
+Version: 1.2  
+Last updated: September 22, 2026
+
+---
+
+## Writing & research
+
+The SIO doctrinal corpus is accessible through:
+
+https://sio.melaniemaquet.com
+
+The GitHub repository defines the conceptual structure.  
+The doctrinal corpus develops reasoning, applications, and implications.
+
+---
+
+## License
+
+This work is licensed under the Creative Commons 
+Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).
+
+You may share this work with attribution.  
+You may not use it commercially.  
+You may not modify or redistribute modified versions.
+
+Full license text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode  
+See [LICENSE](./LICENSE) file in this repository.
+
+---
+
+## Commercial use & extensions
+
+This work is currently licensed under CC BY-NC-ND 4.0 — no commercial use, 
+no derivatives — to protect the integrity of the discipline during its 
+foundational phase.
+
+For commercial licensing, derivative works, formal collaboration, 
+or research partnership inquiries, please contact:
+
+**Mélanie Maquet** — [LinkedIn](https://www.linkedin.com/in/melaniemaquet/)
+
+The license may evolve toward broader openness as the discipline 
+matures and is validated through field practice. Until then, integrity 
+of the foundational vocabulary takes priority over derivative circulation.
+
+---
+
+## Closing
+
+In probabilistic systems:
+
+Visibility is not identity.  
+Selection is not control.
+
+What survives reconstruction defines what you are.
+
+SIO is the discipline of making that survival intentional.
