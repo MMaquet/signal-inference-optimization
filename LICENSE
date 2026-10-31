@@ -18,8 +18,11 @@ Full legal code: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
 
 This license covers all files in this repository, including but not limited to:
 - README.md
-- codebook.md
 - concepts.md
+- codebook.md
 - corrections.md
+- declarative-hub.md
+- technical-foundations.md
+- changelog.md
 
 First public commit of this repository: March 27, 2026
