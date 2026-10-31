@@ -5,8 +5,8 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 **First public commit:** March 27, 2026  
-**Version:** 1.2  
-**Last updated:** September 22, 2026  
+**Version:** 1.3  
+**Last updated:** October 31, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
@@ -40,7 +40,7 @@ Signal degradation follows identifiable patterns:
   - **Generalization** — the system broadens scope beyond actual identity
   - **Amalgamation** — the system merges the entity with competitors or broader categories
   - **Truncation** — the system retains only part of the positioning
-  - **Substitution** — the system replaces proprietary concepts with generic equivalents
+  - **Substitution** — the system replaces proprietary concepts with generic equivalents, or with a prior state of the entity
   - **Projection** — the system attributes typical category properties to the entity
 
 - **Variance manifestations** — five observable symptoms resulting from variance operations:
@@ -49,6 +49,11 @@ Signal degradation follows identifiable patterns:
   - **Instability** — the same system generates different responses to similar queries
   - **Amplification** — a minority signal becomes dominant through fragment selection
   - **Dilution** — no trajectory dominates, producing vague and generic outputs
+
+- **Inferential filling** — production of an assertion where the corpus is silent. It constitutes a second family of alteration, distinct from the five variance operations: those transform an existing signal, inferential filling transforms nothing. A position with no declared source does not remain empty; it receives the most plausible value from the sectoral neighbourhood. Its observable manifestation is distinct from the five above:
+  - **Unanchored assertion** — a precise and plausible statement addresses a position the corpus does not declare. It does not contradict the canonical reference; it occupies a silence within it.
+  
+  Provenance of content separates inferential filling from projection. Projection displaces a property established elsewhere; inferential filling produces one established nowhere. The two require opposite corrections: displacement for projection, occupation of the position for inferential filling. Hallucination is a sector category. It is not a category of analysis.
 
 - **Interpretive sedimentation** — progressive accumulation of plausible inaccuracy layers that consolidate into the reference version used by probabilistic systems. Sedimentation follows a propagation cycle: corpus → ingestion → erroneous reconstruction → republication → re-ingestion → consolidation.
 
@@ -300,9 +305,18 @@ It emerges from the interaction between signals and probabilistic systems.
   - **Amalgamation** → reinforce proprietary concepts, exclude shared terms from the core
   - **Truncation** → strengthen obligatory co-occurrences between concept components
   - **Substitution** → exclude the generic equivalent, densify the proprietary term, create contrastive associations
-  - **Projection** → saturate the real signal, declare exclusions in machine-readable files (sio-corrections.json), avoid editorial negation
+  - **Projection** → saturate the real signal, then close the set: enumerate what the entity holds and declare the enumeration complete, naming no foreign term. The closure clause carries the category term and the entity name, which is what makes it retrievable for the queries where the projection surfaces. Editorial denial is excluded, not because it negates but because it names: a fragment naming the term to be dissociated is retrieved on that term and adds the co-occurrence to the corpus, whatever negation surrounds it. The criterion is whether naming creates a co-occurrence that does not already exist, which is why the same naming is admitted under substitution, where the association is already massively present and the intervention qualifies it. Declaration in machine-readable files (sio-corrections.json) reinforces the clause; it does not replace it
+  - **Inferential filling** → occupy the position: declare the value, or close the set by declaring that none applies. A position left empty is filled again
   
-  Priority order: loss → distortion → pollution. Loss of identity (amalgamation, substitution) is treated first, because no other correction has effect without a distinct identity. Distortion (generalization) is treated second. Incomplete signal (truncation) third. Polluted signal (projection) last, because correction through density and declaration is the slowest to produce observable effects.
+  Projection and inferential filling share one instrument. The closure clause enumerates what the entity holds and declares the enumeration complete. What differs is only what is being closed: for projection, an attribute established elsewhere; for inferential filling, an attribute established nowhere. The four remaining operations close nothing — they displace or densify existing signal — which is why their correction is editorial and the declarative layer does not serve them.
+  
+  Priority order: loss → distortion → incompleteness → pollution. Loss of identity (amalgamation, substitution) is treated first, because no other correction has effect without a distinct identity. Distortion (generalization) is treated second. Incomplete signal (truncation) third. Polluted signal (projection) last, because correction through density and declaration is the slowest to produce observable effects.
+  
+  Inferential filling is treated in parallel with the first position, as **1 bis**. It stands outside the dependency chain: correcting it has no effect on the other four, and the other four have no effect on it. Nothing therefore argues for deferring it, while three conditions argue for treating it immediately — an unanchored assertion is what a reader encounters most directly, an empty position is refilled for as long as it remains empty, and the correction carries no sequencing cost.
+  
+  **Layer of 1 bis.** Occupation is editorial first. A position occupied only in machine-readable files is not occupied: those files are weakly retrieved for natural-language queries, and no system is required to read them. The value must exist in prose to enter the candidate set. Declarative surfaces then reinforce what the corpus already carries; they do not substitute for it.
+  
+  Occupation is bounded in volume. A closure clause is added to existing content rather than published as new content, so that occupation does not grow the corpus while the first position is concentrating identity density.
   
   Detection method, dominant causes, and the full correction and priority matrices are documented in [corrections.md](https://github.com/MMaquet/signal-inference-optimization/blob/main/corrections.md).
 
@@ -359,6 +373,8 @@ Applied to SIO, four families are governed:
 - **Opaque cache state** — risk created when users, organizations, and auditors cannot know whether a response was freshly generated or retrieved from a semantic cache. Without generation timestamp, model version, source context, cache age, and invalidation policy, the freshness and fidelity of the delivered reconstruction cannot be fully assessed from the interface alone.
 
 - **Randomness monopoly** — condition in which semantic caching eliminates output variance by locking one stochastic sample and serving it repeatedly. Stability increases, but not necessarily toward truth or fidelity. Variance is not resolved by convergence; it is replaced by one fixed draw.
+
+- **Closure clause decay** — risk created when a closure clause remains inscribed after the set it closes has changed. A closure clause acquires its force through identical repetition across the corpus; that same repetition distributes the error once the set expands and the clause is not updated. Closure clauses are therefore maintained under temporal monitoring, and are structurally appropriate where the enumerated set is small and stable. Where the set is large or distributed across subsidiaries, the clause becomes a liability rather than a correction.
 
 - **Asymmetric correction** — correcting consolidated sedimentation requires the correct signal to be simultaneously dominant, coherent, and repeated over time. Publishing correct content does not erase sedimentary layers.
 
@@ -430,7 +446,9 @@ The operational pillars and the observed mechanisms are related, but they must n
 
 - **Inferential governance** — the governance of the conditions under which an entity's informational signal is produced, declared, maintained, and evaluated for reconstruction by generative AI systems. Inferential governance acts on controllable signal conditions. It does not control model behavior or guarantee reconstruction outcomes. The posture it entails is explicit: correlation between signal intervention and reconstruction change is observable; causality is not provable. Influence under structural uncertainty, not control.
 
-- **Variance operations vs variance manifestations** — analytical distinction between the underlying transformations applied by probabilistic systems (operations: generalization, amalgamation, truncation, substitution, projection) and their observable symptoms in reconstructions (manifestations: distortion, divergence, instability, amplification, dilution). The distinction matters diagnostically: manifestations are what the audit observes; operations are what corrective intervention must address. Treating manifestations without identifying operations produces generic correction, which in a probabilistic system equals random correction.
+- **Variance operations vs variance manifestations** — analytical distinction between the underlying transformations applied by probabilistic systems (operations: generalization, amalgamation, truncation, substitution, projection) and their observable symptoms in reconstructions (manifestations: distortion, divergence, instability, amplification, dilution). The distinction matters diagnostically: manifestations are what the audit observes; operations are what corrective intervention must address. Treating manifestations without identifying operations produces generic correction, which in a probabilistic system equals random correction. The five operations describe one family, which transforms an existing signal. Inferential filling constitutes a second, which produces an assertion where the corpus is silent.
+
+- **Inferential filling** — production of an assertion where the corpus is silent. It constitutes a second family of alteration, distinct from the five variance operations: those transform an existing signal, inferential filling produces one. Its observable manifestation is the unanchored assertion. Provenance of content separates it from projection, and the two require opposite corrections: projection is corrected by displacement, inferential filling by occupying the position. Within the Semantic Codebook, inferential filling is governed through limits rather than exclusions, because no published formulation exists to exclude.
 
 - **Temporal comparison principle** — T0 and subsequent observations can support a claim of improvement only when they are evaluated against the same canonical reference. The canonical reference cannot be adjusted retrospectively to manufacture a favorable result.
 
@@ -495,6 +513,20 @@ Signal survival through transformation is the standard.
 ## Status
 
 This repository establishes and versions the canonical conceptual foundation of SIO.
+
+Version 1.3 adds:
+
+- inferential filling as a second family of alteration, distinct from the five variance operations: it produces an assertion where the corpus is silent rather than transforming an existing signal. The branch was already admitted by the definition of inference drift — a signal that *acquires* meaning — and is now named
+- the unanchored assertion as the observable manifestation of that family
+- provenance of content as the test separating inferential filling from projection, with their opposite corrections: displacement for projection, occupation of the position for inferential filling
+- the typed correction for inferential filling, placed as 1 bis: treated in parallel with the first position, since it stands outside the dependency chain and nothing argues for deferring it
+- the layer of 1 bis: occupation is editorial first, since a position occupied only in machine-readable files is weakly retrieved and not occupied, with declarative surfaces reinforcing rather than substituting; and bounded in volume, so that occupation does not compete on density with the concentration of identity carried out at the first position
+- the closure clause as the shared instrument of projection and inferential filling, enumerating what the entity holds and declaring the enumeration complete, differing only in whether the closed attribute is established elsewhere or nowhere
+- the correction of projection restated: editorial denial is excluded because it names the term to be dissociated, not because it negates — a fragment naming that term is retrieved on it and adds the co-occurrence to the corpus, whatever negation surrounds it. The criterion, already stated under substitution in corrections.md, is whether naming creates a co-occurrence that does not already exist
+- closure clause decay as a structural risk: a clause acquires force through identical repetition and distributes the error once the closed set expands without update
+- limits, rather than exclusions, as the Codebook instrument governing inferential filling
+- a prior state of the entity as an additional case of substitution
+- incompleteness restored to the stated priority order, which named three stages while the text treated four
 
 Version 1.2 adds:
 
@@ -569,6 +601,6 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [Article series](https://medium.com/@melaniemaquet)
 
 **First public commit:** March 27, 2026  
-**Version:** 1.2  
-**Last updated:** September 22, 2026  
+**Version:** 1.3  
+**Last updated:** October 31, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
