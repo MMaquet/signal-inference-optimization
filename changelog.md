@@ -4,7 +4,7 @@
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-**Last updated:** September 22, 2026  
+**Last updated:** October 31, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
@@ -14,6 +14,54 @@
 All notable changes to the Signal Inference Optimization (SIO) conceptual framework are documented in this file.
 
 This framework follows a deliberate publication cadence — foundational concepts established first, technical operationalization deployed progressively, field validation conducted before public claims.
+
+---
+
+## 2026-10-31
+
+### Version 1.3 — the second family of alteration
+
+Applies to `README.md`, `concepts.md`, `codebook.md`, `corrections.md`, and `declarative-hub.md`. All five files carry version 1.3 and the same date. `technical-foundations.md` is also updated and carries the same date; it remains unversioned.
+
+### Added
+- **A generation section in `technical-foundations.md`.** The document covered the pipeline from crawling to delivery with no section on generation, which appeared only as a bullet while the RAG section named it as a locus of drift. The section states generation as autoregressive sampling over a distribution conditioned by the assembled context and by pre-training, and draws three consequences: a single response is one draw, which is why multi-run observation is a requirement rather than a precaution; where the context is silent, pre-training answers, which is the technical locus of inferential filling; and nothing is lost at that layer, which is why the recurrent signal-loss points take no sixth entry.
+- **Inferential filling** as a second family of alteration, distinct from the five variance operations. Stated in README (inference drift), concepts.md (section 1 as a pathology, section 5 as a typed correction, section 9 as a core concept), codebook.md (excluded formulations and limits), corrections.md (its own section after the five operations), and declarative-hub.md (empty positions as a sixth structural problem).
+- **The unanchored assertion** as the observable manifestation of that family, stated alongside the five variance manifestations without displacing them.
+- **The closure clause** as the instrument correcting both projection and inferential filling, defined in codebook.md under *limits*, prescribed in corrections.md at both operations, and admitted in declarative-hub.md as the form a boundary of interpretation takes when a position must be occupied.
+- **Priority 1 bis** in concepts.md and in both matrices of corrections.md.
+- **Closure clause decay** as a structural risk in concepts.md, section 7.
+
+### Fixed
+- Single trailing space on the `**Last updated:**` line of `technical-foundations.md`, which suppressed the markdown line break and ran the author line into it.
+
+### Defined
+- **Inferential filling** — production of an assertion where the corpus is silent. It transforms nothing. A position with no declared source does not remain empty: it receives the most plausible value from the sectoral neighbourhood.
+- **Unanchored assertion** — a precise and plausible statement addressing a position the corpus does not declare. It does not contradict the canonical reference; it occupies a silence within it. This is why the five variance manifestations do not catch it: each of them describes a deviation from the reference, and the reference is silent at that position.
+- **Closure clause** — enumerate what the entity holds in a category, and declare the enumeration complete, naming no foreign term. The clause carries the category term and the entity name, which is what makes it retrievable for the queries where the alteration surfaces.
+- **Closure clause decay** — a closure clause acquires its force through identical repetition across the corpus, and that same repetition distributes the error once the closed set expands without update. Closure clauses are maintained under temporal monitoring and are appropriate where the enumerated set is small and stable. Where the set is large or distributed across subsidiaries, the clause becomes a liability rather than a correction.
+
+### Changed
+- **Substitution** gains a second case: a proprietary concept may be replaced by a generic equivalent *or by a prior state of the entity*. Applied in concepts.md, codebook.md, and corrections.md.
+- **Operation 5 of corrections.md is split.** Projection retains what is established elsewhere and displaced onto the entity. The material describing silence zones and what the model fills moves to the second family, where it belongs. The sentence *"Silence is not neutral in a probabilistic system"* is retained, relocated, and its verb adjusted from *project* to *fill*.
+- **The correction of projection** gains the closure clause as an editorial intervention. Declaration in `sio-corrections.json` is restated as reinforcement rather than as the correction itself: a bounded set stated only in a machine-readable file is weakly retrieved for natural-language queries, and no system is required to read it.
+- **The five diagnostic questions of corrections.md become six.** The question *"Does the reconstruction contain attributes I never published?"* identified inferential filling rather than projection. Projection is now identified by *"Does the reconstruction attribute to me properties typical of my category?"*, inferential filling by *"Does the reconstruction answer a question my corpus never addresses?"*
+- **The stated priority order** becomes *loss → distortion → incompleteness → pollution* in concepts.md and corrections.md. Both files named three stages while their text treated four: incompleteness was described at priority 3 and absent from the heading.
+
+### Scoped
+- **The prohibition on editorial negation bears on naming, not on negating.** A fragment naming the term to be dissociated is retrieved on that term and adds the co-occurrence to the corpus, whatever negation surrounds it. A closure clause negates without naming, and is admitted. Stated in concepts.md, corrections.md, and the positive density principle of declarative-hub.md.
+- **Occupation is editorial first.** A position occupied only in a machine-readable file is not occupied. The value must exist in prose to enter the candidate set; declarative surfaces reinforce what the corpus already carries rather than substituting for it.
+- **Occupation is bounded in volume.** A closure clause is added to existing content rather than published as new content, so that occupation does not grow the corpus while priority 1 is concentrating identity density. The two corrections do not compete on dependency; without this bound they compete on density.
+
+### Resolved
+- **The conflation of projection and inferential filling within Operation 5 of `corrections.md`.** That entry described two mechanisms under one name — an attribute typical of the category, and an attribute filling a silence — and prescribed a hybrid correction for both. Provenance of content separates them: projection displaces an attribute established elsewhere and is corrected by displacement; inferential filling produces an attribute established nowhere and is corrected by occupying the position. A correction aimed at pushing away an attribute that exists nowhere leaves the position empty, and an empty position is filled again.
+- **The placement of inferential filling in the priority order.** It stands outside the dependency chain: correcting it has no effect on the four operations, and they have no effect on it. The order is constructed on dependency, not on severity, so nothing in it argues for deferring the correction, while three conditions argue for treating it immediately — an unanchored assertion is what a reader encounters most directly, an empty position is refilled for as long as it remains empty, and the correction carries no sequencing cost. It is therefore treated in parallel with priority 1 rather than at a rank of its own.
+
+### Rationale
+- The generation section closes a gap that predates this version. A document establishing the technical foundations of a corpus-first discipline could not stay silent on the layer where the response is produced, and the gap was load-bearing: the five recurrent signal-loss points are all upstream of generation, so without that section nothing in the repository located inferential filling in the pipeline at all.
+- Inferential filling is a second family and not a sixth variance operation because the five operations share a property it does not have: they transform a signal the corpus contains. Adding it to the list would have made that list describe two incompatible mechanisms, which is the defect the operation/manifestation distinction was created to prevent.
+- The branch was already admitted by the definition of inference drift, which states that a signal *loses, shifts, or acquires* meaning across the pipeline. The third verb had no named family. Version 1.3 names it rather than introducing it.
+- *Hallucination* is excluded as a designation. It is a sector category, not a category of analysis: it names the fact that an assertion is false without identifying the mechanism that produced it, and therefore without determining a correction.
+- The closure clause unifies two corrections that were separately specified, and the unification is mechanical rather than editorial: in both cases the entity closes a set, and what differs is only whether the closed attribute is established elsewhere or nowhere. The criterion for whether a foreign term may be named — whether naming creates a co-occurrence that does not already exist — was stated under Substitution in version 1.2 and now governs all three operations that touch it.
 
 ---
 
