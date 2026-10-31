@@ -6,8 +6,8 @@
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-**Version:** 1.2  
-**Last updated:** September 22, 2026  
+**Version:** 1.3  
+**Last updated:** October 31, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
@@ -175,7 +175,7 @@ The five variance operations are:
 - **Generalization** — the formulation broadens the concept beyond its established scope.
 - **Amalgamation** — the formulation merges the entity or concept with a competitor, category, or adjacent object.
 - **Truncation** — the formulation removes a component required to preserve the complete meaning.
-- **Substitution** — the formulation replaces a distinctive concept with a generic or different equivalent.
+- **Substitution** — the formulation replaces a distinctive concept with a generic or different equivalent, or with a prior state of the entity.
 - **Projection** — the formulation invites the attribution of properties typical of a broader category but not established by the entity.
 
 The five observable manifestations are:
@@ -190,6 +190,24 @@ Variance operations and variance manifestations must remain distinct.
 
 The operation describes the transformation.  
 The manifestation describes its observable effect.
+
+### A second family
+
+The five variance operations transform an existing signal. They apply to formulations the entity has published, and the exclusion instrument addresses them by removing or replacing the formulation.
+
+A second family lies outside the reach of exclusion.
+
+**Inferential filling** produces an assertion where the corpus is silent. It transforms nothing. A position with no declared source does not remain empty: it receives the most plausible value from the sectoral neighbourhood.
+
+Its observable manifestation is distinct:
+
+- **Unanchored assertion** — a precise and plausible statement addresses a position the corpus does not declare. It does not contradict the canonical reference; it occupies a silence within it.
+
+Provenance of content separates the two families. Projection displaces something established elsewhere, and is corrected by displacement. Inferential filling displaces nothing, and is corrected by occupying the position.
+
+There is no formulation to exclude, because none was published. Inferential filling is therefore governed through limits, not exclusions.
+
+Hallucination is a sector category. It is not a category of analysis.
 
 ### Obligatory associations
 
@@ -222,6 +240,14 @@ Limits state what a term, concept, service, or position does not designate or pr
 They prevent systems from extending the signal beyond what the entity has established.
 
 Limits are particularly important when the surrounding category carries typical properties that could be projected onto the entity.
+
+Limits are also the instrument through which inferential filling is governed. Declaring the value, or declaring that no value is declared, occupies the position. A position left empty is filled again.
+
+The instrument is the closure clause: enumerate what the entity holds, declare the enumeration complete, and name no foreign term. It governs two cases, differing only in what is closed — an attribute established elsewhere, which is projection, or an attribute established nowhere, which is inferential filling.
+
+Occupation is editorial first. A position occupied only in a machine-readable file is not occupied: that file is weakly retrieved for natural-language queries, and no system is required to read it. Declarative surfaces reinforce the clause; they do not substitute for it. A closure clause is added to existing content rather than published as new content, so that occupation does not grow the corpus at the moment identity density is being concentrated.
+
+A closure clause acquires its force through identical repetition, and that same repetition distributes the error once the closed set expands without update. It is therefore maintained under temporal monitoring, and is appropriate where the enumerated set is small and stable.
 
 ### Coherence note
 
@@ -741,6 +767,14 @@ It preserves the structures that expression must not dissolve.
 ## Status
 
 This document defines the Semantic Codebook as a governance instrument within the Signal Inference Optimization conceptual framework.
+
+Version 1.3 adds:
+
+- inferential filling as a second family of alteration, distinct from the five variance operations: it produces an assertion where the corpus is silent rather than transforming an existing signal;
+- the unanchored assertion as the observable manifestation of that family;
+- provenance of content as the test separating inferential filling from projection, with their distinct corrections — displacement for projection, occupation of the position for inferential filling;
+- limits, rather than exclusions, as the instrument governing inferential filling, with the closure clause as the form that instrument takes, occupation specified as editorial first and bounded in volume, and the maintenance obligation a closure clause creates;
+- a prior state of the entity as an additional case of substitution.
 
 Version 1.2 adds:
 
