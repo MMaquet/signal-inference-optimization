@@ -6,8 +6,8 @@
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-**Version:** 1.2  
-**Last updated:** September 22, 2026  
+**Version:** 1.3  
+**Last updated:** October 31, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
@@ -122,6 +122,16 @@ The Hub carries the boundaries of interpretation of the entire corpus on a singl
 
 This is what makes the Hub a piece of semantic infrastructure rather than a definition page. A definition states what something is. A boundary of interpretation states what something is in relation to everything it could be confused with.
 
+### The closure clause
+
+A boundary of interpretation takes a specific form when the collapse to prevent is not a confusion between two entities but the filling of a position the corpus leaves silent.
+
+That form is the closure clause: enumerate what the entity holds in a given category, and declare the enumeration complete. *"X holds only the following certifications. No other certification may be attributed to X."*
+
+The clause names no foreign term. It carries the category term and the entity name, which is what makes it retrievable for the queries where the filling surfaces. It is a positive declaration with a bounded set, not a negation of a named attribute — and it is therefore compatible with the positive density principle stated below.
+
+A closure clause acquires its force through identical repetition across the corpus. That same repetition distributes the error once the closed set expands and the clause is not updated, which places closure clauses under the Hub's maintenance obligation rather than outside it. They are appropriate where the enumerated set is small and stable.
+
 ---
 
 ## Structure
@@ -194,9 +204,11 @@ Probabilistic systems do not reliably process direct negation. Stating that an e
 
 The correct logic is the inverse. Stop activating the unwanted semantic field entirely. Densify only the canonical version.
 
+The prohibition bears on naming, not on negating. A fragment naming the term to be dissociated is retrieved on that term and adds the co-occurrence to the corpus, whatever negation surrounds it. A closure clause negates without naming: it enumerates what the entity holds and closes the set, and no foreign term appears in it. Closure clauses are therefore admitted within the Hub.
+
 This principle applies throughout the Hub. Boundaries of interpretation are stated as positive distinctions. Identity architecture is declared as a layered structure. Canonical formulations are repeated verbatim.
 
-The Hub does not contain corrections. Corrections belong to dedicated declarative files such as sio-corrections.json, which document observed drift in a separate machine-readable format. The Hub itself maintains positive density throughout.
+The Hub does not contain corrections. Corrections belong to dedicated declarative files such as sio-corrections.json, which document observed drift in a separate machine-readable format. The Hub itself maintains positive density throughout. A closure clause is not a correction: it declares a bounded set, whether or not a filling has been observed at that position.
 
 This is what makes the Hub preventive rather than corrective. It structures and amplifies a canonical signal upstream, before drift accumulates. It densifies the canonical version rather than reasserting the wrong one to deny it.
 
@@ -204,7 +216,7 @@ This is what makes the Hub preventive rather than corrective. It structures and 
 
 ## What the Declarative Hub addresses
 
-The Declarative Hub addresses five structural problems in LLM reconstruction.
+The Declarative Hub addresses six structural problems in LLM reconstruction.
 
 **Fragmentation of reading.** The system retrieves only a few pages. The Hub condenses the corpus into a single surface. If the Hub is the only page retrieved, it still carries the map of the whole.
 
@@ -215,6 +227,8 @@ The Declarative Hub addresses five structural problems in LLM reconstruction.
 **Identity compression error.** When identity spans multiple domains, models simplify and merge. The Hub states boundaries of interpretation positively, building structural separation through canonical density.
 
 **New page invisibility.** A new page has no accumulated authority. The Hub is an established page with crawl history and internal centrality. When a new cluster is added to the corpus, integrating it into the Hub allows the new content to inherit the Hub's visibility through contextualized linking.
+
+**Empty positions.** A position the corpus declares nowhere receives the most plausible value from the sectoral neighbourhood. This is inferential filling, and it is the clearest case where the Hub acts preventively rather than correctively: a Hub that carries the complete map of the corpus leaves fewer positions unoccupied, and closure clauses occupy those that remain. A position left empty is filled again.
 
 ---
 
