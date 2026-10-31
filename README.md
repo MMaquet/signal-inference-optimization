@@ -14,8 +14,8 @@ What they reconstruct becomes your identity.
 ---
 
 **First public commit:** March 27, 2026  
-**Version:** 1.2  
-**Last updated:** September 22, 2026  
+**Version:** 1.3  
+**Last updated:** October 31, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
@@ -124,6 +124,7 @@ During this process:
 - signals are fragmented  
 - context is reduced  
 - meaning is approximated  
+- positions the corpus leaves silent are filled  
 - responses may be cached and re-served by application layers  
 
 Unstructured signals drift.  
@@ -196,6 +197,17 @@ or acquires meaning as it passes through the reconstruction pipeline.
 
 Signal degradation accumulates across the transformation pipeline.  
 At multiple critical points, signals can degrade or disappear entirely.
+
+Two families of alteration are distinguished. The five **variance operations** —
+generalization, amalgamation, truncation, substitution, projection — transform
+an existing signal. **Inferential filling** transforms nothing: it produces an
+assertion where the corpus is silent, drawn from the most plausible value in
+the sectoral neighbourhood. A position with no declared source does not remain
+empty.
+
+The two families require opposite corrections. A transformation is corrected by
+rectifying or displacing the signal. Inferential filling is corrected by
+occupying the position.
 
 SIO structures signals to resist this degradation and preserve 
 semantic coherence through the reconstruction process.
@@ -558,6 +570,18 @@ For diagnostics, Semantic Codebooks, inferential audits, and corrections:
 
 This repository establishes and versions the canonical conceptual foundation of SIO.
 
+Version 1.3 adds:
+
+- **inferential filling** as a second family of alteration, distinct from the five variance operations: it produces an assertion where the corpus is silent rather than transforming an existing signal. The branch was already admitted by the definition of inference drift — a signal that *acquires* meaning — and is now named  
+- **the unanchored assertion** as the observable manifestation of that family, distinct from the five variance manifestations, which do not catch it: an unanchored assertion does not contradict the canonical reference, it occupies a silence within it  
+- **provenance of content** as the test separating inferential filling from projection: projection displaces an attribute established elsewhere, inferential filling produces one established nowhere  
+- **the closure clause** as the shared instrument of both corrections — enumerate what the entity holds and declare the enumeration complete, naming no foreign term  
+- **the criterion for editorial naming** restated: the prohibition bears on naming, not on negating. A fragment naming the term to be dissociated is retrieved on that term and adds the co-occurrence to the corpus, whatever negation surrounds it. The closure clause negates without naming, and is admitted  
+- **priority 1 bis** — inferential filling is treated in parallel with the first position, standing outside the dependency chain  
+- **closure clause decay** as a structural risk: a clause acquires force through identical repetition and distributes the error once the closed set expands without update  
+- a prior state of the entity as an additional case of substitution  
+- incompleteness restored to the stated priority order, which named three stages while the text treated four  
+
 Version 1.2 adds:
 
 - the three pillars of SIO — inferential audit, canonical reference formalization, inferential governance  
@@ -599,8 +623,8 @@ founder of SEMANTIKIA.
 [linkedin.com/in/melaniemaquet](https://www.linkedin.com/in/melaniemaquet/)
 
 First public commit: March 27, 2026  
-Version: 1.2  
-Last updated: September 22, 2026
+Version: 1.3  
+Last updated: October 31, 2026
 
 ---
 
