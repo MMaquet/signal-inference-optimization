@@ -5,8 +5,8 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 **First public commit:** April 18, 2026  
-**Version:** 1.2  
-**Last updated:** September 22, 2026  
+**Version:** 1.3  
+**Last updated:** October 31, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
@@ -33,13 +33,16 @@ Each question identifies a specific variance operation:
 - **Does the reconstruction merge me with my competitors or my sector?** → **Amalgamation**
 - **Is the reconstruction partially correct but incomplete?** → **Truncation**
 - **Is my proprietary term replaced by a generic equivalent?** → **Substitution**
-- **Does the reconstruction contain attributes I never published?** → **Projection**
+- **Does the reconstruction attribute to me properties typical of my category?** → **Projection**
+- **Does the reconstruction answer a question my corpus never addresses?** → **Inferential filling**
+
+The last two questions were previously one. They separate on the provenance of the attributed content: a property typical of the category is established elsewhere and displaced onto the entity; an answer to an unaddressed question is established nowhere and manufactured.
 
 ### Multicausality
 
 In practice, variance operations are often combined. A reconstruction can be simultaneously generalized and truncated. Typed correction identifies the dominant operation — the one whose correction will produce the most structural effect — and prioritizes accordingly.
 
-### Priority order: loss → distortion → pollution
+### Priority order: loss → distortion → incompleteness → pollution
 
 When multiple operations are active simultaneously, triage follows a structural principle:
 
@@ -54,6 +57,11 @@ Positioning is partially correct but amputated. Repairable through reinforcement
 
 **Priority 4 — Polluted signal: projection.**  
 The model added unfounded attributes. This is noise, not loss. Correction through density and machine-readable declaration is the slowest to produce effects. Treat last.
+
+**Priority 1 bis — Manufactured signal: inferential filling.**  
+The model produced an assertion where the corpus is silent. Treated in parallel with priority 1. Inferential filling stands outside the dependency chain: correcting it has no effect on the four operations above, and they have no effect on it. Nothing therefore argues for deferring it, while three conditions argue for treating it immediately — an unanchored assertion is what a reader encounters most directly, an empty position is refilled for as long as it remains empty, and the correction carries no sequencing cost.
+
+Occupation is bounded in volume. A closure clause is added to existing content rather than published as new content, so that occupation does not grow the corpus while priority 1 is concentrating identity density.
 
 ---
 
@@ -101,7 +109,7 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 
 ## Operation 4 — Substitution
 
-**Mechanism:** The model replaces a proprietary concept with its generic sectoral equivalent. The term the entity built, defined, and publicly established disappears in favor of standard vocabulary.
+**Mechanism:** The model replaces a proprietary concept with its generic sectoral equivalent, or with a prior state of the entity. The term the entity built, defined, and publicly established disappears in favor of standard vocabulary or of a superseded designation.
 
 **Detection in inferential audit:** The proprietary term does not appear in reconstructions. It is systematically replaced by the generic equivalent. Queries using the proprietary term may produce responses that do not cite the entity that created it.
 
@@ -110,22 +118,42 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 **Typed correction:**
 - Exclude the generic term from the Codebook — it must not appear as a central term in the corpus. It may exist in context, as explicit contrast, never as equivalent
 - Densify the proprietary term — it must appear in every pillar content, declarative signal files, structured metadata, satellite content. Frequency must be sufficient to create an autonomous cluster
-- Create explicit contrastive associations — produce content that qualifies the proprietary term against the generic one: "X is not Y. It intervenes upstream, on the structure itself." This is admitted here and excluded under Projection, and the scope of that difference is deliberate. Under Substitution, the generic term is already massively co-occurrent with the entity: the association exists, and the intervention qualifies it. Under Projection, the attribute is not yet associated: naming it in order to deny it creates the co-occurrence from nothing
+- Create explicit contrastive associations — produce content that qualifies the proprietary term against the generic one: "X is not Y. It intervenes upstream, on the structure itself." This is admitted here and excluded under Projection and under inferential filling, and the scope of that difference is deliberate. Under Substitution, the generic term is already massively co-occurrent with the entity: the association exists, and the intervention qualifies it. Under Projection, the attribute is not yet associated: naming it in order to deny it creates the co-occurrence from nothing. Under inferential filling, no attribute is associated at all. The criterion is not whether a formulation negates, but whether naming the term creates a co-occurrence that does not already exist
 
 ---
 
 ## Operation 5 — Projection
 
-**Mechanism:** The model attributes properties the entity does not have, because these properties are statistically typical of its category. The entity published nothing on the subject. The model inferred it.
+**Mechanism:** The model attributes to the entity properties it does not have, because those properties are statistically typical of its category or of an informational neighbour. The attribute is established elsewhere and displaced onto this entity.
 
-**Detection in inferential audit:** Attributes appear in reconstructions with no identifiable source in the endogenous corpus. Pointed queries receive affirmative responses based on no real signal.
+**Detection in inferential audit:** Attributes appear in reconstructions with no identifiable source in the endogenous corpus, but with an identifiable source in the sectoral corpus or in a neighbouring entity. Pointed queries receive affirmative responses based on no signal belonging to the entity.
 
-**Probable cause:** The corpus does not explicitly state what the entity does NOT do. The model fills silence zones with what is statistically probable for the category. Silence is not neutral in a probabilistic system — it is an invitation to project.
+**Probable cause:** The corpus does not bound the attribute, and the attribute carries strong statistical mass within the category. The model resolves the gap with the categorical default.
 
 **Typed correction:**
 - Massively densify the real signal — a corpus saturated with the actual expertise and with strong, specific obligatory associations leaves fewer unsupported openings for generic attribution. Density does not prevent projection; it reduces the room available for it
-- Declare in sio-corrections.json — this is exactly what this declarative signal file serves in declarative orchestration. Explicitly declare in machine-readable format what the entity is NOT
-- Do NOT contradict in editorial content — writing "We do NOT do X" creates a co-occurrence between the organization and X. The model may ignore the negation and retain the association. Correction passes through real signal density and machine-readable declaration, not editorial negation
+- Close the set editorially — enumerate what the entity holds in the affected category and declare the enumeration complete, naming no foreign term: *"X holds only the following certifications. No other certification may be attributed to X."* The clause carries the category term and the entity name, which is what makes it retrievable for the queries where the projection surfaces. A closure clause acquires its force through identical repetition, and that same repetition distributes the error once the closed set expands without update: it is maintained under temporal monitoring, and is appropriate where the enumerated set is small and stable
+- Declare in sio-corrections.json — this declarative signal file reinforces the closure clause in machine-readable format. It does not replace it: a bounded set stated only in a machine-readable file is weakly retrieved for natural-language queries, and no system is required to read it
+- Do NOT name the projected attribute in editorial content — writing "We do NOT do X" creates a co-occurrence between the organization and X. The model may ignore the negation and retain the association. The prohibition bears on naming, not on negating: the closure clause negates without naming, and is admitted. Under Substitution the same naming is admitted, because the association already exists
+
+---
+
+## Second family — Inferential filling
+
+The five operations above transform an existing signal. Inferential filling transforms nothing: it produces an assertion where the corpus is silent. It is not a sixth operation but a second family, and it was previously treated within Projection.
+
+**Mechanism:** A position the corpus does not declare receives the most plausible value from the sectoral neighbourhood. Nothing is displaced — the asserted attribute is established nowhere.
+
+**Detection in inferential audit:** The reconstruction answers a question the corpus never addresses. The assertion is precise and plausible, and it varies across runs because no signal anchors it. It does not contradict the canonical reference: the reference is silent at that position. This is why the five variance manifestations do not catch it, and why it has its own — the **unanchored assertion**.
+
+**Probable cause:** A position a reader expects to be filled is declared nowhere in the corpus. Silence is not neutral in a probabilistic system — it is an invitation to fill.
+
+**Typed correction:**
+- Occupy the position editorially — declare the value, or close the set by declaring that none applies. The closure clause is the same instrument as under Projection; what differs is only that the closed attribute is established nowhere rather than elsewhere
+- Reinforce declaratively — the declarative signal files carry the same declaration in machine-readable format, after the corpus carries it, never instead of it
+- Do not treat as a projection — displacement has nothing to displace here. A correction aimed at pushing the attribute away leaves the position empty, and an empty position is filled again
+
+**Priority:** 1 bis. Treated in parallel with priority 1.
 
 ---
 
@@ -137,7 +165,8 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 | Amalgamation | Merged with competitors? | Reinforce proprietary concepts + exclude shared terms |
 | Truncation | Correct but incomplete? | Reinforce obligatory associations between components |
 | Substitution | Proprietary term replaced? | Exclude generic + densify proprietary + contrastive associations |
-| Projection | Unpublished attributes added? | Densify real signal + declare in sio-corrections.json |
+| Projection | Category properties attributed? | Densify real signal + close the set editorially + declare in sio-corrections.json |
+| Inferential filling | Unaddressed question answered? | Occupy the position: close the set editorially, then reinforce declaratively |
 
 ---
 
@@ -149,9 +178,12 @@ The model added unfounded attributes. This is noise, not loss. Correction throug
 | 2 | Identity distortion | Generalization | Signal present but distorted |
 | 3 | Incomplete signal | Truncation | Signal present but amputated |
 | 4 | Polluted signal | Projection | Noise added, not signal lost |
+| 1 bis | Manufactured signal | Inferential filling | Outside the dependency chain; nothing argues for deferring it |
 
-Structural principle: **loss → distortion → pollution.**  
-Restore what disappeared. Correct what is distorted. Clean what was added.
+Structural principle: **loss → distortion → incompleteness → pollution.**  
+Restore what disappeared. Correct what is distorted. Complete what was amputated. Clean what was added.
+
+Inferential filling sits outside that sequence because the sequence orders by dependency, not by severity. Occupying a position neither requires a prior correction nor blocks one: the position carries no competing declaration to displace first.
 
 ---
 
@@ -198,6 +230,6 @@ This document is part of the Signal Inference Optimization (SIO) conceptual fram
 - [Article series](https://medium.com/@melaniemaquet)
 
 **First public commit:** April 18, 2026  
-**Version:** 1.2  
-**Last updated:** September 22, 2026  
+**Version:** 1.3  
+**Last updated:** October 31, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
