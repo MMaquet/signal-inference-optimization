@@ -5,7 +5,7 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 **First public commit:** July 4, 2026  
-**Last updated:** July 4, 2026 
+**Last updated:** October 31, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
@@ -96,6 +96,24 @@ This is why SIO treats the following as structural requirements:
 - peripheral vocabulary must not overpower the core signal
 
 RAG does not eliminate inference drift. It relocates drift into retrieval, chunking, context construction, and generation.
+
+---
+
+## Generation
+
+Generation is where the response is produced, and it is not an assembly of the fragments that survived retrieval.
+
+A generative model produces its output autoregressively: each token is drawn from a distribution conditioned on the assembled context and on the regularities fixed in pre-training. The context constrains that distribution. It does not determine it.
+
+This has three consequences SIO accounts for.
+
+**A single response is one draw.** Decoding parameters — temperature, top-p, sampling strategy — admit variance. Two observations made under comparable conditions can differ at positions the context does not constrain, and converge at positions it does. This is why multi-run observation is a methodological requirement of inferential audit rather than a precaution, and why a single response qualifies nothing.
+
+**Where the context is silent, pre-training answers.** When a query requires a position the assembled context does not address, the distribution is shaped by the sectoral regularities held in the weights. The output is then precise, plausible, and anchored in no retrieved fragment. This is the technical locus of **inferential filling**: not a retrieval failure, not a chunking failure, but a generation-layer production over an unconstrained position.
+
+**Nothing is lost there.** The recurrent signal-loss points documented in the conceptual framework are all upstream of generation — extraction, chunking, retrieval, internal competition, multi-hop synthesis. Inferential filling is not a sixth loss point, because nothing disappears: an assertion is added. The two families of alteration separate at this layer, and so do their corrections.
+
+SIO does not act on decoding parameters, which belong to the model and to the application that configures it. It acts on what the context carries, and on whether the positions a query requires are declared in the corpus at all.
 
 ---
 
