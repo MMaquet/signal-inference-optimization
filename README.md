@@ -15,7 +15,7 @@ What they reconstruct becomes your identity.
 
 **First public commit:** March 27, 2026  
 **Version:** 1.3  
-**Last updated:** October 31, 2026  
+**Last updated:** November 21, 2026  
 **Author:** Mélanie Maquet — SEMANTIKIA
 
 ---
@@ -618,21 +618,21 @@ It will evolve toward:
 Mélanie Maquet — originator of Signal Inference Optimization,  
 founder of SEMANTIKIA.
 
+[semantikia.com](https://semantikia.com)  
+[medium.com/@melaniemaquet](https://medium.com/@melaniemaquet)  
 [melaniemaquet.com/identite-canonique](https://www.melaniemaquet.com/identite-canonique)  
-[sio.melaniemaquet.com](https://sio.melaniemaquet.com)  
 [linkedin.com/in/melaniemaquet](https://www.linkedin.com/in/melaniemaquet/)
 
 First public commit: March 27, 2026  
 Version: 1.3  
-Last updated: October 31, 2026
+Last updated: November 21, 2026
 
 ---
 
 ## Writing & research
 
-The SIO doctrinal corpus is accessible through:
-
-https://sio.melaniemaquet.com
+[semantikia.com](https://semantikia.com) — Reconstruction Fidelity™, the operational application  
+[medium.com/@melaniemaquet](https://medium.com/@melaniemaquet) — the SIO doctrinal corpus
 
 The GitHub repository defines the conceptual structure.  
 The doctrinal corpus develops reasoning, applications, and implications.
